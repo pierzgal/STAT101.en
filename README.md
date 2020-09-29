@@ -1,1 +1,1 @@
-# STAT101.en
+# STAT101 [EN]

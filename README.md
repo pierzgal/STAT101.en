@@ -1,1 +1,1 @@
-# STAT101 [EN]
+# STAT101 [IPS]

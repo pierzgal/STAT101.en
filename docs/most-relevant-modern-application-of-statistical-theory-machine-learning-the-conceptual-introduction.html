@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.6 Most relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS</title>
+  <meta name="description" content="1.6 Most relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.6 Most relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.6 Most relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  
+  
+  
+
+<meta name="author" content="Michał Pierzgalski" />
+
+
+<meta name="date" content="2020-10-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-and-variables.html"/>
+
+<script src="assets/header-attrs-2.4/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="assets/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="assets/viz-1.8.2/viz.js"></script>
+<link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course description</a></li>
+<li class="chapter" data-level="1" data-path="lecture-1-introduction.html"><a href="lecture-1-introduction.html"><i class="fa fa-check"></i><b>1</b> Lecture 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><a href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><i class="fa fa-check"></i><b>1.1</b> Motivation - two reasons why you should learn statistics and data analysis methods?</a></li>
+<li class="chapter" data-level="1.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><i class="fa fa-check"></i><b>1.2</b> Review of some mathematical concepts used in statistics and data science</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#algebra-review---some-basic-rules"><i class="fa fa-check"></i><b>1.2.1</b> Algebra review - some basic rules</a></li>
+<li class="chapter" data-level="1.2.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#functions"><i class="fa fa-check"></i><b>1.2.2</b> Functions</a></li>
+<li class="chapter" data-level="1.2.3" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#sets"><i class="fa fa-check"></i><b>1.2.3</b> Sets</a></li>
+<li class="chapter" data-level="1.2.4" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#three-basic-concepts-of-calculus"><i class="fa fa-check"></i><b>1.2.4</b> Three basic concepts of calculus</a></li>
+<li class="chapter" data-level="1.2.5" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#limits"><i class="fa fa-check"></i><b>1.2.5</b> Limits</a></li>
+<li class="chapter" data-level="1.2.6" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#derivative"><i class="fa fa-check"></i><b>1.2.6</b> Derivative</a></li>
+<li class="chapter" data-level="1.2.7" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral"><i class="fa fa-check"></i><b>1.2.7</b> Integral</a></li>
+<li class="chapter" data-level="1.2.8" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral-as-an-area---intuitive-explanation"><i class="fa fa-check"></i><b>1.2.8</b> Integral as an area - intuitive explanation</a></li>
+<li class="chapter" data-level="1.2.9" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#probability"><i class="fa fa-check"></i><b>1.2.9</b> Probability</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="essential-concepts-of-statistics.html"><a href="essential-concepts-of-statistics.html"><i class="fa fa-check"></i><b>1.3</b> Essential concepts of statistics</a></li>
+<li class="chapter" data-level="1.4" data-path="descriptive-and-inferential-statistics.html"><a href="descriptive-and-inferential-statistics.html"><i class="fa fa-check"></i><b>1.4</b> Descriptive and inferential statistics</a></li>
+<li class="chapter" data-level="1.5" data-path="data-and-variables.html"><a href="data-and-variables.html"><i class="fa fa-check"></i><b>1.5</b> Data and variables</a></li>
+<li class="chapter" data-level="1.6" data-path="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><i class="fa fa-check"></i><b>1.6</b> Most relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>1.6.1</b> Machine learning approaches</a></li>
+<li class="chapter" data-level="1.6.2" data-path="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="most-relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>1.6.2</b> Make predictions or decisions using ML</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STAT 101 IPS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="most-relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> Most relevant modern application of statistical theory: Machine learning - the conceptual introduction</h2>
+<p><strong>Definitions</strong></p>
+<p>Machine learning (ML) is a sub-field of artificial intelligence (AI)
+that provides systems the ability to automatically learn and improve
+from experience without being explicitly programmed.</p>
+<p>Machine learning algorithms build a mathematical model based on sample
+data, known as “training data”, in order to <strong>make predictions or
+decisions</strong> without being explicitly programmed to do so.</p>
+<p><strong>Basic concepts used in Machine Learning</strong>:</p>
+<ul>
+<li>Algorithm: A Machine Learning algorithm is a set of rules and
+statistical techniques used to learn patterns from data and draw
+significant information from it. It is the logic behind a Machine
+Learning model. An example of a Machine Learning algorithm is the
+Linear Regression algorithm.</li>
+<li>Model: A model is the main component of Machine Learning. A model is
+trained by using a Machine Learning Algorithm. An algorithm maps all
+the decisions that a model is supposed to take based on the given
+input, in order to get the correct output.</li>
+<li>Predictor Variable: It is a feature(s) of the data that can be used
+to predict the output.</li>
+<li>Response Variable: It is the feature or the output variable that
+needs to be predicted by using the predictor variable(s).</li>
+<li>Training Data: The Machine Learning model is built using the
+training data. The training data helps the model to identify key
+trends and patterns essential to predict the output.</li>
+<li>Testing Data: After the model is trained, it must be tested to
+evaluate how accurately it can predict an outcome. This is done by
+the testing data set.</li>
+</ul>
+<div id="machine-learning-approaches" class="section level3" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Machine learning approaches</h3>
+<div id="htmlwidget-64944455bd9ac436b53d" style="width:672px;height:200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-64944455bd9ac436b53d">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB]\n  \n  node [shape = rectangle]        \n  rec1 [label = \"Step 1. Machine learning\"]\n  rec2 [label = \"Step 2. Supervised learning\"]\n  rec3 [label = \"Step 3. Unsupervised learning\"]\n  rec4 [label = \"Step 4. Reinforced learning\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> {rec2, rec3, rec4}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>[From Wikipedia:]</p>
+<ul>
+<li>Supervised learning: The computer is presented with example inputs
+and their desired outputs, given by a “teacher”, and the goal is to
+learn a general rule that maps inputs to outputs.</li>
+<li>Unsupervised learning: No labels are given to the learning
+algorithm, leaving it on its own to find structure in its input.
+Unsupervised learning can be a goal in itself (discovering hidden
+patterns in data) or a means towards an end (feature learning).</li>
+<li>Reinforcement learning: A computer program interacts with a dynamic
+environment in which it must perform a certain goal (such as driving
+a vehicle or playing a game against an opponent). As it navigates
+its problem space, the program is provided feedback that’s analogous
+to rewards, which it tries to maximize.</li>
+</ul>
+<p>“For the process of learning (model fitting) we need to have available
+some observations or data (also known as samples or examples) in order
+to explore potential underlying patterns, hidden in our data. These
+learned patterns are nothing more that some functions or decision
+boundaries.”</p>
+</div>
+<div id="make-predictions-or-decisions-using-ml" class="section level3" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Make predictions or decisions using ML</h3>
+<p>In science and technology, predictions or decisions are made using
+formal models. A very simple mathematical deterministic model can be:</p>
+<p><span class="math display">\[F = \frac{9}{5}(C) + 32\]</span></p>
+<p>which you could use to convert degrees Celsius to degrees Fahrenheit.
+For example:</p>
+<p><span class="math display">\[F = \frac{9}{5}(39) + 32 = 70.2 + 32 = 102.2\]</span></p>
+<p>You might be familiar with the formula for a line using the slope and
+y-intercept (recall the equation of linear function - <span class="math inline">\(y = ax + b\)</span>):</p>
+<p><span class="math inline">\(y\)</span> = predicted value (dependent variable); <span class="math inline">\(a\)</span> = slope, i.e.
+<span class="math inline">\(\frac{\text{change in }y}{\text{change in }x}\)</span>; <span class="math inline">\(b\)</span> = intercept with
+<span class="math inline">\(x-\)</span>axis.</p>
+<p>However, in statistics, we rarely deal with deterministic models which
+will produce perfect prediction. We have stochastic models which will
+have unexplained (“random”) error.</p>
+<p>If you have an equation that tries to predict what the adult height of a
+newborn baby boy based on the height of his father. You will certainly
+not get a perfect prediction for many reasons. A mathematical version of
+a simple <strong>linear regression model</strong>, which is stochastic, would be:</p>
+<p><span class="math display">\[y = \beta_0 + x_1\beta_1 + ... + x_k\beta_k + \epsilon\]</span></p>
+<p>This denotes that we believe that there is a linear relationship between
+predictor variables <span class="math inline">\(x_k\)</span> and response variable <span class="math inline">\(y\)</span> with some
+unexplained error <span class="math inline">\(\epsilon\)</span>.</p>
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-and-variables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

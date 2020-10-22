@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STAT 101 IPS</title>
-  <meta name="description" content="STAT 101 IPS" />
+  <title>2.2 Descriptive and inferential statistics | STAT 101 IPS</title>
+  <meta name="description" content="2.2 Descriptive and inferential statistics | STAT 101 IPS" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STAT 101 IPS" />
+  <meta property="og:title" content="2.2 Descriptive and inferential statistics | STAT 101 IPS" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STAT 101 IPS" />
+  <meta name="twitter:title" content="2.2 Descriptive and inferential statistics | STAT 101 IPS" />
   
   
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-10-22" />
+<meta name="date" content="2020-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="contact.html"/>
+<link rel="prev" href="essential-concepts.html"/>
+<link rel="next" href="data-and-variables.html"/>
 <script src="assets/header-attrs-2.4/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,10 @@
 
 
 <script src="assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="assets/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="assets/viz-1.8.2/viz.js"></script>
+<link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -69,9 +73,9 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course description</a>
 <ul>
-<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html"><i class="fa fa-check"></i>Contact</a>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html"><i class="fa fa-check"></i>Kontakt</a>
 <ul>
-<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#office-hours-20202021"><i class="fa fa-check"></i>Office hours (2020/2021)</a></li>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html#dyżur-dla-studentów-20202021"><i class="fa fa-check"></i>Dyżur dla studentów (2020/2021)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lecture-1-introduction.html"><a href="lecture-1-introduction.html"><i class="fa fa-check"></i><b>1</b> Lecture 1: Introduction</a>
@@ -91,6 +95,17 @@
 <li class="chapter" data-level="1.3.9" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#probability"><i class="fa fa-check"></i><b>1.3.9</b> Probability</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="2" data-path="lecture-2-introduction-to-applied-statistics.html"><a href="lecture-2-introduction-to-applied-statistics.html"><i class="fa fa-check"></i><b>2</b> Lecture 2. Introduction to applied statistics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="essential-concepts.html"><a href="essential-concepts.html"><i class="fa fa-check"></i><b>2.1</b> Essential concepts</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-and-inferential-statistics.html"><a href="descriptive-and-inferential-statistics.html"><i class="fa fa-check"></i><b>2.2</b> Descriptive and inferential statistics</a></li>
+<li class="chapter" data-level="2.3" data-path="data-and-variables.html"><a href="data-and-variables.html"><i class="fa fa-check"></i><b>2.3</b> Data and variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><i class="fa fa-check"></i><b>3</b> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>3.0.1</b> Machine learning approaches</a></li>
+<li class="chapter" data-level="3.0.2" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>3.0.2</b> Make predictions or decisions using ML</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -108,23 +123,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STAT 101 IPS</h1>
-<h2 class="subtitle"><em>Lecture notes [WSMiP UŁ]</em></h2>
-<p class="author"><em>Michał Pierzgalski</em></p>
-<p class="date"><em>2020-10-22</em></p>
-</div>
-<div id="course-description" class="section level1 unnumbered" number="">
-<h1>Course description</h1>
-<p>Before you start reading, please look into the detailed syllabus: <a href="https://uniwersytetlodzki-my.sharepoint.com/:w:/g/personal/michal_pierzgalski_wsmip_uni_lodz_pl/EazILIO42VRJivaO0nhQbVoBJvBTH3F5BliVeE7UdpWa6Q?e=ZiDvK0">STAT101</a></p>
+<div id="descriptive-and-inferential-statistics" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Descriptive and inferential statistics</h2>
+<p>Descriptive statistics: The branch of statistics that includes methods
+for organizing and summarizing data. Statistical tools and ideas help us
+examine data to describe their main features. This examination is called
+<strong>exploratory data analysis</strong>.</p>
+<p>Here are two basic strategies that help us organize our exploration of a
+set of data:</p>
+<ul>
+<li>Begin by examining each variable by itself. Then move on to study
+the relationships among the variables.</li>
+<li>Begin with a graph or graphs. Then add numerical summaries of
+specific aspects of the data.</li>
+</ul>
+<p>Inferential statistics: The branch of statistics that involves
+generalizing from a sample to the population from which the sample was
+selected and assessing the reliability of such generalizations.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="contact.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="essential-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-and-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
@@ -177,6 +200,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

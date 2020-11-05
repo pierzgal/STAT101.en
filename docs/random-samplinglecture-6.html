@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.11 Relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS</title>
-  <meta name="description" content="2.11 Relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  <title>2.9 Random sampling15 | STAT 101 IPS</title>
+  <meta name="description" content="2.9 Random sampling15 | STAT 101 IPS" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.11 Relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  <meta property="og:title" content="2.9 Random sampling15 | STAT 101 IPS" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.11 Relevant modern application of statistical theory: Machine learning - the conceptual introduction | STAT 101 IPS" />
+  <meta name="twitter:title" content="2.9 Random sampling15 | STAT 101 IPS" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="experimental-designlecture-7.html"/>
-
+<link rel="prev" href="descriptive-and-inferential-statistics.html"/>
+<link rel="next" href="experimental-designlecture-7.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -139,93 +139,36 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction" class="section level2" number="2.11">
-<h2><span class="header-section-number">2.11</span> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</h2>
-<p><strong>Definitions</strong></p>
-<p>Machine learning (ML) is a sub-field of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.</p>
-<p>Machine learning algorithms build a mathematical model based on sample data, known as “training data”, in order to <strong>make predictions or decisions</strong> without being explicitly programmed to do so.</p>
-<p><strong>Basic concepts used in Machine Learning</strong>:</p>
-<ul>
-<li>Algorithm: A Machine Learning algorithm is a set of rules and statistical techniques used to learn patterns from data and draw significant information from it. It is the logic behind a Machine Learning model. An example of a Machine Learning algorithm is the Linear Regression algorithm.</li>
-<li>Model: A model is the main component of Machine Learning. A model is trained by using a Machine Learning Algorithm. An algorithm maps all the decisions that a model is supposed to take based on the given input, in order to get the correct output.</li>
-<li>Predictor Variable: It is a feature(s) of the data that can be used to predict the output.</li>
-<li>Response Variable: It is the feature or the output variable that needs to be predicted by using the predictor variable(s).</li>
-<li>Training Data: The Machine Learning model is built using the training data. The training data helps the model to identify key trends and patterns essential to predict the output.</li>
-<li>Testing Data: After the model is trained, it must be tested to evaluate how accurately it can predict an outcome. This is done by the testing data set.</li>
-</ul>
-<div id="machine-learning-approaches" class="section level3" number="2.11.1">
-<h3><span class="header-section-number">2.11.1</span> Machine learning approaches</h3>
-<div id="htmlwidget-320b1d7808c0576162c1" style="width:672px;height:200px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-320b1d7808c0576162c1">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB]\n  \n  node [shape = rectangle]        \n  rec1 [label = \"Step 1. Machine learning\"]\n  rec2 [label = \"Step 2. Supervised learning\"]\n  rec3 [label = \"Step 3. Unsupervised learning\"]\n  rec4 [label = \"Step 4. Reinforced learning\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> {rec2, rec3, rec4}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<p>[From <em>Wikipedia.org</em>:]</p>
-<ul>
-<li>Supervised learning: The computer is presented with example inputs and their desired outputs, given by a “teacher”, and the goal is to learn a general rule that maps inputs to outputs.</li>
-<li>Unsupervised learning: No labels are given to the learning algorithm, leaving it on its own to find structure in its input. Unsupervised learning can be a goal in itself (discovering hidden patterns in data) or a means towards an end (feature learning).</li>
-<li>Reinforcement learning: A computer program interacts with a dynamic environment in which it must perform a certain goal (such as driving a vehicle or playing a game against an opponent). As it navigates its problem space, the program is provided feedback that’s analogous to rewards, which it tries to maximize.</li>
-</ul>
-<p>“For the process of learning (model fitting) we need to have available some observations or data (also known as samples or examples) in order to explore potential underlying patterns, hidden in our data. These learned patterns are nothing more that some functions or decision boundaries.”</p>
+<div id="random-samplinglecture-6" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Random sampling<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></h2>
+<p>A <strong>random sample</strong> is one that is selected without bias. In selecting a sample, the importance of randomness cannot be overemphasized. In statistical thinking we expect a random sample to share approximately the same properties as the population. Also, the larger the sample size, the more closely the sample properties approximate those of the population.</p>
+<p><strong>For example</strong>, to estimate the average height of adult males, it would be highly biased to select a sample from among NBA players. In general, non-random samples are generated when there is bias in the selection process. Such samples are useless for statistical purposes, because the sample is not representative of the population. A simple random sample is one in which every individual in the population has the same probability of being selected. To satisfy this requirement, the sampling method that is used must be free of bias with respect to the property being measured. The “lottery method” of selection appears to produce a simple random sample (see the margin). Computer-generated random numbers (also called pseudo-random numbers) can be used in selecting random samples: We first assign a number to each individual in the population and then use a computer random number generator to select from the assigned numbers. The following are common types of sampling bias.</p>
+<div id="sampling-errors-and-systematic-bias" class="section level3" number="2.9.1">
+<h3><span class="header-section-number">2.9.1</span> Sampling errors and systematic bias</h3>
+<p>In statistics, <strong>sampling errors</strong> are incurred when the statistical characteristics of a population are estimated from a subset, or sample, of that population. Since the sample does not include all members of the population, statistics on the sample, such as means and quartiles, generally differ from the characteristics of the entire population, which are known as parameters. For example, if one measures the height of a thousand individuals from a country of one million, the average height of the thousand is typically not the same as the average height of all one million people in the country. Since sampling is typically done to determine the characteristics of a whole population, the difference between the sample and population values is considered an error.</p>
+<p><strong>Systematic error</strong> is predictable and typically constant or proportional to the true value. If the cause of the systematic error can be identified, then it usually can be eliminated. Systematic errors are caused by imperfect calibration of measurement instruments or imperfect methods of observation, or interference of the environment with the measurement process, and always affect the results of an experiment in a predictable direction.</p>
 </div>
-<div id="make-predictions-or-decisions-using-ml" class="section level3" number="2.11.2">
-<h3><span class="header-section-number">2.11.2</span> Make predictions or decisions using ML</h3>
-<p>In science and technology, predictions or decisions are made using formal models. A very simple mathematical deterministic model can be:</p>
-<p><span class="math display">\[F = \frac{9}{5}(C) + 32\]</span></p>
-<p>which you could use to convert degrees Celsius to degrees Fahrenheit. For example:</p>
-<p><span class="math display">\[F = \frac{9}{5}(39) + 32 = 70.2 + 32 = 102.2\]</span></p>
-<p>You might be familiar with the formula for a line using the slope and y-intercept (recall the equation of linear function - <span class="math inline">\(y = ax + b\)</span>):</p>
-<p><span class="math inline">\(y\)</span> = predicted value (dependent variable); <span class="math inline">\(a\)</span> = slope, i.e. <span class="math inline">\(\frac{\text{change in }y}{\text{change in }x}\)</span>; <span class="math inline">\(b\)</span> = intercept with <span class="math inline">\(x-\)</span>axis.</p>
-<p>However, in statistics, we rarely deal with deterministic models which will produce perfect prediction. We have stochastic models which will have unexplained (“random”) error.</p>
-<p>If you have an equation that tries to predict what the adult height of a newborn baby boy based on the height of his father. You will certainly not get a perfect prediction for many reasons. A mathematical version of a simple <strong>linear regression model</strong>, which is stochastic, would be:</p>
-<p><span class="math display">\[y = \beta_0 + x_1\beta_1 + ... + x_k\beta_k + \epsilon\]</span></p>
-<p>This denotes that we believe that there is a linear relationship between predictor variables <span class="math inline">\(x_k\)</span> and response variable <span class="math inline">\(y\)</span> with some unexplained error <span class="math inline">\(\epsilon\)</span>.</p>
-</div>
-<div id="machine-learning-approaches---visual-guide" class="section level3" number="2.11.3">
-<h3><span class="header-section-number">2.11.3</span> Machine learning approaches - visual guide</h3>
-<p>The following figures give general idea on how machine learning works<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>:</p>
-<div class="figure">
-<img src="images/ml/1__YfYURermogYfTxYUEhXNA.jpeg" title="Supervised learning" alt="" />
-<p class="caption">Supervised learning</p>
-</div>
-<div id="supervised-learning---examplelecture-9" class="section level4" number="2.11.3.1">
-<h4><span class="header-section-number">2.11.3.1</span> Supervised learning - example<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></h4>
-<p>We seek to teach a computer to predict housing prices. We begin with giving our computer the prices of other houses in the area, as well as information about each house (e.g. the size, number of bedrooms, number of floors). This data are called the <strong>training set</strong>. Also, the data provided for any one of the given houses is called a training example - this is denoted by <span class="math inline">\(x_i\)</span>, meaning data pertaining to house (i), while <span class="math inline">\(x_2\)</span> = training example (2). Each distinct bit of information contained within a training example is called a <strong>feature</strong>. In data representing housing attributes, the size of the house is a feature, as would the number of stories and the number of bedrooms. Every training example contains the same features in the same order.</p>
-<p>Linear regression is one of the most basic machine learning models. Symbolically, this is a common representation of the linear regression model:</p>
-<p><span class="math display">\[h_{\theta}(x) = \theta_0 + \theta_1 x\]</span></p>
-<p><span class="math inline">\(h_{\theta}(x)\)</span> represents the hypothesis function. It says that the outputted value varies based on the input x. That is to say, based on the value x between parentheses, the prediction is made, meaning that <span class="math inline">\(h\theta(x(_i))\)</span> symbolizes the prediction made by the hypothesis on example <span class="math inline">\(x(i)\)</span>. The <span class="math inline">\(\theta\)</span> symbols are known as parameters - can be positive or negative numbers.</p>
-<p>“Let’s go back to our housing prices example. Let’s pretend we’re using training example 1. Our example will use only one feature for this explanation: the size of the house in square feet. This will be represented by <span class="math inline">\(x(1)_1\)</span>, meaning feature 1 of training example 1, and will be equal to 2,500 (square feet).”</p>
-<p>“Let’s say our hypothesis believes that each square foot adds $50 of value to the home and that housing prices start at $200,000 in the area. <span class="math inline">\(\theta(0)\)</span> would then have a value of 200,000 and <span class="math inline">\(\theta(1)\)</span> would then be 50. Let’s check out why that is. We know that a prediction is formed by summing the bias unit with the product of features and their respective parameters. When we multiply our <span class="math inline">\(x(1)_1\)</span> (2,500 square feet) by our <span class="math inline">\(\theta(1)\)</span> (the associated parameter of $50/square feet), we get a value of $125,000. Through this multiplication, for every square foot (<span class="math inline">\(x(1)_1\)</span>), $50 dollars of value (<span class="math inline">\(\theta(1)\)</span>) is added. We add that product to our bias unit of $200,000 (<span class="math inline">\(\theta(0)\)</span> representing the average local starting housing price) to get a final output value of $325,000!”</p>
-
+<div id="various-types-of-bias-in-statistical-analysis" class="section level3" number="2.9.2">
+<h3><span class="header-section-number">2.9.2</span> Various types of bias in statistical analysis</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Undercoverage</strong> bias (or exclusion bias), in which part of the population is excluded from the sampling process.</li>
+<li><strong>Response bias</strong>, in which the wording of a questionnaire is not neutral but rather suggests or provokes a particular response.</li>
+<li><strong>Nonresponse</strong> <strong>bias</strong>, in which individuals with a common characteristic are unwilling (or neglect) to respond to a questionnaire. (Notice that this is not the opposite of response bias.)</li>
+<li><strong>Self-selection bias</strong> (or voluntary response bias), in which individuals select themselves (or volunteer) for the sample. Many of these biases are a result of convenience sampling, in which individuals are sampled only because they are nearby or easily accessible.</li>
+<li><strong>Selection bias</strong> is the bias introduced by the selection of individuals, groups or data for analysis in such a way that proper randomization is not achieved, thereby ensuring that the sample obtained is not representative of the population intended to be analyzed. It is sometimes referred to as the selection effect. The phrase “selection bias” most often refers to the distortion of a statistical analysis, resulting from the method of collecting samples. If the selection bias is not taken into account, then some conclusions of the study may be false.</li>
+</ol>
+<p>In practice, it is difficult to ensure the selection of a random sample. Several methods have been developed for sampling in particular situations. Some of the most common are as follows.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Systematic Sampling</strong>: In systematic sampling, a sample is chosen systematically from a list. For example, we may pick every 100th name in a telephone book.</li>
+<li><strong>Stratified Sampling</strong>: In stratified sampling, the population is first divided into nonoverlapping groups (or strata), and then the sample is chosen proportionally from each group. For example, to pick a sample of registered voters, we may want to stratify the population into groups—white, African American, Hispanic, and other—and then randomly pick registered voters, choosing from each group a number proportional to the size of the group in the population.</li>
+<li><strong>Cluster Sampling</strong>: In cluster sampling, the population is divided into groups (or clusters) and then a random sample of clusters is selected. For example, to survey apartment dwellers in Los Angeles, we would first randomly select a collection of apartment buildings (the clusters) and then interview every resident in the selected buildings. This type of sampling reduces the enormous time and cost for the pollster in traveling from apartment to apartment.</li>
+</ol>
 </div>
 </div>
-</div>
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
-<ol start="17">
-<li id="fn17"><p>Retrieved from: Loukas, S. What is Machine Learning: Supervised, Unsupervised, Semi-Supervised and Reinforcement learning methods. <a href="https://towardsdatascience.com/what-is-machine-learning-a-short-note-on-supervised-unsupervised-semi-supervised-and-aed1573ae9bb" class="uri">https://towardsdatascience.com/what-is-machine-learning-a-short-note-on-supervised-unsupervised-semi-supervised-and-aed1573ae9bb</a><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#fnref17" class="footnote-back">↩︎</a></p></li>
-<li id="fn18"><p>Based on: Nolan, F. A Comprehensive Introductory Guide to Supervised Learning for the Non-Mathematician. <a href="https://towardsdatascience.com/an-involved-introduction-to-supervised-learning-for-the-common-human-6338d9559748" class="uri">https://towardsdatascience.com/an-involved-introduction-to-supervised-learning-for-the-common-human-6338d9559748</a><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<ol start="15">
+<li id="fn15"><p>Retrieved from: Stewart, J., Redlin, L. and Watson, S., 2013. <em>Precalculus: Mathematics for calculus</em>. Cengage Learning.<a href="random-samplinglecture-6.html#fnref15" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -233,8 +176,8 @@
           </div>
         </div>
       </div>
-<a href="experimental-designlecture-7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="descriptive-and-inferential-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="experimental-designlecture-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

@@ -24,6 +24,7 @@ summary
 probability
 statistics---an-introduction-lecture-2
 essential-concepts
+a-parameter-and-a-statistic
 constructs-and-operational-definitionslecture-1
 conceptualisation-and-operationalisation
 data-collection

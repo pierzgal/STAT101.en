@@ -44,7 +44,7 @@ machine-learning-approaches
 make-predictions-or-decisions-using-ml
 machine-learning-approaches---visual-guide
 supervised-learning---examplelecture-9
-lecture-3.-exploratory-data-analysis
+exploratory-data-analysis-lecture-3
 types-of-data-and-the-scales-of-measurement
 what-is-measurement
 levels-of-measurement-scales-of-measurement
@@ -78,7 +78,7 @@ measures-of-relative-standing
 percentile-and-percentile-rank
 standard-score-z-score
 z-score-as-a-measure-of-relative-standing
-lecture-4.-basic-methods-of-data-visualization
+basic-methods-of-data-visualization-lecture-4
 bar-plot
 frequency-distribution-table-and-histogram
 three-types-of-histograms-are-used

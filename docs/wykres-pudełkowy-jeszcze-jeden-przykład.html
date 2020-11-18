@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.13 Wykres pudełkowy - jeszcze jeden przykład | STAT 101 IPS</title>
+  <meta name="description" content="4.13 Wykres pudełkowy - jeszcze jeden przykład | STAT 101 IPS" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.13 Wykres pudełkowy - jeszcze jeden przykład | STAT 101 IPS" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.13 Wykres pudełkowy - jeszcze jeden przykład | STAT 101 IPS" />
+  
+  
+  
+
+<meta name="author" content="Michał Pierzgalski" />
+
+
+<meta name="date" content="2020-11-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="histogram-a-wykres-pudełkowy-przykład-5.html"/>
+<link rel="next" href="wykres-pudełkowy-a-histogram.html"/>
+<script src="assets/header-attrs-2.5/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="assets/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="assets/viz-1.8.2/viz.js"></script>
+<link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course description</a>
+<ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html"><i class="fa fa-check"></i>Contact</a>
+<ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#office-hours-20202021"><i class="fa fa-check"></i>Office hours (2020/2021)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-lecture-1.html"><a href="introduction-lecture-1.html"><i class="fa fa-check"></i><b>1</b> Introduction [Lecture 1]</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><a href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><i class="fa fa-check"></i><b>1.1</b> Motivation - two reasons why you should learn statistics and data analysis methods?</a></li>
+<li class="chapter" data-level="1.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><i class="fa fa-check"></i><b>1.2</b> Review of some mathematical concepts used in statistics and data science</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#algebra-review---some-basic-rules"><i class="fa fa-check"></i><b>1.2.1</b> Algebra review - some basic rules</a></li>
+<li class="chapter" data-level="1.2.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#functions"><i class="fa fa-check"></i><b>1.2.2</b> Functions</a></li>
+<li class="chapter" data-level="1.2.3" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#sets"><i class="fa fa-check"></i><b>1.2.3</b> Sets</a></li>
+<li class="chapter" data-level="1.2.4" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#three-basic-concepts-of-calculus"><i class="fa fa-check"></i><b>1.2.4</b> Three basic concepts of calculus</a></li>
+<li class="chapter" data-level="1.2.5" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#limits"><i class="fa fa-check"></i><b>1.2.5</b> Limits</a></li>
+<li class="chapter" data-level="1.2.6" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#derivative"><i class="fa fa-check"></i><b>1.2.6</b> Derivative</a></li>
+<li class="chapter" data-level="1.2.7" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral"><i class="fa fa-check"></i><b>1.2.7</b> Integral</a></li>
+<li class="chapter" data-level="1.2.8" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral-as-an-area---intuitive-explanation"><i class="fa fa-check"></i><b>1.2.8</b> Integral as an area - intuitive explanation</a></li>
+<li class="chapter" data-level="1.2.9" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#probability"><i class="fa fa-check"></i><b>1.2.9</b> Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="statistics-an-introduction-lecture-2.html"><a href="statistics-an-introduction-lecture-2.html"><i class="fa fa-check"></i><b>2</b> Statistics - an introduction [Lecture 2]</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="essential-concepts.html"><a href="essential-concepts.html"><i class="fa fa-check"></i><b>2.1</b> Essential concepts</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="essential-concepts.html"><a href="essential-concepts.html#a-parameter-and-a-statistic"><i class="fa fa-check"></i><b>2.1.1</b> A parameter and a statistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="constructs-and-operational-definitionslecture-1.html"><a href="constructs-and-operational-definitionslecture-1.html"><i class="fa fa-check"></i><b>2.2</b> Constructs and operational definitions</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="constructs-and-operational-definitionslecture-1.html"><a href="constructs-and-operational-definitionslecture-1.html#conceptualisation-and-operationalisation"><i class="fa fa-check"></i><b>2.2.1</b> Conceptualisation and operationalisation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-collection.html"><a href="data-collection.html"><i class="fa fa-check"></i><b>2.3</b> Data collection</a></li>
+<li class="chapter" data-level="2.4" data-path="sampling-techniqueslecture-2.html"><a href="sampling-techniqueslecture-2.html"><i class="fa fa-check"></i><b>2.4</b> Sampling techniques</a></li>
+<li class="chapter" data-level="2.5" data-path="data-distribution.html"><a href="data-distribution.html"><i class="fa fa-check"></i><b>2.5</b> Data distribution</a></li>
+<li class="chapter" data-level="2.6" data-path="basic-stages-of-social-researchlecture-3.html"><a href="basic-stages-of-social-researchlecture-3.html"><i class="fa fa-check"></i><b>2.6</b> Basic stages of social research</a></li>
+<li class="chapter" data-level="2.7" data-path="statistical-study-essential-steps.html"><a href="statistical-study-essential-steps.html"><i class="fa fa-check"></i><b>2.7</b> Statistical study - essential steps</a></li>
+<li class="chapter" data-level="2.8" data-path="experimental-and-observational-studieslecture-4.html"><a href="experimental-and-observational-studieslecture-4.html"><i class="fa fa-check"></i><b>2.8</b> Experimental and observational studies</a></li>
+<li class="chapter" data-level="2.9" data-path="statistical-research-design-an-example-of-a-simple-experimentlecture-5.html"><a href="statistical-research-design-an-example-of-a-simple-experimentlecture-5.html"><i class="fa fa-check"></i><b>2.9</b> Statistical research design - an example of a simple experiment</a></li>
+<li class="chapter" data-level="2.10" data-path="descriptive-and-inferential-statistics.html"><a href="descriptive-and-inferential-statistics.html"><i class="fa fa-check"></i><b>2.10</b> Descriptive and inferential statistics</a></li>
+<li class="chapter" data-level="2.11" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html"><i class="fa fa-check"></i><b>2.11</b> Random sampling</a>
+<ul>
+<li class="chapter" data-level="2.11.1" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html#sampling-errors-and-systematic-bias"><i class="fa fa-check"></i><b>2.11.1</b> Sampling errors and systematic bias</a></li>
+<li class="chapter" data-level="2.11.2" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html#various-types-of-bias-in-statistical-analysis"><i class="fa fa-check"></i><b>2.11.2</b> Various types of bias in statistical analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.12" data-path="experimental-designlecture-7.html"><a href="experimental-designlecture-7.html"><i class="fa fa-check"></i><b>2.12</b> Experimental design</a></li>
+<li class="chapter" data-level="2.13" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><i class="fa fa-check"></i><b>2.13</b> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>2.13.1</b> Machine learning approaches</a></li>
+<li class="chapter" data-level="2.13.2" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>2.13.2</b> Make predictions or decisions using ML</a></li>
+<li class="chapter" data-level="2.13.3" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches---visual-guide"><i class="fa fa-check"></i><b>2.13.3</b> Machine learning approaches - visual guide</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lecture-3-exploratory-data-analysis.html"><a href="lecture-3-exploratory-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Lecture 3. Exploratory data analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html"><i class="fa fa-check"></i><b>3.1</b> Types of data and the scales of measurement</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#what-is-measurement"><i class="fa fa-check"></i><b>3.1.1</b> What is measurement?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#levels-of-measurement-scales-of-measurement"><i class="fa fa-check"></i><b>3.1.2</b> Levels of measurement (scales of measurement)</a></li>
+<li class="chapter" data-level="3.1.3" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#discrete-or-continuous-variables"><i class="fa fa-check"></i><b>3.1.3</b> Discrete or continuous variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html"><i class="fa fa-check"></i><b>3.2</b> Levels of measurement - a summary</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html#frequency-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Frequency distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="reliability-and-validity.html"><a href="reliability-and-validity.html"><i class="fa fa-check"></i><b>3.3</b> Reliability and Validity</a></li>
+<li class="chapter" data-level="3.4" data-path="tabular-presentation-of-data-distributions.html"><a href="tabular-presentation-of-data-distributions.html"><i class="fa fa-check"></i><b>3.4</b> Tabular presentation of data distributions</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="tabular-presentation-of-data-distributions.html"><a href="tabular-presentation-of-data-distributions.html#unordered-data"><i class="fa fa-check"></i><b>3.4.1</b> Unordered data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="frequency-distribution-1.html"><a href="frequency-distribution-1.html"><i class="fa fa-check"></i><b>3.5</b> Frequency distribution</a></li>
+<li class="chapter" data-level="3.6" data-path="frequency-distribution-with-intervals-for-grouped-data.html"><a href="frequency-distribution-with-intervals-for-grouped-data.html"><i class="fa fa-check"></i><b>3.6</b> Frequency distribution with intervals (for grouped data)</a></li>
+<li class="chapter" data-level="3.7" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html"><i class="fa fa-check"></i><b>3.7</b> Basic descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#basic-easures-of-central-tendency"><i class="fa fa-check"></i><b>3.7.1</b> Basic easures of central tendency</a></li>
+<li class="chapter" data-level="3.7.2" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#which-measures-of-central-tendency-are-appropriate-for-numerical-and-categorical-data"><i class="fa fa-check"></i><b>3.7.2</b> Which measures of central tendency are appropriate for numerical and categorical data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#basic-measures-of-spreaddispersion"><i class="fa fa-check"></i><b>3.7.3</b> Basic measures of spread/dispersion</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html"><i class="fa fa-check"></i><b>3.8</b> Mean and standard deviation</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html#średnia"><i class="fa fa-check"></i><b>3.8.1</b> Średnia</a></li>
+<li class="chapter" data-level="3.8.2" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html#wariancja-i-odchylenie-standardowe"><i class="fa fa-check"></i><b>3.8.2</b> Wariancja i odchylenie standardowe</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="useful-formulas-descriptive-statistics.html"><a href="useful-formulas-descriptive-statistics.html"><i class="fa fa-check"></i><b>3.9</b> Useful formulas (descriptive statistics)</a></li>
+<li class="chapter" data-level="3.10" data-path="parameter-and-statistic-summary-of-symbols.html"><a href="parameter-and-statistic-summary-of-symbols.html"><i class="fa fa-check"></i><b>3.10</b> Parameter and statistic - summary of symbols</a></li>
+<li class="chapter" data-level="3.11" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html"><i class="fa fa-check"></i><b>3.11</b> Finding mean and standard deviation</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html#example-3.1"><i class="fa fa-check"></i><b>3.11.1</b> Example 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="mode.html"><a href="mode.html"><i class="fa fa-check"></i><b>3.12</b> Mode</a></li>
+<li class="chapter" data-level="3.13" data-path="quartiles-and-median.html"><a href="quartiles-and-median.html"><i class="fa fa-check"></i><b>3.13</b> Quartiles and median</a></li>
+<li class="chapter" data-level="3.14" data-path="rozstęp-międzykwartylowy.html"><a href="rozstęp-międzykwartylowy.html"><i class="fa fa-check"></i><b>3.14</b> Rozstęp międzykwartylowy</a></li>
+<li class="chapter" data-level="3.15" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html"><i class="fa fa-check"></i><b>3.15</b> Measures of relative standing</a>
+<ul>
+<li class="chapter" data-level="3.15.1" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html#percentile-and-percentile-rank"><i class="fa fa-check"></i><b>3.15.1</b> Percentile and percentile rank</a></li>
+<li class="chapter" data-level="3.15.2" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html#standard-score-z-score"><i class="fa fa-check"></i><b>3.15.2</b> Standard score (Z-score)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture-4-basic-methods-of-data-visualization.html"><a href="lecture-4-basic-methods-of-data-visualization.html"><i class="fa fa-check"></i><b>4</b> Lecture 4. Basic methods of data visualization</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="wykres-słupkowy.html"><a href="wykres-słupkowy.html"><i class="fa fa-check"></i><b>4.1</b> Wykres słupkowy</a></li>
+<li class="chapter" data-level="4.2" data-path="frequency-distribution-table-and-histogram.html"><a href="frequency-distribution-table-and-histogram.html"><i class="fa fa-check"></i><b>4.2</b> Frequency distribution table and histogram</a></li>
+<li class="chapter" data-level="4.3" data-path="histogram-1.html"><a href="histogram-1.html"><i class="fa fa-check"></i><b>4.3</b> Histogram (1)</a></li>
+<li class="chapter" data-level="4.4" data-path="histogram-gęstości-i-histogram-częstości.html"><a href="histogram-gęstości-i-histogram-częstości.html"><i class="fa fa-check"></i><b>4.4</b> Histogram gęstości i histogram częstości</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="histogram-gęstości-i-histogram-częstości.html"><a href="histogram-gęstości-i-histogram-częstości.html#konstrukcja-histogramu-gęstości-1"><i class="fa fa-check"></i><b>4.4.1</b> Konstrukcja histogramu gęstości (1)</a></li>
+<li class="chapter" data-level="4.4.2" data-path="histogram-gęstości-i-histogram-częstości.html"><a href="histogram-gęstości-i-histogram-częstości.html#konstrukcja-histogramu-gęstości-2"><i class="fa fa-check"></i><b>4.4.2</b> Konstrukcja histogramu gęstości (2)</a></li>
+<li class="chapter" data-level="4.4.3" data-path="histogram-gęstości-i-histogram-częstości.html"><a href="histogram-gęstości-i-histogram-częstości.html#histogram-częstości-bezwzględnych"><i class="fa fa-check"></i><b>4.4.3</b> Histogram częstości bezwzględnych</a></li>
+<li class="chapter" data-level="4.4.4" data-path="histogram-gęstości-i-histogram-częstości.html"><a href="histogram-gęstości-i-histogram-częstości.html#histogram-częstości-względnych"><i class="fa fa-check"></i><b>4.4.4</b> Histogram częstości względnych</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><i class="fa fa-check"></i><b>4.5</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
+<li class="chapter" data-level="4.6" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><i class="fa fa-check"></i><b>4.6</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
+<li class="chapter" data-level="4.7" data-path="wykres-pudełkowy.html"><a href="wykres-pudełkowy.html"><i class="fa fa-check"></i><b>4.7</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="4.8" data-path="wykres-pudełkowy-przykład-1.html"><a href="wykres-pudełkowy-przykład-1.html"><i class="fa fa-check"></i><b>4.8</b> Wykres pudełkowy - przykład (1)</a></li>
+<li class="chapter" data-level="4.9" data-path="wykres-pudełkowy-przykład-2.html"><a href="wykres-pudełkowy-przykład-2.html"><i class="fa fa-check"></i><b>4.9</b> Wykres pudełkowy - przykład (2)</a></li>
+<li class="chapter" data-level="4.10" data-path="wykres-pudełkowy-przykład-3.html"><a href="wykres-pudełkowy-przykład-3.html"><i class="fa fa-check"></i><b>4.10</b> Wykres pudełkowy - przykład (3)</a></li>
+<li class="chapter" data-level="4.11" data-path="wykres-pudełkowy-przykład-4.html"><a href="wykres-pudełkowy-przykład-4.html"><i class="fa fa-check"></i><b>4.11</b> Wykres pudełkowy - przykład (4)</a></li>
+<li class="chapter" data-level="4.12" data-path="histogram-a-wykres-pudełkowy-przykład-5.html"><a href="histogram-a-wykres-pudełkowy-przykład-5.html"><i class="fa fa-check"></i><b>4.12</b> Histogram a wykres pudełkowy - przykład (5)</a></li>
+<li class="chapter" data-level="4.13" data-path="wykres-pudełkowy-jeszcze-jeden-przykład.html"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html"><i class="fa fa-check"></i><b>4.13</b> Wykres pudełkowy - jeszcze jeden przykład</a></li>
+<li class="chapter" data-level="4.14" data-path="wykres-pudełkowy-a-histogram.html"><a href="wykres-pudełkowy-a-histogram.html"><i class="fa fa-check"></i><b>4.14</b> Wykres pudełkowy a histogram</a></li>
+<li class="chapter" data-level="4.15" data-path="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><i class="fa fa-check"></i><b>4.15</b> Skośność/asymetria rozkładu (skewness) - rozkłady lewostronnie i prawostronnie asymetryczne</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STAT 101 IPS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wykres-pudełkowy---jeszcze-jeden-przykład" class="section level2" number="4.13">
+<h2><span class="header-section-number">4.13</span> Wykres pudełkowy - jeszcze jeden przykład</h2>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.svg" width="384" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="histogram-a-wykres-pudełkowy-przykład-5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykres-pudełkowy-a-histogram.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

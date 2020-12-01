@@ -327,7 +327,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If the sample space can be written in the form of a list (possibly inﬁnite) then it is called a discrete sample space (e.g. number of tosses of a fair coin before Heads occurs). If this is not possible then it is called a continuous sample space (e.g. positions where shells land in a tank battle).</p>
 <div id="probability-model" class="section level5" number="4.2.2.2.1">
 <h5><span class="header-section-number">4.2.2.2.1</span> Probability model</h5>
-<p>An experiment is modeled by a probability space, which is a triplet (Ω,F,P). We will read this triplet as “Omega, Script F, P.” The first component, Ω, is a nonempty set. Each element ω of Ω is called an outcome and Ω is called the sample space. The second component, F, is a set of subsets of Ω called events. The final component, P, of the triplet (Ω,F,P), is a probability measure on F, which assigns a probability, P(A), to each event A. The axioms of probability are of two types: event axioms, which are about the set of events F, and probability axioms, which are about the probability measure P.</p>
+<p>An experiment is modeled by a probability space, which is a triplet <span class="math inline">\((\Omega,F,P)\)</span>. We will read this triplet as “Omega, Script F, P.” The first component, Ω, is a nonempty set. Each element ω of Ω (s of S) is called an outcome and Ω is called the sample space. The second component, F, is a set of subsets of Ω called events. The final component, P, of the triplet <span class="math inline">\((\Omega,F,P)\)</span>, is a probability measure on F, which assigns a probability, P(A), to each event A. The axioms of probability are of two types: event axioms, which are about the set of events F, and probability axioms, which are about the probability measure P.</p>
 </div>
 </div>
 <div id="three-definitions-of-probability" class="section level4" number="4.2.2.3">
@@ -336,7 +336,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Experimental probability</li>
 </ol>
 <p>In experiments involving chance we use the following terms to talk about what we are doing and the results we obtain: The number of trials is the total number of times the experiment is repeated. The outcomes are the different results possible for one trial of the experiment. The frequency of a particular outcome is the number of times that this outcome is observed. The relative frequency of an outcome is the frequency of that outcome expressed as a fraction or percentage of the total number of trials. For example, when a small plastic cone was tossed into the air 279 times it fell on its side 183 times and on its base 96 times.</p>
-<p>We say: - the number of trials is 279 - the outcomes are side and base - the frequencies of side and base are 183 and 96 respectively - the relative frequencies of side and base are …</p>
+<p>We say:
+- the number of trials is 279
+- the outcomes are side and base
+- the frequencies of side and base are 183 and 96 respectively
+- the relative frequencies of side and base are …</p>
 <p>In the absence of any further data, the relative frequency of each event is our best estimate of the probability of that event occurring.</p>
 <p>In this case, we write</p>
 <p>Experimental P(side) = the experimental probability the cone will land on its side when tossed is 0.656</p>
@@ -420,7 +424,7 @@ We summarize the above three examples. A random experiment always has more than 
 <h3><span class="header-section-number">4.2.3</span> Conditional Probability and Independence</h3>
 <p>A friend tosses a coin three times. You accidentally notice that the first time the coin shows Head. What is the chance that the friend observes 2 Heads?</p>
 <p><em>Solution</em>. In a previous example, we found all eight possible outcomes. Now, with the additional information at our disposal, we can exclude the outcomes starting with a T. Only four possible outcomes remain: HHH, HHT, HTH, HTT. Two of them contain exactly two Heads. So, the chance is 2/4=1/2.</p>
-<p>Note that here we have two events: $A={<span class="math inline">\(2 Heads are observed\)</span>}$ and <span class="math inline">\(B=\{\)</span>First toss is Heads<span class="math inline">\(\}\)</span>. We know that <span class="math inline">\(P(A)=3/8\)</span>, see Example 2.1. Now, the event <span class="math inline">\(A\)</span> is considered under the condition that the event <span class="math inline">\(B\)</span> has occurred. Then the conditional probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span>, is found by calculating the fraction of <span class="math inline">\(A\)</span> within <span class="math inline">\(B\)</span>, i.e. the fraction of <span class="math inline">\(A\cap B\)</span> within <span class="math inline">\(B\)</span>.<br />
+<p>Note that here we have two events: <span class="math inline">\(A=\{\text{2 Heads are observed}\}\)</span> and <span class="math inline">\(B=\{\text{First toss is Heads}\}\)</span>. We know that <span class="math inline">\(P(A)=3/8\)</span>. Now, the event <span class="math inline">\(A\)</span> is considered under the condition that the event <span class="math inline">\(B\)</span> has occurred. Then the conditional probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span>, is found by calculating the fraction of <span class="math inline">\(A\)</span> within <span class="math inline">\(B\)</span>, i.e. the fraction of <span class="math inline">\(A\cap B\)</span> within <span class="math inline">\(B\)</span>.<br />
 </p>
 <p><strong>Conditional probability</strong>. The conditional probability of an event <span class="math inline">\(A\)</span>, given an event <span class="math inline">\(B\)</span>, is <span class="math display">\[P(A/B)=\frac{P(A\cap B)}{P(B)}\]</span></p>
 <ul>

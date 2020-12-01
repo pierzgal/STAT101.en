@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.2 Elementary probability | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="4.2 Elementary probability | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.2 Elementary probability | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.2 Elementary probability | STAT 101 IPS (WSMiP UŁ)" />
+  
+  
+  
+
+<meta name="author" content="Michał Pierzgalski" />
+
+
+<meta name="date" content="2020-12-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+
+<script src="assets/header-attrs-2.5/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="assets/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="assets/viz-1.8.2/viz.js"></script>
+<link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course description</a>
+<ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html"><i class="fa fa-check"></i>Contact</a>
+<ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#office-hours-20202021"><i class="fa fa-check"></i>Office hours (2020/2021)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-lecture-1.html"><a href="introduction-lecture-1.html"><i class="fa fa-check"></i><b>1</b> Introduction [Lecture 1]</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><a href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><i class="fa fa-check"></i><b>1.1</b> Motivation - two reasons why you should learn statistics and data analysis methods?</a></li>
+<li class="chapter" data-level="1.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><i class="fa fa-check"></i><b>1.2</b> Review of some mathematical concepts used in statistics and data science</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#algebra-review---some-basic-rules"><i class="fa fa-check"></i><b>1.2.1</b> Algebra review - some basic rules</a></li>
+<li class="chapter" data-level="1.2.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#functions"><i class="fa fa-check"></i><b>1.2.2</b> Functions</a></li>
+<li class="chapter" data-level="1.2.3" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#three-basic-concepts-of-calculus"><i class="fa fa-check"></i><b>1.2.3</b> Three basic concepts of calculus</a></li>
+<li class="chapter" data-level="1.2.4" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#limits"><i class="fa fa-check"></i><b>1.2.4</b> Limits</a></li>
+<li class="chapter" data-level="1.2.5" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#derivative"><i class="fa fa-check"></i><b>1.2.5</b> Derivative</a></li>
+<li class="chapter" data-level="1.2.6" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral"><i class="fa fa-check"></i><b>1.2.6</b> Integral</a></li>
+<li class="chapter" data-level="1.2.7" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral-as-an-area---intuitive-explanation"><i class="fa fa-check"></i><b>1.2.7</b> Integral as an area - intuitive explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="statistics-an-introduction-lecture-2.html"><a href="statistics-an-introduction-lecture-2.html"><i class="fa fa-check"></i><b>2</b> Statistics - an introduction [Lecture 2]</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="essential-concepts.html"><a href="essential-concepts.html"><i class="fa fa-check"></i><b>2.1</b> Essential concepts</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="essential-concepts.html"><a href="essential-concepts.html#a-parameter-and-a-statistic"><i class="fa fa-check"></i><b>2.1.1</b> A parameter and a statistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="constructs-and-operational-definitionslecture-1.html"><a href="constructs-and-operational-definitionslecture-1.html"><i class="fa fa-check"></i><b>2.2</b> Constructs and operational definitions</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="constructs-and-operational-definitionslecture-1.html"><a href="constructs-and-operational-definitionslecture-1.html#conceptualisation-and-operationalisation"><i class="fa fa-check"></i><b>2.2.1</b> Conceptualisation and operationalisation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-collection.html"><a href="data-collection.html"><i class="fa fa-check"></i><b>2.3</b> Data collection</a></li>
+<li class="chapter" data-level="2.4" data-path="sampling-techniqueslecture-2.html"><a href="sampling-techniqueslecture-2.html"><i class="fa fa-check"></i><b>2.4</b> Sampling techniques</a></li>
+<li class="chapter" data-level="2.5" data-path="data-distribution.html"><a href="data-distribution.html"><i class="fa fa-check"></i><b>2.5</b> Data distribution</a></li>
+<li class="chapter" data-level="2.6" data-path="basic-stages-of-social-researchlecture-3.html"><a href="basic-stages-of-social-researchlecture-3.html"><i class="fa fa-check"></i><b>2.6</b> Basic stages of social research</a></li>
+<li class="chapter" data-level="2.7" data-path="statistical-study-essential-steps.html"><a href="statistical-study-essential-steps.html"><i class="fa fa-check"></i><b>2.7</b> Statistical study - essential steps</a></li>
+<li class="chapter" data-level="2.8" data-path="experimental-and-observational-studieslecture-4.html"><a href="experimental-and-observational-studieslecture-4.html"><i class="fa fa-check"></i><b>2.8</b> Experimental and observational studies</a></li>
+<li class="chapter" data-level="2.9" data-path="statistical-research-design-an-example-of-a-simple-experimentlecture-5.html"><a href="statistical-research-design-an-example-of-a-simple-experimentlecture-5.html"><i class="fa fa-check"></i><b>2.9</b> Statistical research design - an example of a simple experiment</a></li>
+<li class="chapter" data-level="2.10" data-path="descriptive-and-inferential-statistics.html"><a href="descriptive-and-inferential-statistics.html"><i class="fa fa-check"></i><b>2.10</b> Descriptive and inferential statistics</a></li>
+<li class="chapter" data-level="2.11" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html"><i class="fa fa-check"></i><b>2.11</b> Random sampling</a>
+<ul>
+<li class="chapter" data-level="2.11.1" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html#sampling-errors-and-systematic-bias"><i class="fa fa-check"></i><b>2.11.1</b> Sampling errors and systematic bias</a></li>
+<li class="chapter" data-level="2.11.2" data-path="random-samplinglecture-6.html"><a href="random-samplinglecture-6.html#various-types-of-bias-in-statistical-analysis"><i class="fa fa-check"></i><b>2.11.2</b> Various types of bias in statistical analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.12" data-path="experimental-designlecture-7.html"><a href="experimental-designlecture-7.html"><i class="fa fa-check"></i><b>2.12</b> Experimental design</a></li>
+<li class="chapter" data-level="2.13" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><i class="fa fa-check"></i><b>2.13</b> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>2.13.1</b> Machine learning approaches</a></li>
+<li class="chapter" data-level="2.13.2" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>2.13.2</b> Make predictions or decisions using ML</a></li>
+<li class="chapter" data-level="2.13.3" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches---visual-guide"><i class="fa fa-check"></i><b>2.13.3</b> Machine learning approaches - visual guide</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis-lecture-3.html"><a href="exploratory-data-analysis-lecture-3.html"><i class="fa fa-check"></i><b>3</b> Exploratory data analysis [Lecture 3]</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html"><i class="fa fa-check"></i><b>3.1</b> Types of data and the scales of measurement</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#what-is-measurement"><i class="fa fa-check"></i><b>3.1.1</b> What is measurement?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#levels-of-measurement-scales-of-measurement"><i class="fa fa-check"></i><b>3.1.2</b> Levels of measurement (scales of measurement)</a></li>
+<li class="chapter" data-level="3.1.3" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#discrete-or-continuous-variables"><i class="fa fa-check"></i><b>3.1.3</b> Discrete or continuous variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html"><i class="fa fa-check"></i><b>3.2</b> Levels of measurement - a summary</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html#types-of-data-and-levels-of-measurement---intuitions"><i class="fa fa-check"></i><b>3.2.1</b> Types of data and levels of measurement - intuitions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html#frequency-distribution"><i class="fa fa-check"></i><b>3.2.2</b> Frequency distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="reliability-and-validity.html"><a href="reliability-and-validity.html"><i class="fa fa-check"></i><b>3.3</b> Reliability and Validity</a></li>
+<li class="chapter" data-level="3.4" data-path="tabular-presentation-of-data-distributions.html"><a href="tabular-presentation-of-data-distributions.html"><i class="fa fa-check"></i><b>3.4</b> Tabular presentation of data distributions</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="tabular-presentation-of-data-distributions.html"><a href="tabular-presentation-of-data-distributions.html#unordered-data"><i class="fa fa-check"></i><b>3.4.1</b> Unordered data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="frequency-distribution-1.html"><a href="frequency-distribution-1.html"><i class="fa fa-check"></i><b>3.5</b> Frequency distribution</a></li>
+<li class="chapter" data-level="3.6" data-path="frequency-distribution-with-intervals-for-grouped-data.html"><a href="frequency-distribution-with-intervals-for-grouped-data.html"><i class="fa fa-check"></i><b>3.6</b> Frequency distribution with intervals (for grouped data)</a></li>
+<li class="chapter" data-level="3.7" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html"><i class="fa fa-check"></i><b>3.7</b> Basic descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#basic-measures-of-central-tendency"><i class="fa fa-check"></i><b>3.7.1</b> Basic measures of central tendency</a></li>
+<li class="chapter" data-level="3.7.2" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#which-measures-of-central-tendency-are-appropriate-for-numerical-and-categorical-data"><i class="fa fa-check"></i><b>3.7.2</b> Which measures of central tendency are appropriate for numerical and categorical data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="basic-descriptive-statistics.html"><a href="basic-descriptive-statistics.html#basic-measures-of-spreaddispersion"><i class="fa fa-check"></i><b>3.7.3</b> Basic measures of spread/dispersion</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html"><i class="fa fa-check"></i><b>3.8</b> Mean and standard deviation</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html#mean"><i class="fa fa-check"></i><b>3.8.1</b> Mean</a></li>
+<li class="chapter" data-level="3.8.2" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>3.8.2</b> Variance and standard deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="useful-formulas-descriptive-statistics.html"><a href="useful-formulas-descriptive-statistics.html"><i class="fa fa-check"></i><b>3.9</b> Useful formulas (descriptive statistics)</a></li>
+<li class="chapter" data-level="3.10" data-path="parameter-and-statistic-summary-of-symbols.html"><a href="parameter-and-statistic-summary-of-symbols.html"><i class="fa fa-check"></i><b>3.10</b> Parameter and statistic - summary of symbols</a></li>
+<li class="chapter" data-level="3.11" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html"><i class="fa fa-check"></i><b>3.11</b> Finding mean and standard deviation</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html#example-3.1"><i class="fa fa-check"></i><b>3.11.1</b> Example 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="mode.html"><a href="mode.html"><i class="fa fa-check"></i><b>3.12</b> Mode</a></li>
+<li class="chapter" data-level="3.13" data-path="quartiles-and-median.html"><a href="quartiles-and-median.html"><i class="fa fa-check"></i><b>3.13</b> Quartiles and median</a>
+<ul>
+<li class="chapter" data-level="3.13.1" data-path="quartiles-and-median.html"><a href="quartiles-and-median.html#example"><i class="fa fa-check"></i><b>3.13.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="3.14" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html"><i class="fa fa-check"></i><b>3.14</b> Measures of relative standing</a>
+<ul>
+<li class="chapter" data-level="3.14.1" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html#percentile-and-percentile-rank"><i class="fa fa-check"></i><b>3.14.1</b> Percentile and percentile rank</a></li>
+<li class="chapter" data-level="3.14.2" data-path="measures-of-relative-standing.html"><a href="measures-of-relative-standing.html#standard-score-z-score"><i class="fa fa-check"></i><b>3.14.2</b> Standard score (Z-score)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="basic-methods-of-data-visualization.html"><a href="basic-methods-of-data-visualization.html"><i class="fa fa-check"></i><b>3.15</b> Basic methods of data visualization</a></li>
+<li class="chapter" data-level="3.16" data-path="bar-plot.html"><a href="bar-plot.html"><i class="fa fa-check"></i><b>3.16</b> Bar plot</a></li>
+<li class="chapter" data-level="3.17" data-path="frequency-distribution-table-and-histogram.html"><a href="frequency-distribution-table-and-histogram.html"><i class="fa fa-check"></i><b>3.17</b> Frequency distribution table and histogram</a></li>
+<li class="chapter" data-level="3.18" data-path="three-types-of-histograms-are-used.html"><a href="three-types-of-histograms-are-used.html"><i class="fa fa-check"></i><b>3.18</b> Three types of histograms are used:</a></li>
+<li class="chapter" data-level="3.19" data-path="density-histogram-and-frequency-histogram.html"><a href="density-histogram-and-frequency-histogram.html"><i class="fa fa-check"></i><b>3.19</b> Density histogram and frequency histogram</a>
+<ul>
+<li class="chapter" data-level="3.19.1" data-path="density-histogram-and-frequency-histogram.html"><a href="density-histogram-and-frequency-histogram.html#construction-of-the-density-histogram-1"><i class="fa fa-check"></i><b>3.19.1</b> Construction of the density histogram (1)</a></li>
+<li class="chapter" data-level="3.19.2" data-path="density-histogram-and-frequency-histogram.html"><a href="density-histogram-and-frequency-histogram.html#absolute-histogram"><i class="fa fa-check"></i><b>3.19.2</b> Absolute histogram</a></li>
+<li class="chapter" data-level="3.19.3" data-path="density-histogram-and-frequency-histogram.html"><a href="density-histogram-and-frequency-histogram.html#relative-frequency-histogram"><i class="fa fa-check"></i><b>3.19.3</b> Relative frequency histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="3.20" data-path="histogram-for-the-binomial-distribution-1.html"><a href="histogram-for-the-binomial-distribution-1.html"><i class="fa fa-check"></i><b>3.20</b> Histogram for the binomial distribution (1)</a></li>
+<li class="chapter" data-level="3.21" data-path="box-plot.html"><a href="box-plot.html"><i class="fa fa-check"></i><b>3.21</b> Box plot</a></li>
+<li class="chapter" data-level="3.22" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html"><i class="fa fa-check"></i><b>3.22</b> Box plot - example (1)</a>
+<ul>
+<li class="chapter" data-level="3.22.1" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#box-plot---example-2"><i class="fa fa-check"></i><b>3.22.1</b> Box plot - example (2)</a></li>
+<li class="chapter" data-level="3.22.2" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#box-plot---example-compare-the-box-plots"><i class="fa fa-check"></i><b>3.22.2</b> Box plot - example (compare the box plots)</a></li>
+<li class="chapter" data-level="3.22.3" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#plot-the-data-from-the-above-example-using-histograms-and-smooth-density-curves"><i class="fa fa-check"></i><b>3.22.3</b> Plot the data from the above example using histograms and smooth density curves</a></li>
+</ul></li>
+<li class="chapter" data-level="3.23" data-path="box-plots-additional-example.html"><a href="box-plots-additional-example.html"><i class="fa fa-check"></i><b>3.23</b> Box plots - additional example</a></li>
+<li class="chapter" data-level="3.24" data-path="histogram-and-box-plot.html"><a href="histogram-and-box-plot.html"><i class="fa fa-check"></i><b>3.24</b> Histogram and box-plot</a></li>
+<li class="chapter" data-level="3.25" data-path="skewness-of-data-distribution.html"><a href="skewness-of-data-distribution.html"><i class="fa fa-check"></i><b>3.25</b> Skewness of data distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html"><a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>4</b> Elements of statistical inference [Lecture 4 - draft copy, ver. 0.1]</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>4.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="introduction.html"><a href="introduction.html#logic"><i class="fa fa-check"></i><b>4.1.1</b> Logic</a></li>
+<li class="chapter" data-level="4.1.2" data-path="introduction.html"><a href="introduction.html#sets"><i class="fa fa-check"></i><b>4.1.2</b> Sets</a></li>
+<li class="chapter" data-level="4.1.3" data-path="introduction.html"><a href="introduction.html#cardinality-retrieved-from-wikipedia.org"><i class="fa fa-check"></i><b>4.1.3</b> Cardinality (Retrieved from Wikipedia.org)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="introduction.html"><a href="introduction.html#sets---summary"><i class="fa fa-check"></i><b>4.1.4</b> Sets - summary</a></li>
+<li class="chapter" data-level="4.1.5" data-path="introduction.html"><a href="introduction.html#venn-diagrams"><i class="fa fa-check"></i><b>4.1.5</b> Venn diagrams</a></li>
+<li class="chapter" data-level="4.1.6" data-path="introduction.html"><a href="introduction.html#basic-counting-principles"><i class="fa fa-check"></i><b>4.1.6</b> Basic counting principles</a></li>
+<li class="chapter" data-level="4.1.7" data-path="introduction.html"><a href="introduction.html#product"><i class="fa fa-check"></i><b>4.1.7</b> Product</a></li>
+<li class="chapter" data-level="4.1.8" data-path="introduction.html"><a href="introduction.html#division-rule"><i class="fa fa-check"></i><b>4.1.8</b> Division Rule</a></li>
+<li class="chapter" data-level="4.1.9" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations"><i class="fa fa-check"></i><b>4.1.9</b> Permutations and Combinations</a></li>
+<li class="chapter" data-level="4.1.10" data-path="introduction.html"><a href="introduction.html#permutations-without-repetitions"><i class="fa fa-check"></i><b>4.1.10</b> Permutations without repetitions</a></li>
+<li class="chapter" data-level="4.1.11" data-path="introduction.html"><a href="introduction.html#combinations-without-repetitions"><i class="fa fa-check"></i><b>4.1.11</b> Combinations without repetitions</a></li>
+<li class="chapter" data-level="4.1.12" data-path="introduction.html"><a href="introduction.html#permutations-with-repetitions"><i class="fa fa-check"></i><b>4.1.12</b> Permutations with repetitions</a></li>
+<li class="chapter" data-level="4.1.13" data-path="introduction.html"><a href="introduction.html#combinations-with-repetitions"><i class="fa fa-check"></i><b>4.1.13</b> Combinations with repetitions</a></li>
+<li class="chapter" data-level="4.1.14" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations-with-bounded-repetition"><i class="fa fa-check"></i><b>4.1.14</b> Permutations and Combinations with Bounded Repetition</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="elementary-probability.html"><a href="elementary-probability.html"><i class="fa fa-check"></i><b>4.2</b> Elementary probability</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="elementary-probability.html"><a href="elementary-probability.html#introduction-1"><i class="fa fa-check"></i><b>4.2.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2.2" data-path="elementary-probability.html"><a href="elementary-probability.html#essential-definitions-and-concepts"><i class="fa fa-check"></i><b>4.2.2</b> Essential definitions and concepts</a></li>
+<li class="chapter" data-level="4.2.3" data-path="elementary-probability.html"><a href="elementary-probability.html#conditional-probability-and-independence"><i class="fa fa-check"></i><b>4.2.3</b> Conditional Probability and Independence</a></li>
+<li class="chapter" data-level="4.2.4" data-path="elementary-probability.html"><a href="elementary-probability.html#bayes-formula"><i class="fa fa-check"></i><b>4.2.4</b> Bayes formula</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STAT 101 IPS (WSMiP UŁ)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="elementary-probability" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Elementary probability</h2>
+<div id="introduction-1" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Introduction</h3>
+<p>Probability origins were concerned primarily with games of chance, and many lectures on elementary probability theory still contain references to dice, playing cards, and coin flips. These lottery-style scenarios give an extremely narrow and restrictive view of what probability is about: lotteries are based on elementary outcomes that are equally likely, but in many situations where quantification of uncertainty is helpful there is no compelling way to decompose outcomes into equally-likely components. In fact, the focus on equally-likely events is characteristic of pre-statistical thinking.</p>
+<p>In modern texts equally-likely outcomes are used to illustrate elementary ideas, but they are relegated to special cases. It is sometimes possible to compute the probability of an event by counting the outcomes within that event, and dividing by the total number of outcomes. For example, the probability of rolling an even number with a fair six-sided die, i.e., of rolling any of the three numbers 2, 4, or 6, out of the 6 possibilities, is <span class="math inline">\(\frac{3}{6}=\frac{1}{2}\)</span>. In many situations, however, such reasoning is at best a loose analogy. To quantify uncertainty via statistical models a more general and abstract notion of probability must be introduced.</p>
+<p>Quantities that are measured but uncertain are formalized in probability theory as {}. More specifically, we set up a theoretical framework for understanding variation based on probability distributions of random variables, and the variation of random variables is supposed to be similar to real-world variation observed in data.</p>
+</div>
+<div id="essential-definitions-and-concepts" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Essential definitions and concepts</h3>
+<div id="probabilities-are-defined-on-sets-of-uncertain-events." class="section level4" number="4.2.2.1">
+<h4><span class="header-section-number">4.2.2.1</span> Probabilities are defined on sets of uncertain events.</h4>
+<p>The calculus of probability is defined for <em>sets</em>, which in this context are called <em>events</em>. That is, we speak of “the probability of the event <span class="math inline">\(A\)</span>” and we will write this as <span class="math inline">\(P(A)\)</span>. Events are considered to be composed of <em>outcomes</em> from some experiment or observational process. The collection of all possible outcomes (and, therefore, the union of all possible events) is called the <em>sample space</em> and will be denoted by <span class="math inline">\({\cal S}\)</span>. Because <span class="math inline">\({\cal S}\)</span> is a set, we might also say that <span class="math inline">\({\cal S}\)</span> is made up of elements (each of which is an outcome) and to indicate that <span class="math inline">\(\omega\)</span> is an element of <span class="math inline">\({\cal S}\)</span> we would write <span class="math inline">\(\omega \in {\cal S}\)</span>.</p>
+<p>Recall the definitions of <em>union</em> and <em>intersection</em>: for events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> the union <span class="math inline">\(A \cup B\)</span> consists of all outcomes that are either in <span class="math inline">\(A\)</span> or in <span class="math inline">\(B\)</span> or in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>; the intersection <span class="math inline">\(A \cap B\)</span> consists of all outcomes that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. The <em>complement</em> <span class="math inline">\(A^c\)</span> of <span class="math inline">\(A\)</span> consists of all outcomes that are <em>not</em> in <span class="math inline">\(A\)</span>. We say two events are <em>mutually exclusive</em> or <em>disjoint</em> if they have empty intersection.</p>
+</div>
+<div id="basic-terminology" class="section level4" number="4.2.2.2">
+<h4><span class="header-section-number">4.2.2.2</span> Basic terminology</h4>
+<p>Random experiment - an activity with an observable result, or set of results, for example: tossing a coin, the result being a Head or a Tail.</p>
+<p>Outcome - an outcome is simply an observable result of an experiment, for example: testing a component, the outcome being a defective or non-defective component.</p>
+<p>Event - this is just an outcome (a simple event) or set of outcomes to an experiment of interest to the experimenter.</p>
+<p>Sample Space - a sample space is the set of all possible outcomes of an experiment.</p>
+<p>An event space F, which is a set of events an event being a set of outcomes in the sample space.</p>
+<p>A probability function, which assigns each event in the event space a probability, which is a number between 0 and 1.</p>
+<p>If the sample space can be written in the form of a list (possibly inﬁnite) then it is called a discrete sample space (e.g. number of tosses of a fair coin before Heads occurs). If this is not possible then it is called a continuous sample space (e.g. positions where shells land in a tank battle).</p>
+<div id="probability-model" class="section level5" number="4.2.2.2.1">
+<h5><span class="header-section-number">4.2.2.2.1</span> Probability model</h5>
+<p>An experiment is modeled by a probability space, which is a triplet (Ω,F,P). We will read this triplet as “Omega, Script F, P.” The first component, Ω, is a nonempty set. Each element ω of Ω is called an outcome and Ω is called the sample space. The second component, F, is a set of subsets of Ω called events. The final component, P, of the triplet (Ω,F,P), is a probability measure on F, which assigns a probability, P(A), to each event A. The axioms of probability are of two types: event axioms, which are about the set of events F, and probability axioms, which are about the probability measure P.</p>
+</div>
+</div>
+<div id="three-definitions-of-probability" class="section level4" number="4.2.2.3">
+<h4><span class="header-section-number">4.2.2.3</span> Three definitions of probability</h4>
+<ol style="list-style-type: decimal">
+<li>Experimental probability</li>
+</ol>
+<p>In experiments involving chance we use the following terms to talk about what we are doing and the results we obtain: The number of trials is the total number of times the experiment is repeated. The outcomes are the different results possible for one trial of the experiment. The frequency of a particular outcome is the number of times that this outcome is observed. The relative frequency of an outcome is the frequency of that outcome expressed as a fraction or percentage of the total number of trials. For example, when a small plastic cone was tossed into the air 279 times it fell on its side 183 times and on its base 96 times.</p>
+<p>We say: - the number of trials is 279 - the outcomes are side and base - the frequencies of side and base are 183 and 96 respectively - the relative frequencies of side and base are …</p>
+<p>In the absence of any further data, the relative frequency of each event is our best estimate of the probability of that event occurring.</p>
+<p>In this case, we write</p>
+<p>Experimental P(side) = the experimental probability the cone will land on its side when tossed is 0.656</p>
+<p>Experimental P(base) = the experimental probability the cone will land on its base when tossed is 0.344</p>
+<p>The larger the number of trials, the more confident we are that the estimated probability will be accurate.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Naive (classical definition of probability)</li>
+</ol>
+<p>Historically, the earliest definition of the probability of an event was to count the number of ways the event could happen and divide by the total number of possible outcomes for the experiment.</p>
+<p>We call this the naive definition since it is restrictive and relies on strong assumptions; nevertheless, it is important to understand, and useful when not misused.</p>
+<p>When we are working with probabilities, our notation will be P(A). In english, this means ‘the Probability that event A occurred’. So, if A is the event of flipping heads in one flip of a fair coin, then P(A)=.5.</p>
+<p>The probability of an event occurring, if the likelihood of each outcome is equal, is:</p>
+<p><span class="math display">\[P(Event) = \frac{\text{number of favorable outcomes}}{\text{number of outcomes}}\]</span></p>
+<p>This ‘Naive Definition’ is a reasonable place to start, because it’s likely how you have calculated probabilities up to this point. Of course, this is not always the correct approach for real world probabilities (hence the name ‘naive’). For example, imagine a random person running for President of the United States. Using the naive definition of probability, their probability of winning the election is .5; one favorable outcome (winning) divided by the total number of outcomes (winning or losing). Clearly this is a simplified approach; different outcomes often have different probabilities associated with them, so it’s important to realize when the naive definition does and does not apply. In the President case, the ‘losing’ outcome is much more likely, so the naive ‘weighting’ scheme does not apply.</p>
+<p>Anyways, we often apply the naive definition (correctly, hopefully) automatically: if someone asks you the probability that a fair die rolls a 6, you would say 1/6 because you quickly reason that there are six outcomes (rolls 1 to 6) and one that is favorable (rolling a 6), so the overall probability is just 1/6. In this example, it’s very easy to count the number of favorable outcomes and number of total outcomes; however, counting the number of outcomes can quickly become much more complex.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Subjective probability</li>
+</ol>
+<p>The third type of probability is subjective probability. Subjective probabilities result from intuition, educated guesses, and estimates.</p>
+<p>For instance, given a patient’s health and extent of injuries, a doctor may feel that the patient has a 90% chance of a full recovery. Or a business analyst may predict that the chance of the employees of a certain company going on strike is 0.25.</p>
+</div>
+<div id="axioms-of-probability" class="section level4" number="4.2.2.4">
+<h4><span class="header-section-number">4.2.2.4</span> Axioms of probability</h4>
+<p>We now state the axioms of probability.</p>
+<p><strong>Axioms of probability:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>For all events <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) \geq 0\)</span>.</p></li>
+<li><p><span class="math inline">\(P({\cal S}) = 1\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> are mutually exclusive events, then <span class="math inline">\(P(A_1 \cup A_2 \cup \cdots \cup A_n) = P(A_1) + P(A_2) + \cdots + P(A_n)\)</span>.</p></li>
+</ol>
+<p>A technical point is that in advanced texts, Axiom 3 would instead involve infinitely many events, and an infinite sum:</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(A_1, A_2, \ldots,\)</span> are mutually exclusive events (possibly infinitely many events), then <span class="math inline">\(P(\cup_{i}A_i) = \sum_{i}P(A_i)\)</span></li>
+</ol>
+<p>where the notations mean that the union and summation extend across all events.</p>
+<p>Regardless of whether one worries about the possibility of infinitely many events, it is easy to deduce from the axioms the elementary properties we need.</p>
+<p><strong>Theorem: Three Properties of Probability</strong> For any events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we have</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(P(A^c)= 1-P(A)\)</span>, where <span class="math inline">\(A^c\)</span> is the complement of <span class="math inline">\(A\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, <span class="math inline">\(P(A \cap B)=0\)</span>.</p></li>
+<li><p><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span>.</p></li>
+</ol>
+<p>These facts are often illustrated by analyzing games of chance, which is the context in which many of the basic methods of probability were first worked out. For instance, in picking at random a playing card from a standard 52-card deck, we may compute the probability of drawing a spade or a face card, meaning either a spade that is not a face card, or a face card that is not a spade, or a face card that is also a spade. We take <span class="math inline">\(A\)</span> to be the event that we draw a spade and <span class="math inline">\(B\)</span> to be the event that we draw a face card. Then, because there are 3 face cards that are spades we have <span class="math inline">\(P(A \cap B)=\frac{3}{52}\)</span>, and, appying the last formula above, we get <span class="math inline">\(P(A \cup B) = \frac{1}{4} + \frac{3}{13} - \frac{3}{52} = \frac{11}{26}\)</span>. This matches a simple enumeration argument: there are 13 spades and 9 non-spade face cards, for a total of 22 cards that are either a spade or a face card, i.e., <span class="math inline">\(P(A \cup B) = \frac{22}{52} = \frac{11}{26}.\)</span> The main virtue of such formulas is that they also apply to contexts where probabilities are determined without reference to a decomposition into equally-likely sub-components.</p>
+<p><strong>Coin tossing example</strong>. Toss a coin three times. What are possible outcomes? What is the chance to observe exactly two Heads?</p>
+<p><em>Solution</em>: We know (by the product rule) that the result of three tosses can be recorded by a string of H’s and T’s of length three. There are 8 such strings: <span class="math display">\[\begin{array}{cccc}
+     &amp; HHT &amp; HTT &amp;      \\
+ HHH &amp; HTH &amp; THT &amp; TTT  \\
+     &amp; THH &amp; TTH &amp;
+  \end{array}\]</span> Three strings (in the second column) contain exactly two Heads, so the chance to observe two Heads is 3/8.<br />
+</p>
+<p><strong>Example [infinite sample space]</strong> Suppose, a stubborn person tosses a coin until it lands on Head. What are possible outcomes? What is the chance that three or more tosses will be necessary?</p>
+<p><em>Solution</em>: The coin may land on Head at once, or else it may land on Tail once or several times before it lands on Head. The experiment ends when Head appears. The possible outcomes are: <span class="math display">\[H,\ \ TH,\ \ TTH,\ \ TTTH,\ \ldots,\ \underbrace{T\ldots T}_{n-1}H,\ \ldots\]</span> The probability of any string of T’s and H’s of length <span class="math inline">\(n\)</span> is <span class="math inline">\(1/2^{n}\)</span>. So, the above outcomes have the corresponding probabilities <span class="math display">\[1/2,\ \ 1/4,\ \ 1/8,\ \ 1/16,\ \ldots,\ 1/2^n,\ \ldots\]</span> One knows from calculus that the sum of these numbers equals one, i.e. <span class="math display">\[\frac 12 +\frac 14 +\frac 18+\cdots +\frac{1}{2^n}+\cdots = 1\]</span> The probability that three or more tosses are necessary is found by the summation <span class="math display">\[\frac 18 +\frac{1}{16}+\cdots+\frac{1}{2^n}+\cdots=\frac 14\]</span></p>
+<p><strong>Example [uncountable sample space (continuous data)]</strong> One shoots at a target that is a round disk of radius 30 inches. Assuming that the arrow lands anywhere in the target arbitrarily, what is the chance that the bull’s-eye, the inner disk of radius 10 inches, will be hit?</p>
+<p><em>Solution</em>. The outcome of this experiment is the point where the arrow lands. All the points on the surface of the target are possible outcomes. It is important to note: one cannot assign positive probabilities to individual points (outcomes). Instead, one associates the probability to hit any region on the target surface with the area of that region. So, the probability to hit the bull’s-eye is proportional to its area, or more precisely it is the relative area of the bull’s-eye on the target: <span class="math display">\[\frac{\pi\, 10^2}{\pi\, 30^2}=\frac 19\]</span> (Remember: the area of a disk of radius <span class="math inline">\(r\)</span> equals <span class="math inline">\(\pi r^2\)</span>.)<br />
+We summarize the above three examples. A random experiment always has more than one possible outcome. The collection (set) of all possible outcomes can be described and represented by a list, chart or a geometric figure. In probability theory, one is interested in probabilities of certain parts of that collection of outcomes, or subcollections (subsets) of outcomes. The probability is a number between 0 and 1.<br />
+</p>
+</div>
+<div id="probability-space" class="section level4" number="4.2.2.5">
+<h4><span class="header-section-number">4.2.2.5</span> Probability space</h4>
+<p>The set of all possible outcomes of a random experiment is called a <em>probability space</em>, we denote it by <span class="math inline">\(\Omega\)</span>. Its elements, or points, are called outcomes, they are denoted by <span class="math inline">\(\omega\)</span>. The result of the random experiment is always one point <span class="math inline">\(\omega\)</span> of <span class="math inline">\(\Omega\)</span>.</p>
+<p>An event is a part of <span class="math inline">\(\Omega\)</span> (called a subset of <span class="math inline">\(\Omega\)</span>). It is often characterized by a certain condition (such as “two Heads are observed in three tosses” or “the bull’s-eye is hit”). Events are denoted by <span class="math inline">\(A,B,C,\)</span> etc. We say that an event <span class="math inline">\(A\)</span> occurs if the random experiment results in an outcome <span class="math inline">\(\omega\)</span> that belongs in <span class="math inline">\(A\)</span>. If <span class="math inline">\(\omega\)</span> happens to be outside of <span class="math inline">\(A\)</span>, the event <span class="math inline">\(A\)</span> does not occur. Each event has a probability, which is a number between 0 and 1. The probability of an event <span class="math inline">\(A\)</span> is denoted by <span class="math inline">\(P(A)\)</span>.<br />
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>The entire <span class="math inline">\(\Omega\)</span> is called a <em>certain</em> event. It always occurs because it contains every possible outcome <span class="math inline">\(\omega\)</span>. So, its probability is one: <span class="math inline">\(P(\Omega)=1\)</span>.<br />
+</li>
+<li>There is a special notation <span class="math inline">\(\emptyset\)</span> for the event that never occurs. It contains no outcomes. Its probability is zero, <span class="math inline">\(P(\emptyset)=0\)</span>. The event <span class="math inline">\(\emptyset\)</span> is said to be <em>impossible</em>. It is also called an empty set.<br />
+</li>
+<li>If <span class="math inline">\(A\)</span> is an event, then the rest of <span class="math inline">\(\Omega\)</span> is called the <em>complement</em> of <span class="math inline">\(A\)</span> and denoted by <span class="math inline">\(A^c\)</span>. If <span class="math inline">\(A\)</span> occurs, <span class="math inline">\(A^c\)</span> doesn’t, and vice versa. The probability of <span class="math inline">\(A^c\)</span> is given by <span class="math inline">\(P(A^c)=1-P(A)\)</span>.<br />
+</li>
+<li>If <span class="math inline">\(A\)</span> is a part of <span class="math inline">\(B\)</span>, we write <span class="math inline">\(A\subset B\)</span> (inclusion). This means that <span class="math inline">\(A\)</span> implies <span class="math inline">\(B\)</span> (i.e., if <span class="math inline">\(A\)</span> occurs, then <span class="math inline">\(B\)</span> also occurs). Then we have <span class="math inline">\(P(A)\leq P(B)\)</span>.<br />
+</li>
+<li>The common part of two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is called their intersection, denoted by <span class="math inline">\(A\cap B\)</span>, or just <span class="math inline">\(AB\)</span>. It occurs whenever both <span class="math inline">\(A\)</span> <strong>and</strong> <span class="math inline">\(B\)</span> occur.<br />
+</li>
+<li>The event consisting of all the outcomes that are either in <span class="math inline">\(A\)</span> or in <span class="math inline">\(B\)</span> is called the union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, denoted by <span class="math inline">\(A\cup B\)</span>. It occurs whenever <span class="math inline">\(A\)</span> <strong>or</strong> <span class="math inline">\(B\)</span> occurs.<br />
+</li>
+<li>If two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no common part (no common outcomes; note that in this case <span class="math inline">\(A\cap B=\emptyset\)</span>), then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be disjoint, or mutually exclusive. They cannot occur simultaneously. In this case we have <span class="math inline">\(P(A\cup B)=P(A)+P(B)\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="conditional-probability-and-independence" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Conditional Probability and Independence</h3>
+<p>A friend tosses a coin three times. You accidentally notice that the first time the coin shows Head. What is the chance that the friend observes 2 Heads?</p>
+<p><em>Solution</em>. In a previous example, we found all eight possible outcomes. Now, with the additional information at our disposal, we can exclude the outcomes starting with a T. Only four possible outcomes remain: HHH, HHT, HTH, HTT. Two of them contain exactly two Heads. So, the chance is 2/4=1/2.</p>
+<p>Note that here we have two events: $A={<span class="math inline">\(2 Heads are observed\)</span>}$ and <span class="math inline">\(B=\{\)</span>First toss is Heads<span class="math inline">\(\}\)</span>. We know that <span class="math inline">\(P(A)=3/8\)</span>, see Example 2.1. Now, the event <span class="math inline">\(A\)</span> is considered under the condition that the event <span class="math inline">\(B\)</span> has occurred. Then the conditional probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span>, is found by calculating the fraction of <span class="math inline">\(A\)</span> within <span class="math inline">\(B\)</span>, i.e. the fraction of <span class="math inline">\(A\cap B\)</span> within <span class="math inline">\(B\)</span>.<br />
+</p>
+<p><strong>Conditional probability</strong>. The conditional probability of an event <span class="math inline">\(A\)</span>, given an event <span class="math inline">\(B\)</span>, is <span class="math display">\[P(A/B)=\frac{P(A\cap B)}{P(B)}\]</span></p>
+<ul>
+<li>Multiplication rule. The above formula can be rewritten as <span class="math display">\[P(A\cap B)=P(B)\cdot P(A/B)\]</span> Due to the symmetry, one can rewrite this as <span class="math display">\[P(A\cap B)=P(A)\cdot P(B/A)\]</span></li>
+</ul>
+<p>Example. A deck of 52 cards has 13 spades. If two cards are drawn from the deck at random, what is the chance that both are spades?</p>
+<p><em>Solution</em>. Let <span class="math inline">\(A=\{\)</span>First card is a spade<span class="math inline">\(\}\)</span> and <span class="math inline">\(B=\{\)</span>Second card is a spade<span class="math inline">\(\}\)</span>. Clearly, <span class="math inline">\(P(A)=13/52=1/4\)</span>. If the first card is a spade, then the chance to draw another spade is 12/51 (the remaining deck of 51 cards has 12 spades left). This means that <span class="math inline">\(P(B/A)=12/51\)</span>. Hence, <span class="math display">\[P(A\cap B)=P(A)\cdot
+P(B/A)=\frac 14\cdot\frac{12}{51}=\frac{12}{204}\]</span></p>
+<ul>
+<li>Extended multiplication rule. If <span class="math inline">\(A_1,A_2,\ldots,A_n\)</span> are events, then</li>
+</ul>
+<p><span class="math display">\[P(A_1\cap A_2\cap\cdots\cap A_n)=P(A_1)\cdot P(A_2/A_1)\cdot
+      P(A_3/A_1\cap A_2)\cdots P(A_n/A_1\cap\cdots\cap A_{n-1})\]</span></p>
+<ul>
+<li>Partition. Let <span class="math inline">\(B_1,\ldots,B_n\)</span> be disjoint (i.e., mutually exclusive) events; i.e. <span class="math inline">\(B_i\cap B_j=\emptyset\)</span>. Let <span class="math inline">\(\cup B_i=\Omega\)</span>, i.e. these events cover (exhaust) the entire probability space. We call <span class="math inline">\(\{B_1,\ldots, B_n\}\)</span> a <em>partition</em> of <span class="math inline">\(\Omega\)</span>.<br />
+</li>
+<li>Law of total probability. Let <span class="math inline">\(\{B_1,\ldots, B_n\}\)</span> be a partition of <span class="math inline">\(\Omega\)</span>, and <span class="math inline">\(A\)</span> an event. Then</li>
+</ul>
+<p><span class="math display">\[P(A)=P(B_1)\cdot P(A/B_1)+\cdots +P(B_n)\cdot P(A/B_n)\]</span></p>
+<p>One can think of <span class="math inline">\(B_1,\ldots,B_n\)</span> as conditions under which the event <span class="math inline">\(A\)</span> may occur. The events <span class="math inline">\(B_1,\ldots,B_n\)</span> are also called <em>hypotheses</em>.<br />
+</p>
+<p>Example. Alex goes to school by bus or train, whichever comes first. He notice that the bus comes first with probability 30% and the train with probability 70%. When Alex takes train, he arrives late to school with probability 5%. When he takes bus, he is late to school with probability 20%. What is the probability that he is late to school?</p>
+<p><em>Solution</em>. The event in question here is <span class="math inline">\(A=\{\)</span>Alex is late to school<span class="math inline">\(\}\)</span>. This may happen under two conditions (hypotheses): <span class="math inline">\(B_1=\{\)</span>Alex takes bus<span class="math inline">\(\}\)</span> and <span class="math inline">\(B_2=\{\)</span>Alex takes train<span class="math inline">\(\}\)</span>. Hence,</p>
+<p><span class="math display">\[P(A)=P(B_1)\cdot P(A/B_1)+P(B_2)\cdot P(A/B_2)=0.3\times 0.2+0.7\times 0.05=0.095\]</span></p>
+<ul>
+<li>Two-stage experiments. Amanda rolls a die and then flips a coin the number of times shown on the die. What is the chance she observes two Heads?</li>
+</ul>
+<p><em>Solution</em>: In the first stage, the die shows one of the six numbers <span class="math inline">\(1,\ldots,6\)</span>. These are six events, which we denote by <span class="math inline">\(B_1,\ldots,B_6\)</span>. They are disjoint and exhaust all the possibilities, so they make a partition. In the second stage, the event <span class="math inline">\(A=\{\)</span>Two Heads are observed<span class="math inline">\(\}\)</span> may (or may not) occur. Applying the law of total probability gives</p>
+<p><span class="math display">\[\begin{aligned}
+  P(A)&amp;=&amp;P(B_1)\cdot P(A/B_1)+\cdots +P(B_6)\cdot P(A/B_6)\\
+      &amp;=&amp;\frac 16 \cdot 0 +\frac 16 \cdot \frac 14
+        +\frac 16 \cdot \frac 38 +\frac 16 \cdot \frac {C_{4,2}}{2^4}
+        +\frac 16 \cdot \frac{C_{5,2}}{2^5}+\frac 16 \cdot\frac{C_{6,2}}{2^6}
+       =\frac{33}{128}\end{aligned}\]</span></p>
+<p>Roll a die twice. If the first roll is a six, what is the chance the second roll will be a six?</p>
+<p><em>Solution</em>. Let <span class="math inline">\(A=\{\)</span>The second roll is a six<span class="math inline">\(\}\)</span> and <span class="math inline">\(B=\{\)</span>The first roll is a six<span class="math inline">\(\}\)</span>. Then <span class="math display">\[P(A/B)=\frac{P(A\cap B)}{P(B)}=\frac{1/36}{1/6}=\frac 16\]</span></p>
+<p>Note that <span class="math inline">\(P(A)=1/6\)</span>, so that <span class="math display">\[P(A/B)=P(A)\]</span> In other words, the probability of <span class="math inline">\(A\)</span> does not change when the event <span class="math inline">\(B\)</span> occurs, the event <span class="math inline">\(B\)</span> does not affect the chance of <span class="math inline">\(A\)</span> to occur.<br />
+</p>
+<ul>
+<li>Independent events. Two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, are said to be <em>independent</em> if <span class="math display">\[P(A/B)=P(A)\]</span> By using 3.2, we can rewrite this equation as <span class="math display">\[P(A\cap B)=P(A)\, P(B)\]</span> and also as <span class="math display">\[P(B/A)=P(B)\]</span> All these three equations mean the same: the independence of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.<br />
+Note: The equation <span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span> is better the other two: it is symmetric. It also works when <span class="math inline">\(P(A)=0\)</span> or <span class="math inline">\(P(B)=0\)</span>. So, it is preferred for practical purposes.<br />
+</li>
+</ul>
+<p>Example. Flip two coins. Let <span class="math inline">\(A=\{\)</span>First coin shows Head<span class="math inline">\(\}\)</span> and <span class="math inline">\(B=\{\)</span>Both coins show the same face<span class="math inline">\(\}\)</span>. Are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent?</p>
+<p><em>Solution</em>. One easily finds that <span class="math inline">\(P(A)=1/2\)</span>, <span class="math inline">\(P(B)=1/2\)</span> and <span class="math inline">\(P(A\cap B)=1/4\)</span>. Then we check that <span class="math inline">\(1/2\times 1/2=1/4\)</span>. Yes, they are independent.<br />
+</p>
+<p>Note: Sometimes the independence is obvious, like in 3.11 (because there is no way the result of the first roll can affect the second). Sometimes the independence is harder to recognize, as it is in 3.13 above. One can explain the independence in 3.13 noting that the second coin may or may not show the same face as the first with probability 1/2, no matter what face the first coin shows.<br />
+</p>
+<ul>
+<li>Independence of three events. Three events <span class="math inline">\(A,B,C\)</span> are said to be mutually (or jointly) independent if<br />
+</li>
+</ul>
+<ol style="list-style-type: lower-alpha">
+<li>any two of them are independent in the sense of 3.12, and<br />
+</li>
+<li>the following holds: <span class="math display">\[P(A\cap B\cap C)=P(A)\, P(B)\, P(C)\]</span></li>
+</ol>
+<p>Neither one of the conditions (a) and (b) alone is enough for joint independence. One needs to check both (a) and (b) to verify the joint independence of <span class="math inline">\(A,B,C\)</span>.<br />
+</p>
+</div>
+<div id="bayes-formula" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Bayes formula</h3>
+<p>Example. A rocket has a built-in redundant system. It has three
+components, <span class="math inline">\(K_1,K_2,K_3\)</span>. If component <span class="math inline">\(K_1\)</span> fails, it is bypassed and
+component <span class="math inline">\(K_2\)</span> is used, etc. So, as long as one component works the
+system is functioning. Suppose that the probabilities of failure of the
+components are 10%, 20% and 5%, respectively. Find the probability that
+the entire system works.</p>
+<p><em>Solution</em>. First, note: <span class="math inline">\(P(\)</span>system works<span class="math inline">\()=1-P(\)</span>system fails<span class="math inline">\()\)</span>. The
+system fails if all the three components fail. The failures are mutually
+independent events, so
+<span class="math display">\[P({\rm system}\ {\rm fails})=0.1\cdot 0.2\cdot 0.05=0.001\]</span> So, the
+entire system will function with probability 99.9%. Note a very high
+reliability!<br />
+</p>
+<p>An additional note: it is more difficult to find the probability that
+two components fail. Because they can fail in various combinations:
+<span class="math inline">\(\{1,2\}\)</span>, <span class="math inline">\(\{1,3\}\)</span>, and <span class="math inline">\(\{2,3\}\)</span>. In each case the remaining
+component is assumed to work.</p>
+<p>Therefore, the probability that two components fail is</p>
+<p><span class="math display">\[\begin{aligned}
+    P({\rm two}\ {\rm fail})&amp;=&amp;P(1,2\ {\rm fail})+P(1,3\ {\rm fail})+P(2,3\ {\rm fail})\\
+    &amp;=&amp;0.1\cdot 0.2\cdot 0.95+0.1\cdot 0.8\cdot 0.05+0.9\cdot 0.2\cdot 0.05=0.032\end{aligned}\]</span></p>
+<p>Remark. If <span class="math inline">\(A_1,\ldots,A_n\)</span> are independent, one can replace any number
+of these events by their complements (e.g., <span class="math inline">\(A_1\)</span> by <span class="math inline">\(A_1^c\)</span>, etc.) and
+the new collection of events will be also independent.<br />
+- Bayes formula. Recall the law of total probability in 3.8 and suppose
+we need to compute <span class="math inline">\(P(B_i/A)\)</span> for some <span class="math inline">\(i=1,\ldots,n\)</span>. By using the
+formulas in 3.2-3.3 we get</p>
+<p><span class="math display">\[P(B_i/A)=\frac{P(B_i\cap A)}{P(A)}=\frac{P(B_i)\cdot P(A/B_i)}{P(A)}\]</span></p>
+<p>Now we replace the denominator <span class="math inline">\(P(A)\)</span> by its expansion given by the law
+of total probability and obtain
+<span class="math display">\[P(B_i/A)=\frac{P(B_i)\cdot P(A/B_i)}{P(B_1)\cdot P(A/B_1)+\cdots +P(B_n)\cdot P(A/B_n)}\]</span></p>
+<p>This is called <em>Bayes formula</em>. Note that the numerator here is one of
+the terms that appear in the denominator.</p>
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

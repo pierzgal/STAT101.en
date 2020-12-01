@@ -281,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.1" data-path="elementary-probability.html"><a href="elementary-probability.html#introduction-1"><i class="fa fa-check"></i><b>4.2.1</b> Introduction</a></li>
 <li class="chapter" data-level="4.2.2" data-path="elementary-probability.html"><a href="elementary-probability.html#essential-definitions-and-concepts"><i class="fa fa-check"></i><b>4.2.2</b> Essential definitions and concepts</a></li>
 <li class="chapter" data-level="4.2.3" data-path="elementary-probability.html"><a href="elementary-probability.html#conditional-probability-and-independence"><i class="fa fa-check"></i><b>4.2.3</b> Conditional Probability and Independence</a></li>
-<li class="chapter" data-level="4.2.4" data-path="elementary-probability.html"><a href="elementary-probability.html#bayes-formula"><i class="fa fa-check"></i><b>4.2.4</b> Bayes formula</a></li>
+<li class="chapter" data-level="4.2.4" data-path="elementary-probability.html"><a href="elementary-probability.html#bayes-theorem"><i class="fa fa-check"></i><b>4.2.4</b> Bayes’ theorem</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -406,7 +406,7 @@ We summarize the above three examples. A random experiment always has more than 
 </li>
 <li>If <span class="math inline">\(A\)</span> is an event, then the rest of <span class="math inline">\(\Omega\)</span> is called the <em>complement</em> of <span class="math inline">\(A\)</span> and denoted by <span class="math inline">\(A^c\)</span>. If <span class="math inline">\(A\)</span> occurs, <span class="math inline">\(A^c\)</span> doesn’t, and vice versa. The probability of <span class="math inline">\(A^c\)</span> is given by <span class="math inline">\(P(A^c)=1-P(A)\)</span>.<br />
 </li>
-<li>If <span class="math inline">\(A\)</span> is a part of <span class="math inline">\(B\)</span>, we write <span class="math inline">\(A\subset B\)</span> (inclusion). This means that <span class="math inline">\(A\)</span> implies <span class="math inline">\(B\)</span> (i.e., if <span class="math inline">\(A\)</span> occurs, then <span class="math inline">\(B\)</span> also occurs). Then we have <span class="math inline">\(P(A)\leq P(B)\)</span>.<br />
+<li>If <span class="math inline">\(A\)</span> is a part of <span class="math inline">\(B\)</span>, we write <span class="math inline">\(A\subseteq B\)</span> (inclusion). This means that <span class="math inline">\(A\)</span> implies <span class="math inline">\(B\)</span> (i.e., if <span class="math inline">\(A\)</span> occurs, then <span class="math inline">\(B\)</span> also occurs). Then we have <span class="math inline">\(P(A)\leq P(B)\)</span>.<br />
 </li>
 <li>The common part of two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is called their intersection, denoted by <span class="math inline">\(A\cap B\)</span>, or just <span class="math inline">\(AB\)</span>. It occurs whenever both <span class="math inline">\(A\)</span> <strong>and</strong> <span class="math inline">\(B\)</span> occur.<br />
 </li>
@@ -457,13 +457,21 @@ P(B/A)=\frac 14\cdot\frac{12}{51}=\frac{12}{204}\]</span></p>
        =\frac{33}{128}\end{aligned}\]</span></p>
 <p>Roll a die twice. If the first roll is a six, what is the chance the second roll will be a six?</p>
 <p><em>Solution</em>. Let <span class="math inline">\(A=\{\)</span>The second roll is a six<span class="math inline">\(\}\)</span> and <span class="math inline">\(B=\{\)</span>The first roll is a six<span class="math inline">\(\}\)</span>. Then <span class="math display">\[P(A/B)=\frac{P(A\cap B)}{P(B)}=\frac{1/36}{1/6}=\frac 16\]</span></p>
-<p>Note that <span class="math inline">\(P(A)=1/6\)</span>, so that <span class="math display">\[P(A/B)=P(A)\]</span> In other words, the probability of <span class="math inline">\(A\)</span> does not change when the event <span class="math inline">\(B\)</span> occurs, the event <span class="math inline">\(B\)</span> does not affect the chance of <span class="math inline">\(A\)</span> to occur.<br />
+<p>Note that <span class="math inline">\(P(A)=1/6\)</span>, so that</p>
+<p><span class="math display">\[P(A/B)=P(A)\]</span></p>
+<p>In other words, the probability of <span class="math inline">\(A\)</span> does not change when the event <span class="math inline">\(B\)</span> occurs, the event <span class="math inline">\(B\)</span> does not affect the chance of <span class="math inline">\(A\)</span> to occur.<br />
 </p>
 <ul>
-<li>Independent events. Two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, are said to be <em>independent</em> if <span class="math display">\[P(A/B)=P(A)\]</span> By using 3.2, we can rewrite this equation as <span class="math display">\[P(A\cap B)=P(A)\, P(B)\]</span> and also as <span class="math display">\[P(B/A)=P(B)\]</span> All these three equations mean the same: the independence of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.<br />
-Note: The equation <span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span> is better the other two: it is symmetric. It also works when <span class="math inline">\(P(A)=0\)</span> or <span class="math inline">\(P(B)=0\)</span>. So, it is preferred for practical purposes.<br />
-</li>
+<li>Independent events. Two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, are said to be <em>independent</em> if</li>
 </ul>
+<p><span class="math display">\[P(A/B)=P(A)\]</span></p>
+<p>By using 3.2, we can rewrite this equation as</p>
+<p><span class="math display">\[P(A\cap B)=P(A)\, P(B)\]</span></p>
+<p>and also as <span class="math display">\[P(B/A)=P(B)\]</span></p>
+<p>All these three equations mean the same: the independence of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.<br />
+</p>
+<p>Note: The equation <span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span> is better the other two: it is symmetric. It also works when <span class="math inline">\(P(A)=0\)</span> or <span class="math inline">\(P(B)=0\)</span>. So, it is preferred for practical purposes.<br />
+</p>
 <p>Example. Flip two coins. Let <span class="math inline">\(A=\{\)</span>First coin shows Head<span class="math inline">\(\}\)</span> and <span class="math inline">\(B=\{\)</span>Both coins show the same face<span class="math inline">\(\}\)</span>. Are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent?</p>
 <p><em>Solution</em>. One easily finds that <span class="math inline">\(P(A)=1/2\)</span>, <span class="math inline">\(P(B)=1/2\)</span> and <span class="math inline">\(P(A\cap B)=1/4\)</span>. Then we check that <span class="math inline">\(1/2\times 1/2=1/4\)</span>. Yes, they are independent.<br />
 </p>
@@ -476,13 +484,14 @@ Note: The equation <span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span> is b
 <ol style="list-style-type: lower-alpha">
 <li>any two of them are independent in the sense of 3.12, and<br />
 </li>
-<li>the following holds: <span class="math display">\[P(A\cap B\cap C)=P(A)\, P(B)\, P(C)\]</span></li>
+<li>the following holds:</li>
 </ol>
+<p><span class="math display">\[P(A\cap B\cap C)=P(A)\, P(B)\, P(C)\]</span></p>
 <p>Neither one of the conditions (a) and (b) alone is enough for joint independence. One needs to check both (a) and (b) to verify the joint independence of <span class="math inline">\(A,B,C\)</span>.<br />
 </p>
 </div>
-<div id="bayes-formula" class="section level3" number="4.2.4">
-<h3><span class="header-section-number">4.2.4</span> Bayes formula</h3>
+<div id="bayes-theorem" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Bayes’ theorem</h3>
 <p>Example. A rocket has a built-in redundant system. It has three
 components, <span class="math inline">\(K_1,K_2,K_3\)</span>. If component <span class="math inline">\(K_1\)</span> fails, it is bypassed and
 component <span class="math inline">\(K_2\)</span> is used, etc. So, as long as one component works the
@@ -491,8 +500,9 @@ components are 10%, 20% and 5%, respectively. Find the probability that
 the entire system works.</p>
 <p><em>Solution</em>. First, note: <span class="math inline">\(P(\)</span>system works<span class="math inline">\()=1-P(\)</span>system fails<span class="math inline">\()\)</span>. The
 system fails if all the three components fail. The failures are mutually
-independent events, so
-<span class="math display">\[P({\rm system}\ {\rm fails})=0.1\cdot 0.2\cdot 0.05=0.001\]</span> So, the
+independent events, so</p>
+<p><span class="math display">\[P({\rm system}\ {\rm fails})=0.1\cdot 0.2\cdot 0.05=0.001\]</span></p>
+<p>So, the
 entire system will function with probability 99.9%. Note a very high
 reliability!<br />
 </p>
@@ -507,13 +517,14 @@ component is assumed to work.</p>
 <p>Remark. If <span class="math inline">\(A_1,\ldots,A_n\)</span> are independent, one can replace any number
 of these events by their complements (e.g., <span class="math inline">\(A_1\)</span> by <span class="math inline">\(A_1^c\)</span>, etc.) and
 the new collection of events will be also independent.<br />
-- Bayes formula. Recall the law of total probability in 3.8 and suppose
+</p>
+<p><strong>Bayes formula</strong>. Recall the law of total probability in 3.8 and suppose
 we need to compute <span class="math inline">\(P(B_i/A)\)</span> for some <span class="math inline">\(i=1,\ldots,n\)</span>. By using the
 formulas in 3.2-3.3 we get</p>
 <p><span class="math display">\[P(B_i/A)=\frac{P(B_i\cap A)}{P(A)}=\frac{P(B_i)\cdot P(A/B_i)}{P(A)}\]</span></p>
 <p>Now we replace the denominator <span class="math inline">\(P(A)\)</span> by its expansion given by the law
-of total probability and obtain
-<span class="math display">\[P(B_i/A)=\frac{P(B_i)\cdot P(A/B_i)}{P(B_1)\cdot P(A/B_1)+\cdots +P(B_n)\cdot P(A/B_n)}\]</span></p>
+of total probability and obtain</p>
+<p><span class="math display">\[P(B_i/A)=\frac{P(B_i)\cdot P(A/B_i)}{P(B_1)\cdot P(A/B_1)+\cdots +P(B_n)\cdot P(A/B_n)}\]</span></p>
 <p>This is called <em>Bayes formula</em>. Note that the numerator here is one of
 the terms that appear in the denominator.</p>
 

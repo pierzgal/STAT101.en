@@ -135,4 +135,4 @@ three-definitions-of-probability
 axioms-of-probability
 probability-space
 conditional-probability-and-independence
-bayes-formula
+bayes-theorem

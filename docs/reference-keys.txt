@@ -92,7 +92,7 @@ plot-the-data-from-the-above-example-using-histograms-and-smooth-density-curves
 box-plots---additional-example
 histogram-and-box-plot
 skewness-of-data-distribution
-elements-of-statistical-inference-lecture-4---draft-copy-ver.-0.1
+elements-of-statistical-inference-lecture-4---draft-copy-ver.-0.2
 introduction
 logic
 boolean-operators
@@ -135,4 +135,15 @@ three-definitions-of-probability
 axioms-of-probability
 probability-space
 conditional-probability-and-independence
+multiplication-rule
+law-of-total-probability
+two-stage-experiments
+independent-events
 bayes-theorem
+various-examples
+example-1
+example-2
+example-3
+example-4
+example-5
+example-6

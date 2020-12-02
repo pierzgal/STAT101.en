@@ -24,14 +24,14 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2020-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html"/>
+<link rel="prev" href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-2.html"/>
 <link rel="next" href="elementary-probability.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
@@ -257,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.24" data-path="histogram-and-box-plot.html"><a href="histogram-and-box-plot.html"><i class="fa fa-check"></i><b>3.24</b> Histogram and box-plot</a></li>
 <li class="chapter" data-level="3.25" data-path="skewness-of-data-distribution.html"><a href="skewness-of-data-distribution.html"><i class="fa fa-check"></i><b>3.25</b> Skewness of data distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html"><a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>4</b> Elements of statistical inference [Lecture 4 - draft copy, ver. 0.1]</a>
+<li class="chapter" data-level="4" data-path="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-2.html"><a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-2.html"><i class="fa fa-check"></i><b>4</b> Elements of statistical inference [Lecture 4 - draft copy, ver. 0.2]</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>4.1</b> Introduction</a>
 <ul>
@@ -282,6 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.2" data-path="elementary-probability.html"><a href="elementary-probability.html#essential-definitions-and-concepts"><i class="fa fa-check"></i><b>4.2.2</b> Essential definitions and concepts</a></li>
 <li class="chapter" data-level="4.2.3" data-path="elementary-probability.html"><a href="elementary-probability.html#conditional-probability-and-independence"><i class="fa fa-check"></i><b>4.2.3</b> Conditional Probability and Independence</a></li>
 <li class="chapter" data-level="4.2.4" data-path="elementary-probability.html"><a href="elementary-probability.html#bayes-theorem"><i class="fa fa-check"></i><b>4.2.4</b> Bayes’ theorem</a></li>
+<li class="chapter" data-level="4.2.5" data-path="elementary-probability.html"><a href="elementary-probability.html#various-examples"><i class="fa fa-check"></i><b>4.2.5</b> Various examples (*)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -529,18 +530,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="sum" class="section level4" number="4.1.6.2">
 <h4><span class="header-section-number">4.1.6.2</span> Sum</h4>
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are disjoint, then <span class="math inline">\(|A \cup B| = |A| + |B|\)</span>.</p>
-<p>99 math majors, 179 cs majors, How many majors in math or cs (assume no double majors)? 99 + 179 = 278</p>
+<p>Example. There are 99 math majors, 179 cs majors. How many majors are in math or cs (assume no double majors)? 99 + 179 = 278</p>
 <p>Extend sum rule to any number of sets:</p>
 <p>If <span class="math inline">\(A_1, \ldots, A_n\)</span> are pairwise disjoint, then <span class="math inline">\(|A_1 \cup \ldots \cup A_n| = |A_1| + |A_2| + \ldots + |A_n|\)</span>.</p>
-<p>99 math, 179 cs, 24 philosophy Total in math or cs or philosophy = 302</p>
+<p>Example. There are 99 math, 179 cs, 24 philosophy. Total in math or cs or philosophy = 302</p>
 </div>
 <div id="inclusion-exclusion" class="section level4" number="4.1.6.3">
 <h4><span class="header-section-number">4.1.6.3</span> Inclusion-Exclusion</h4>
 <p>What if the sets aren’t disjoint? E.g., math and cs majors, where some people are majoring in both? Consider two sets first.</p>
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are any sets (not necessarily disjoint), then <span class="math inline">\(|A \cup B| = |A| + |B|- |A \cap B|\)</span>.</p>
-<p>99 math majors, 179 cs majors, 7 majoring in both.<br />
-How many majors in math or cs?<br />
-99 + 179 - 7 = 271</p>
+<p>Example. There are 99 math majors, 179 cs majors, 7 majoring in both.<br />
+How many majors are in math or cs?<br />
+</p>
+<p>Solution. 99 + 179 - 7 = 271</p>
 <p>How many numbers in <span class="math inline">\(\{1,\ldots,100\}\)</span> are divisible by <span class="math inline">\(2\)</span> or <span class="math inline">\(5\)</span>?</p>
 <ul>
 <li><p><span class="math inline">\(50\)</span> divisible by <span class="math inline">\(2\)</span></p></li>
@@ -549,7 +551,11 @@ How many majors in math or cs?<br />
 <li><p>total: <span class="math inline">\(50+20-10=60\)</span>.</p></li>
 </ul>
 <p>The inclusion-exclusion formula expresses the fact that the sum of the sizes of the two sets may be too large since some elements may be counted twice. The double-counted elements are those in the intersection of the two sets and the count is corrected by subtracting the size of the intersection.</p>
-<p>The principle is more clearly seen in the case of three sets, which for the sets A, B and C is given by</p>
+<p><strong>Example</strong>. Suppose a survey of 100 people asks if they have a cat or dog as a pet. The results are as follows: 55 answered yes for cat, 58 answered yes for dog and 20 people checked yes for both cat and dog. How many people have a cat or a dog?</p>
+<ul>
+<li>Solution: Since 55 have a cat, and 58 have a dog, you may think at first that 55 + 58 = 113 have one or the other. That thinking overlooks that some people – 20 of them – have both, and we counted these people twice by adding 55 and 58. To correct our answer, we must subtract from that sum the number 20: 55 + 58 − 20 = 93 have a cat or a dog. This is an example of the inclusion-exclusion principle.</li>
+</ul>
+<p><strong>The I-E principle is more clearly seen in the case of three sets, which for the sets A, B and C is given by:</strong></p>
 <p><span class="math inline">\(|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|\)</span></p>
 <p><img src="images/prob/Inclusion-exclusion.svg" title="Inclusion-exclusion principle" /></p>
 </div>
@@ -838,7 +844,7 @@ Then the number of permutations of <span class="math inline">\(S\)</span> is <sp
           </div>
         </div>
       </div>
-<a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="elementary-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

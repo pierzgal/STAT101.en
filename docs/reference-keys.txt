@@ -136,9 +136,9 @@ axioms-of-probability
 probability-space
 conditional-probability-and-independence
 multiplication-rule
-law-of-total-probability
 two-stage-experiments
 independent-events
+law-of-total-probability
 bayes-theorem
 various-examples
 example-1

@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-02" />
+<meta name="date" content="2020-12-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -314,7 +314,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.2.2</span> Essential definitions and concepts</h3>
 <div id="probabilities-are-defined-on-sets-of-uncertain-events." class="section level4" number="4.2.2.1">
 <h4><span class="header-section-number">4.2.2.1</span> Probabilities are defined on sets of uncertain events.</h4>
-<p>The calculus of probability is defined for <em>sets</em>, which in this context are called <em>events</em>. That is, we speak of “the probability of the event <span class="math inline">\(A\)</span>” and we will write this as <span class="math inline">\(P(A)\)</span>. Events are considered to be composed of <em>outcomes</em> from some experiment or observational process. The collection of all possible outcomes (and, therefore, the union of all possible events) is called the <em>sample space</em> and will be denoted by <span class="math inline">\({\cal S}\)</span>. Because <span class="math inline">\({\cal S}\)</span> is a set, we might also say that <span class="math inline">\({\cal S}\)</span> is made up of elements (each of which is an outcome) and to indicate that <span class="math inline">\(\omega\)</span> is an element of <span class="math inline">\({\cal S}\)</span> we would write <span class="math inline">\(\omega \in {\cal S}\)</span>.</p>
+<p>The calculus of probability is defined for <em>sets</em>, which in this context are called <em>events</em>. That is, we speak of “the probability of the event <span class="math inline">\(A\)</span>” and we will write this as <span class="math inline">\(P(A)\)</span>. Events are considered to be composed of <em>outcomes</em> from some experiment or observational process. The collection of all possible outcomes (and, therefore, the union of all possible events) is called the <em>sample space</em> and will be denoted by <span class="math inline">\({\Omega}\)</span>. Because <span class="math inline">\({\Omega}\)</span> is a set, we might also say that <span class="math inline">\({\Omega}\)</span> is made up of elements (each of which is an outcome) and to indicate that <span class="math inline">\(\omega\)</span> is an element of <span class="math inline">\({\Omega}\)</span> we would write <span class="math inline">\(\omega \in {\Omega}\)</span>.</p>
 <p>Recall the definitions of <em>union</em> and <em>intersection</em>: for events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> the union <span class="math inline">\(A \cup B\)</span> consists of all outcomes that are either in <span class="math inline">\(A\)</span> or in <span class="math inline">\(B\)</span> or in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>; the intersection <span class="math inline">\(A \cap B\)</span> consists of all outcomes that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. The <em>complement</em> <span class="math inline">\(A^c\)</span> of <span class="math inline">\(A\)</span> consists of all outcomes that are <em>not</em> in <span class="math inline">\(A\)</span>. We say two events are <em>mutually exclusive</em> or <em>disjoint</em> if they have empty intersection.</p>
 </div>
 <div id="basic-terminology" class="section level4" number="4.2.2.2">
@@ -365,7 +365,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Axioms of probability:</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>For all events <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) \geq 0\)</span>.</p></li>
-<li><p><span class="math inline">\(P({\cal S}) = 1\)</span>.</p></li>
+<li><p><span class="math inline">\(P({S}) = 1\)</span>.</p></li>
 <li><p>If <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> are mutually exclusive events, then <span class="math inline">\(P(A_1 \cup A_2 \cup \cdots \cup A_n) = P(A_1) + P(A_2) + \cdots + P(A_n)\)</span>.</p></li>
 </ol>
 <p>A technical point is that in advanced texts, Axiom 3 would instead involve infinitely many events, and an infinite sum:</p>

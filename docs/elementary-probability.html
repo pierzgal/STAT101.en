@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2020-12-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -329,7 +329,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If the sample space can be written in the form of a list (possibly inﬁnite) then it is called a discrete sample space (e.g. number of tosses of a fair coin before Heads occurs). If this is not possible then it is called a continuous sample space (e.g. positions where shells land in a tank battle).</p>
 <div id="probability-model" class="section level5" number="4.2.2.2.1">
 <h5><span class="header-section-number">4.2.2.2.1</span> Probability model</h5>
-<p>An experiment is modeled by a probability space, which is a triplet <span class="math inline">\((\Omega,F,P)\)</span>. We will read this triplet as “Omega, Script F, P.” The first component, Ω, is a nonempty set. Each element ω of Ω (s of S) is called an outcome and Ω is called the sample space. The second component, F, is a set of subsets of Ω called events. The final component, P, of the triplet <span class="math inline">\((\Omega,F,P)\)</span>, is a probability measure on F, which assigns a probability, P(A), to each event A. The axioms of probability are of two types: event axioms, which are about the set of events F, and probability axioms, which are about the probability measure P.</p>
+<p>An experiment is modeled by a probability space, which is a triplet <span class="math inline">\((\Omega,F,P)\)</span>. We will read this triplet as “Omega, Script F, P.” The first component, Ω, is a nonempty set. Each element ω of Ω (s of S) is called an outcome and Ω is called the sample space. The second component, F, is a set of subsets of Ω called events (i.e. an event space of S). The final component, P, of the triplet <span class="math inline">\((\Omega,F,P)\)</span>, is a probability measure on F, which assigns a probability, P(A), to each event A. The axioms of probability are of two types: event axioms, which are about the set of events F, and probability axioms, which are about the probability measure P.</p>
+<p>Two important tools that help assign probability measures to events in F are:
+1. a random variable,
+2. a probability distribution function.</p>
+<p>We discuss these important concepts in the next lecture.</p>
 </div>
 </div>
 <div id="three-definitions-of-probability" class="section level4" number="4.2.2.3">
@@ -404,9 +408,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 We summarize the above three examples. A random experiment always has more than one possible outcome. The collection (set) of all possible outcomes can be described and represented by a list, chart or a geometric figure. In probability theory, one is interested in probabilities of certain parts of that collection of outcomes, or subcollections (subsets) of outcomes. The probability is a number between 0 and 1.<br />
 </p>
 </div>
-<div id="probability-space" class="section level4" number="4.2.2.5">
-<h4><span class="header-section-number">4.2.2.5</span> Probability space</h4>
-<p>The set of all possible outcomes of a random experiment is called a <em>probability space</em>, we denote it by <span class="math inline">\(\Omega\)</span>. Its elements, or points, are called outcomes, they are denoted by <span class="math inline">\(\omega\)</span>. The result of the random experiment is always one point <span class="math inline">\(\omega\)</span> of <span class="math inline">\(\Omega\)</span>.</p>
+<div id="sample-space" class="section level4" number="4.2.2.5">
+<h4><span class="header-section-number">4.2.2.5</span> Sample space</h4>
+<p>The set of all possible outcomes of a random experiment is called a <em>sample space</em>, we denote it by <span class="math inline">\(\Omega\)</span>. Its elements, or points, are called outcomes, they are denoted by <span class="math inline">\(\omega\)</span>. The result of the random experiment is always one point <span class="math inline">\(\omega\)</span> of <span class="math inline">\(\Omega\)</span>.</p>
 <p>An event is a part of <span class="math inline">\(\Omega\)</span> (called a subset of <span class="math inline">\(\Omega\)</span>). It is often characterized by a certain condition (such as “two Heads are observed in three tosses” or “the bull’s-eye is hit”). Events are denoted by <span class="math inline">\(A,B,C,\)</span> etc. We say that an event <span class="math inline">\(A\)</span> occurs if the random experiment results in an outcome <span class="math inline">\(\omega\)</span> that belongs in <span class="math inline">\(A\)</span>. If <span class="math inline">\(\omega\)</span> happens to be outside of <span class="math inline">\(A\)</span>, the event <span class="math inline">\(A\)</span> does not occur. Each event has a probability, which is a number between 0 and 1. The probability of an event <span class="math inline">\(A\)</span> is denoted by <span class="math inline">\(P(A)\)</span>.<br />
 </p>
 <ol style="list-style-type: lower-alpha">

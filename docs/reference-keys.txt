@@ -133,7 +133,7 @@ basic-terminology
 probability-model
 three-definitions-of-probability
 axioms-of-probability
-probability-space
+sample-space
 conditional-probability-and-independence
 multiplication-rule
 two-stage-experiments

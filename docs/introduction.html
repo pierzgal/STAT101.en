@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-06" />
+<meta name="date" content="2020-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -267,14 +267,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.4" data-path="introduction.html"><a href="introduction.html#sets---summary"><i class="fa fa-check"></i><b>4.1.4</b> Sets - summary</a></li>
 <li class="chapter" data-level="4.1.5" data-path="introduction.html"><a href="introduction.html#venn-diagrams"><i class="fa fa-check"></i><b>4.1.5</b> Venn diagrams</a></li>
 <li class="chapter" data-level="4.1.6" data-path="introduction.html"><a href="introduction.html#basic-counting-principles"><i class="fa fa-check"></i><b>4.1.6</b> Basic counting principles</a></li>
-<li class="chapter" data-level="4.1.7" data-path="introduction.html"><a href="introduction.html#product"><i class="fa fa-check"></i><b>4.1.7</b> Product</a></li>
-<li class="chapter" data-level="4.1.8" data-path="introduction.html"><a href="introduction.html#division-rule"><i class="fa fa-check"></i><b>4.1.8</b> Division Rule</a></li>
-<li class="chapter" data-level="4.1.9" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations"><i class="fa fa-check"></i><b>4.1.9</b> Permutations and Combinations</a></li>
-<li class="chapter" data-level="4.1.10" data-path="introduction.html"><a href="introduction.html#permutations-without-repetitions"><i class="fa fa-check"></i><b>4.1.10</b> Permutations without repetitions</a></li>
-<li class="chapter" data-level="4.1.11" data-path="introduction.html"><a href="introduction.html#combinations-without-repetitions"><i class="fa fa-check"></i><b>4.1.11</b> Combinations without repetitions</a></li>
-<li class="chapter" data-level="4.1.12" data-path="introduction.html"><a href="introduction.html#permutations-with-repetitions"><i class="fa fa-check"></i><b>4.1.12</b> Permutations with repetitions</a></li>
-<li class="chapter" data-level="4.1.13" data-path="introduction.html"><a href="introduction.html#combinations-with-repetitions"><i class="fa fa-check"></i><b>4.1.13</b> Combinations with repetitions</a></li>
-<li class="chapter" data-level="4.1.14" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations-with-bounded-repetition"><i class="fa fa-check"></i><b>4.1.14</b> Permutations and Combinations with Bounded Repetition</a></li>
+<li class="chapter" data-level="4.1.7" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations"><i class="fa fa-check"></i><b>4.1.7</b> Permutations and Combinations</a></li>
+<li class="chapter" data-level="4.1.8" data-path="introduction.html"><a href="introduction.html#permutations-without-repetitions"><i class="fa fa-check"></i><b>4.1.8</b> Permutations without repetitions</a></li>
+<li class="chapter" data-level="4.1.9" data-path="introduction.html"><a href="introduction.html#combinations-without-repetitions"><i class="fa fa-check"></i><b>4.1.9</b> Combinations without repetitions</a></li>
+<li class="chapter" data-level="4.1.10" data-path="introduction.html"><a href="introduction.html#permutations-with-repetitions"><i class="fa fa-check"></i><b>4.1.10</b> Permutations with repetitions</a></li>
+<li class="chapter" data-level="4.1.11" data-path="introduction.html"><a href="introduction.html#combinations-with-repetitions"><i class="fa fa-check"></i><b>4.1.11</b> Combinations with repetitions</a></li>
+<li class="chapter" data-level="4.1.12" data-path="introduction.html"><a href="introduction.html#permutations-and-combinations-with-bounded-repetition"><i class="fa fa-check"></i><b>4.1.12</b> Permutations and Combinations with Bounded Repetition</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="elementary-probability.html"><a href="elementary-probability.html"><i class="fa fa-check"></i><b>4.2</b> Elementary probability</a>
 <ul>
@@ -560,9 +558,8 @@ How many majors are in math or cs?<br />
 <p><span class="math inline">\(|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|\)</span></p>
 <p><img src="images/prob/Inclusion-exclusion.svg" title="Inclusion-exclusion principle" /></p>
 </div>
-</div>
-<div id="product" class="section level3" number="4.1.7">
-<h3><span class="header-section-number">4.1.7</span> Product</h3>
+<div id="product" class="section level4" number="4.1.6.4">
+<h4><span class="header-section-number">4.1.6.4</span> Product</h4>
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are any sets, then <span class="math inline">\(| A \times B| = |A| \cdot |B|\)</span>.</p>
 <p><strong>Example</strong>. License plates – 3 letters followed by 3 digits: <span class="math inline">\(26 \times 26 \times 26 \times 10 \times 10 \times 10\)</span>.</p>
 <p><strong>Example</strong>. <strong>The power set</strong>. Number of subsets of <span class="math inline">\(n\)</span>-element set (the power set of <span class="math inline">\(n\)</span>-element set)? This is <span class="math inline">\(2^n\)</span>. Each subset corresponds to a bit string of length <span class="math inline">\(n\)</span>, with a <span class="math inline">\(1\)</span> in position <span class="math inline">\(k\)</span> meaning that the <span class="math inline">\(k\)</span>th element is in the subset. That is, set of subsets has bijection to set of bit strings of length <span class="math inline">\(n\)</span>, which has <span class="math inline">\(2^n\)</span> elements.</p>
@@ -580,15 +577,15 @@ The difference is what’s needed: <span class="math inline">\(36^8 - 26^8\)</sp
 <p>We know with absolute certainty that <span class="math inline">\(1!=1, (n = 1)\)</span>. Thus, we obtain the following:</p>
 <p>We know that <span class="math inline">\(n! = n \times (n-1)!\)</span>, it follows that <span class="math inline">\(1! = 1 \times (1-1)!\)</span>, it follows that <span class="math inline">\(1! = 1 \times 0!\)</span>, thus, it must be <span class="math inline">\(0! = 1\)</span>.</p>
 <p>For the equation to be true, we must force the value of zero factorial to equal 1. Otherwise, <span class="math inline">\(1! \neq 1\)</span> which is a contradiction.</p>
-<div id="complementary-counting" class="section level4" number="4.1.7.1">
-<h4><span class="header-section-number">4.1.7.1</span> Complementary counting</h4>
+</div>
+<div id="complementary-counting" class="section level4" number="4.1.6.5">
+<h4><span class="header-section-number">4.1.6.5</span> Complementary counting</h4>
 <p><strong>Example</strong>. Suppose we are making a 10-digit PIN, but now at least one digit has to be repeated at least once. How many such PINs exist? Some examples of this PIN would be 1111111111, 01234556788, or 9876598765, but the list goes on! Let’s try our “normal” approach. If we try this, we’ll end up getting stuck. Consider placing the first digit - we have 10 choices. How many choices do we have for the second digit? Is this a repeated digit or not? We can try to find a product of counts of choices for each digit in different scenarios but this can become complicated as we move around which digits are repeated…</p>
 <p>Another approach might be to count how many PINs don’t satisfy this property, and subtract it from the total number of PINs. This strategy is called complementary counting, as we are counting the size of the complement of the set of interest. The number of possible 10-digit PINs, with no stipulations, is 10^10 (from the product rule, multiplying 10 choices with itself for each of 10 positions).</p>
 <p>Then, we found above that the 10-digit PINs with no repeats has 10! possibilities (each digit used exactly once). Well, consider that the 10-digit PINs with at least one repeat will be all other possibilities (they could have one, two, or more repeats but certainly won’t have none). This means that we can count this by taking the difference of all the possible 10-digit PINs and those with no repeats. That is: 10^10 − 10!</p>
 </div>
-</div>
-<div id="division-rule" class="section level3" number="4.1.8">
-<h3><span class="header-section-number">4.1.8</span> Division Rule</h3>
+<div id="division-rule" class="section level4" number="4.1.6.6">
+<h4><span class="header-section-number">4.1.6.6</span> Division Rule</h4>
 <p>One last basic rule: division rule:</p>
 <p>If there is a <span class="math inline">\(k\)</span> to <span class="math inline">\(1\)</span> mapping from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>, and <span class="math inline">\(|A| = n\)</span>, then <span class="math inline">\(|B| = n/k\)</span>.</p>
 <p>How many subsets of size <span class="math inline">\(2\)</span> are there, of a <span class="math inline">\(5\)</span>-element set <span class="math inline">\(A\)</span>?<br />
@@ -603,27 +600,28 @@ So <span class="math inline">\(S\)</span> has <span class="math inline">\(20 / 2
 <p>To solve this exercise we must first pick a random seat, and assign it to person 1, the rest of seats will be labeled in numerical order, in clockwise rotation around the table. There are 4 seats to choose from when we pick the first seat, 3 for the second, 2 for the third and just 1 option left for the last one. Thus there are 4! = 24 possible ways to seat them. However, since we only consider a different arrangement when they don’t have the same neighbours left and right, only 1 out of every 4 seat choices matter.</p>
 <p>Because there are 4 ways to choose for seat 1, by the division rule (<span class="math inline">\(n/k\)</span>) there are 24/4 = 6 different seating arrangements for 4 people around the table.</p>
 </div>
-<div id="permutations-and-combinations" class="section level3" number="4.1.9">
-<h3><span class="header-section-number">4.1.9</span> Permutations and Combinations</h3>
+</div>
+<div id="permutations-and-combinations" class="section level3" number="4.1.7">
+<h3><span class="header-section-number">4.1.7</span> Permutations and Combinations</h3>
 <p>Some problems deal with the number of ways of choosing some particular number of elements from a set.<br />
 </p>
 <p>There are two different ways to select them: in a particular order (as a sequence), or just in an (unordered) set.<br />
 Selections are called <em>permutations</em> when we care about the order, and <em>combinations</em> when we don’t.</p>
-<div id="choices-with-or-without-replacement" class="section level4" number="4.1.9.1">
-<h4><span class="header-section-number">4.1.9.1</span> Choices: With or without replacement?</h4>
+<div id="choices-with-or-without-replacement" class="section level4" number="4.1.7.1">
+<h4><span class="header-section-number">4.1.7.1</span> Choices: With or without replacement?</h4>
 <p>When you are choosing several things, can you choose the same thing more than once? If so, you are choosing with replacement.</p>
 <p>Example: You buy bagels at a bakery. You can buy more than one blueberry bagel if you want. This is choosing with replacement.</p>
 <p>Example: You select five players for a basketball team from a pool of 20 candidates. You can not pick the same person more than once. This is choosing without replacement.</p>
 </div>
-<div id="choices-ordered-or-unordered" class="section level4" number="4.1.9.2">
-<h4><span class="header-section-number">4.1.9.2</span> Choices: Ordered or unordered?</h4>
+<div id="choices-ordered-or-unordered" class="section level4" number="4.1.7.2">
+<h4><span class="header-section-number">4.1.7.2</span> Choices: Ordered or unordered?</h4>
 <p>When you are choosing several things, does the order in which you select them matter? If so, you are making an ordered choice.</p>
 <p>Example: You select five players for a basketball team for a pickup game in the park. All five will run on the court together, without organizing positions. This is an unordered choice.</p>
 <p>Example: You select five players for a basketball team for a formal game with fixed positions: center, power forward, small, forward, shooting guard, and point guard. This is an ordered choice.</p>
 </div>
 </div>
-<div id="permutations-without-repetitions" class="section level3" number="4.1.10">
-<h3><span class="header-section-number">4.1.10</span> Permutations without repetitions</h3>
+<div id="permutations-without-repetitions" class="section level3" number="4.1.8">
+<h3><span class="header-section-number">4.1.8</span> Permutations without repetitions</h3>
 <p>An <span class="math inline">\(r\)</span>-permutation (without repetition) of a set of <span class="math inline">\(n\)</span> elements is an ordered arrangement of <span class="math inline">\(r\)</span> of the <span class="math inline">\(n\)</span> elements (all distinct).</p>
 <p><span class="math inline">\(S=\{A,B,C\}\)</span>.<br />
 The <span class="math inline">\(2\)</span>-permutations are <span class="math inline">\((A,B),(B,A),(A,C),(C,A),(B,C),(C,B)\)</span>.<br />
@@ -645,8 +643,8 @@ The <span class="math inline">\(2\)</span>-permutations are <span class="math in
 <li>By division rule, number of rings is <span class="math inline">\(n!/n = (n-1)!\)</span>.</li>
 </ul>
 </div>
-<div id="combinations-without-repetitions" class="section level3" number="4.1.11">
-<h3><span class="header-section-number">4.1.11</span> Combinations without repetitions</h3>
+<div id="combinations-without-repetitions" class="section level3" number="4.1.9">
+<h3><span class="header-section-number">4.1.9</span> Combinations without repetitions</h3>
 <p>An <span class="math inline">\(r\)</span>-combination (without repetition) of a set of <span class="math inline">\(n\)</span> elements is an (unordered) subset of the <span class="math inline">\(n\)</span> elements.</p>
 <p><span class="math inline">\(S=\{A,B,C\}\)</span>.<br />
 The <span class="math inline">\(2\)</span>-combinations are <span class="math inline">\(\{A,B\},\{A,C\},\{B,C\}\)</span>.<br />
@@ -662,8 +660,8 @@ The <span class="math inline">\(2\)</span>-combinations are <span class="math in
 <p><span class="math inline">\({n \choose r}\)</span> is called a <em>binomial coefficient</em> for reasons that will become clear later.</p>
 <p>How many ways can <span class="math inline">\(3\)</span> distinct numbers be chosen from <span class="math inline">\(1,\ldots,10\)</span>?<br />
 This is <span class="math inline">\({10 \choose 3} = \frac{10!}{3!7!} = 120\)</span>.</p>
-<div id="useful-properties-of-binomial-coefficient" class="section level4" number="4.1.11.1">
-<h4><span class="header-section-number">4.1.11.1</span> Useful properties of binomial coefficient</h4>
+<div id="useful-properties-of-binomial-coefficient" class="section level4" number="4.1.9.1">
+<h4><span class="header-section-number">4.1.9.1</span> Useful properties of binomial coefficient</h4>
 <p>Above, we introduced the <em>binomial coefficients</em> <span class="math display">\[{n \choose r} = \frac{n!}{r!(n-r)!}\]</span><br />
 These represent the number of ways to choose <span class="math inline">\(r\)</span> elements from a set of <span class="math inline">\(n\)</span> elements, where the order does not matter.<br />
 <em>Combinations</em>, as opposed to <em>permutations</em>, where the order does matter.<br />
@@ -683,8 +681,8 @@ Then <span class="math display">\[{n \choose r} = \frac{n!}{r!(n-r)!}.\]</span><
 Then <span class="math display">\[{n \choose r} = {n \choose n-r}.\]</span></p>
 </div>
 </div>
-<div id="permutations-with-repetitions" class="section level3" number="4.1.12">
-<h3><span class="header-section-number">4.1.12</span> Permutations with repetitions</h3>
+<div id="permutations-with-repetitions" class="section level3" number="4.1.10">
+<h3><span class="header-section-number">4.1.10</span> Permutations with repetitions</h3>
 <p>Recall that an <span class="math inline">\(r\)</span>-permutation of a set of <span class="math inline">\(n\)</span> elements is a sequence of length <span class="math inline">\(r\)</span> of distinct elements.</p>
 <p>An <span class="math inline">\(r\)</span>-permutation of a set of <span class="math inline">\(n\)</span> elements allowing repetitions is a sequence of <span class="math inline">\(r\)</span> elements, each chosen from the set. (Repeats allowed.)</p>
 <p>Recall that the number of <span class="math inline">\(r\)</span>-permutations without repetitions is <span class="math inline">\(\frac{n!}{(n-r)!}\)</span>.<br />
@@ -706,23 +704,23 @@ which is <span class="math inline">\(2^4\)</span>.<br />
 It doesn’t matter here how many red and blue balls there are – just matters that there are more than <span class="math inline">\(4\)</span>.<br />
 Really the unlimited case.</p>
 </div>
-<div id="combinations-with-repetitions" class="section level3" number="4.1.13">
-<h3><span class="header-section-number">4.1.13</span> Combinations with repetitions</h3>
+<div id="combinations-with-repetitions" class="section level3" number="4.1.11">
+<h3><span class="header-section-number">4.1.11</span> Combinations with repetitions</h3>
 <p>Now we move from permutations with repetition to combinations with repetition. Let <span class="math inline">\(S\)</span> be the set <span class="math inline">\(\{ A, B, C \}\)</span>. This set has three 2-combinations. That is, there are three ways to choose two distinct elements of <span class="math inline">\(S\)</span> where order does not matter. The three 2-combinations of <span class="math inline">\(S\)</span> are shown below.</p>
 <p><span class="math display">\[\{\{ A, B \}, \{ A, C \}, \{ B, C \}\}\]</span></p>
 <p>Suppose that we are not required to choose distinct elements of <span class="math inline">\(S\)</span>, but rather can choose the same element repeatedly. The resulting sets are called the <span class="math inline">\(r\)</span>-combinations with repetition of the set <span class="math inline">\(S\)</span>. Listed below are the six <span class="math inline">\(2\)</span>-combinations with repetition of <span class="math inline">\(S\)</span>.</p>
 <p><span class="math display">\[\{\{ A, B \}, \{ A, C \}, \{ B, C \}, \{ A, A \}, \{ B, B \}, \{ C, C \}\}\]</span></p>
 <p>Strictly speaking, these are multisets (bags), not sets, since an element may appear multiple times.</p>
-<div id="counting-r-combinations-with-repetition" class="section level4" number="4.1.13.1">
-<h4><span class="header-section-number">4.1.13.1</span> Counting <span class="math inline">\(r\)</span>-Combinations with Repetition</h4>
+<div id="counting-r-combinations-with-repetition" class="section level4" number="4.1.11.1">
+<h4><span class="header-section-number">4.1.11.1</span> Counting <span class="math inline">\(r\)</span>-Combinations with Repetition</h4>
 <p>The following theorem gives a nice formula for the number of <span class="math inline">\(r\)</span>-combinations with repetition of an <span class="math inline">\(n\)</span>-element set.</p>
 <p>The number of <span class="math inline">\(r\)</span>-combinations with repetition of an <span class="math inline">\(n\)</span>-element set is</p>
 <p><span class="math display">\[\binom{n + r - 1}{r}.\]</span></p>
 <p>In the example above, we found six ways to choose two elements from the set <span class="math inline">\(S = \{ A, B, C \}\)</span> with repetition allowed. Sure enough, the theorem says that the number of 2-combinations of a 3-element set is <span class="math inline">\(\binom{3 + 2 - 1}{2} = 6\)</span>.</p>
 <p>For comparison, recall that the number of ordinary <span class="math inline">\(r\)</span>-combinations of an <span class="math inline">\(n\)</span>-element set is <span class="math inline">\(\binom{n}{r}\)</span>. Every ordinary <span class="math inline">\(r\)</span>-combination is also a valid <span class="math inline">\(r\)</span>-combination with repetition. So, as one would expect, the number of <span class="math inline">\(r\)</span>-combinations with repetition is greater if <span class="math inline">\(r &gt; 1\)</span>.</p>
 </div>
-<div id="why-is-this-calculation-accurate" class="section level4" number="4.1.13.2">
-<h4><span class="header-section-number">4.1.13.2</span> Why is this calculation accurate?</h4>
+<div id="why-is-this-calculation-accurate" class="section level4" number="4.1.11.2">
+<h4><span class="header-section-number">4.1.11.2</span> Why is this calculation accurate?</h4>
 <p>Understand it by a thought experiment:<br />
 <br />
 Represent each combination concisely by a string of stars and bars.<br />
@@ -769,10 +767,10 @@ The bars are the <span class="math inline">\(+\)</span> signs, the stars are the
 Here, <span class="math inline">\({7 + 3 - 1 \choose 7} = {9 \choose 7} = 36\)</span>.</p>
 </div>
 </div>
-<div id="permutations-and-combinations-with-bounded-repetition" class="section level3" number="4.1.14">
-<h3><span class="header-section-number">4.1.14</span> Permutations and Combinations with Bounded Repetition</h3>
-<div id="combinations" class="section level4" number="4.1.14.1">
-<h4><span class="header-section-number">4.1.14.1</span> Combinations (*)</h4>
+<div id="permutations-and-combinations-with-bounded-repetition" class="section level3" number="4.1.12">
+<h3><span class="header-section-number">4.1.12</span> Permutations and Combinations with Bounded Repetition</h3>
+<div id="combinations" class="section level4" number="4.1.12.1">
+<h4><span class="header-section-number">4.1.12.1</span> Combinations (*)</h4>
 <p>So far, these <span class="math inline">\(r\)</span>-combination problems all allowed arbitrary numbers of occurrences of each element of the set.<br />
 (Arbitrary number of balls in each basket, arbitrary number for each summation term.)<br />
 Can also consider variations in which there are constraints on the number of occurrences of each element.<br />
@@ -810,8 +808,8 @@ We have three choices for this unique party, then we can give it <span class="ma
 Thus the number of wrong distributions is <span class="math inline">\(3{n+2 \choose 2}\)</span>, so the number of good distributions is <span class="math display">\[{2n+3 \choose 2} - 3{n+2 \choose 2} =
 \frac{n(n+1)}{2} = {n+1 \choose 2}.\]</span></p>
 </div>
-<div id="permutations" class="section level4" number="4.1.14.2">
-<h4><span class="header-section-number">4.1.14.2</span> Permutations (*)</h4>
+<div id="permutations" class="section level4" number="4.1.12.2">
+<h4><span class="header-section-number">4.1.12.2</span> Permutations (*)</h4>
 <p>One last topic – permutations of elements allowing repeats, with bounds.<br />
 <br />
 The general problem is:<br />

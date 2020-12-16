@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <title>5.2 How to define random variable and probability distribution - an example | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="5.2 How to define random variable and probability distribution - an example | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="5.2 How to define random variable and probability distribution - an example | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="5.2 How to define random variable and probability distribution - an example | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="levels-of-measurement-a-summary.html"/>
-<link rel="next" href="tabular-presentation-of-data-distributions.html"/>
+<link rel="prev" href="random-variable-and-probability-distribution-definitions.html"/>
+<link rel="next" href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -322,35 +322,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reliability-and-validity" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Reliability and Validity</h2>
-<div class="figure">
-<img src="images/stat/visual-representation-of-reliability-and-validity-gareis-and-grant-2008-png.jpg" alt="" />
-<p class="caption">Reliability and Validity</p>
-</div>
-<p><strong>Reliability</strong> refers to the consistency of a measure. Psychologists consider three types of consistency: over time (test-retest reliability), across items (internal consistency), and across different researchers (inter-rater reliability).</p>
-<p><strong>Validity</strong> is the extent to which the scores from a measure represent the variable they are intended to. When a measure has good test-retest reliability and internal consistency, researchers should be more confident that the scores represent what they are supposed to. There has to be more to it, however, because a measure can be extremely reliable but have no validity whatsoever.</p>
-<p>“The usefulness of a measurement tool is reliant on the extent to which it can be considered reliable and accurate as an indicator of behavior. Reliability is an indication of the consistency of the measurement. The degree to which an instrument reflects what it is proposed to measure is reflected in validity. <strong>Internal</strong> <strong>consistency</strong> is a form of reliability. This property is most relevant to performance measures that consist of multiple items that are to be summarized clinically into a composite score. Clinical inferences made from a composite score of multiple items are strengthened by evidence that all items—in the case of the FGA, dynamic balance—are measuring the same construct.28 As an index of a test’s ability to differentiate among patients, a high degree of internal consistency also supports the use of the instrument as a screening tool”.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
-<p><strong>Three essential types of validity</strong></p>
-<ol style="list-style-type: decimal">
-<li>Face validity is the extent to which a measurement method appears “on its face” to measure the construct of interest.</li>
-<li>Content validity is the extent to which a measure “covers” the construct of interest.</li>
-<li>Criterion validity is the extent to which people’s scores on a measure are correlated with other variables (known as criteria) that one would expect them to be correlated with.</li>
-</ol>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="20">
-<li id="fn20"><p>Retrieved from: <a href="https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/" class="uri">https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/</a><a href="reliability-and-validity.html#fnref20" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="how-to-define-random-variable-and-probability-distribution---an-example" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> How to define random variable and probability distribution - an example</h2>
+<p>In an experiment, we throw three coins (<span class="math inline">\(n = 3\)</span>) and we are interested in the probability of throwing <span class="math inline">\(k\)</span> Heads <span class="math inline">\((H)\)</span> - we assume that getting <span class="math inline">\(H\)</span> is a success and throwing <span class="math inline">\(T\)</span> is a failure.</p>
+<p><strong>Define a random variable on the sample space and construct a probability distribution for the experiment</strong>.</p>
+<p>The experiment from the example is called a <strong>binomial experiment.</strong></p>
+<p>We begin with the sample space <span class="math inline">\(S\)</span>. The sample space contains possible outcomes of the experiment. <span class="math inline">\(S = \{ (H, H, H), (H, H, T), (H, T, T), (T, T, T), (T, T, H), (T, H, H), (T, H, T), (H, T, H) \}\)</span>. We can compute the number of elements in S (<span class="math inline">\(|S|\)</span>) using the formula for the number of <span class="math inline">\(r\)</span>-permutations (of sequences of <span class="math inline">\(r\)</span> elements) with replacement, from the set of <span class="math inline">\(x\)</span> elements: <span class="math inline">\(P_r^x = x^r\)</span>. In our example we have <span class="math inline">\(2^3 = 8\)</span> (eight 3-permutations from the set <span class="math inline">\(X = \{0, 1\}\)</span>, and <span class="math inline">\(|X| = 2\)</span>).</p>
+<p>To construct a random variable we need to assign real numbers to the outcomes of the experiment.</p>
+<p>For example, we can define a rv Y and assign:</p>
+<p><span class="math inline">\((H, H, H) \rightarrow 3\)</span>;</p>
+<p><span class="math inline">\((H, H, T) \rightarrow 2\)</span>;</p>
+<p><span class="math inline">\((T, H, H) \rightarrow 2\)</span>;</p>
+<p><span class="math inline">\((...) \rightarrow ...\)</span>;</p>
+<p><span class="math inline">\((T, T, T) \rightarrow 0\)</span>.</p>
+<p>Then, if we assign the probability to each value of the random variable <em>Y</em> = {0, 1, 2, 3}, <span class="math inline">\(P(Y = ...) = ...\)</span>, we will finally construct the probability distribution function for this <strong>rv</strong> (See the table 1.1).</p>
+<table>
+<caption>Probability distribution of Y</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">y</th>
+<th align="left">f(y) = p</th>
+<th align="left">computations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td align="left">0</td>
+<td align="left">1/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{0}0.5^0(1-0.5)^3\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td align="left">1</td>
+<td align="left">3/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{1}0.5^1(1-0.5)^2\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td align="left">2</td>
+<td align="left">3/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{2}0.5^2(1-0.5)^1\)</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td align="left">3</td>
+<td align="left">1/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{3}0.5^3(1-0.5)^0\)</span></td>
+</tr>
+<tr class="odd">
+<td>-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<p>Why is the probability of, for example, tossing 1 head (1 success) equal to <span class="math inline">\(3/8\)</span>?</p>
+<p>In the example, the probability of getting heads is <span class="math inline">\(1/2\)</span>, therefore, the probability of getting tails is also <span class="math inline">\(1/2\)</span>, because <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
+<p>The random experiment from the example is composed of 3 levels (trials) (it is a compound experiment): first toss (first trial), second toss (second trial), third toss (third trial).</p>
+<p>In compound experiments we employ the  (in the example we use the multiplication rule for independent events) to compute probabilities.</p>
+<p>We begin with computing the probability of getting one head in 3 trials :</p>
+<p><span class="math display">\[ P((H,T,T)) = P((1,0,0)) = p^1 \times (1-p)^2 = (1/2)^1 \times (1/2)^2 = 1/8 \]</span></p>
+<p><span class="math display">\[ P((T,H,T)) = P((0,1,0)) = (1-p) \times p \times (1-p) = (1/2) \times (1/2) \times (1/2) = 1/8 \]</span></p>
+<p><span class="math display">\[ P((T,T,H)) = P((0,0,1)) = (1-p)^2 \times p^1 = (1/2)^2 \times (1/2)^1 = 1/8 \]</span></p>
+<p>Then, the probability of getting one head in 3 trials  is:</p>
+<p><span class="math display">\[ P(\{(H,T,T), (T,H,T), (T,T,H)\}) = P((H,T,T)) + P((T,H,T)) + P((T,T,H)) = \]</span></p>
+<p><span class="math display">\[ = 1/8 + 1/8 + 1/8 = 3/8 = \]</span></p>
+<p><span class="math display">\[ = \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
+<p>In general, the probability of getting  head in  trials  is:</p>
+<p><span class="math display">\[ P(X = x) = f(x; n = \text{number of trials}, p = \text{probability of success}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n \]</span></p>
+<p>Notice that <span class="math inline">\(\binom{3}{1} = |\{\{1\}, \{2\}, \{3\}\}| = 3\)</span> - it is a number of 1-element combinations from the set of 3 elements.</p>
+<p>As for the binomial experiment, we can think of the every single combination as a set of coordinates that indicates the place of success/successes in a sequence of outcomes.</p>
+<p>In our example, the elements of sets <span class="math inline">\(\{1\}, \{2\}, \{3\}\)</span> indicate that success (heads) can appear only in the first trial, only in the second, or only in the third trial.</p>
+<p>If we have for example <span class="math inline">\(\binom{3}{2} = 3 = |\{\{1,2\}, \{1,3\}, \{2,3\}\}|\)</span>, the elements of sets <span class="math inline">\(\{1,2\}, \{1,3\}, \{2,3\}\)</span> indicate that heads can appear in the first  second trial, in the first  third, or in the second  third trial.</p>
+<p>Why is the probability of, for example, tossing 1 head (1 success) equal to <span class="math inline">\(3/8\)</span>?</p>
+<p>In the example, the probability of getting heads is <span class="math inline">\(1/2\)</span>, therefore, the probability of getting tails is also <span class="math inline">\(1/2\)</span>, because <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
+<p>The random experiment from the example is composed of 3 levels (trials) (it is a compound experiment): first toss (first trial), second toss (second trial), third toss (third trial).</p>
+<p>In compound experiments, we employ the <strong>multiplication rule</strong> (in the example we use the multiplication rule for independent events) to compute probabilities.</p>
+<p>We begin with computing the probability of getting one head in 3 trials <strong>in a particular order</strong>:</p>
+<p><span class="math display">\[P((H,T,T)) = P((1,0,0)) = p^1 \times (1-p)^2 = (1/2)^1 \times (1/2)^2 = 1/8\]</span></p>
+<p><span class="math display">\[P((T,H,T)) = P((0,1,0)) = (1-p) \times p \times (1-p) = (1/2) \times (1/2) \times (1/2) = 1/8\]</span></p>
+<p><span class="math display">\[P((T,T,H)) = P((0,0,1)) = (1-p)^2 \times p^1 = (1/2)^2 \times (1/2)^1 = 1/8\]</span></p>
+<p>Then, the probability of getting one head in 3 trials <strong>in any order</strong> is:</p>
+<p><span class="math display">\[P(\{(H,T,T), (T,H,T), (T,T,H)\}) = P((H,T,T)) + P((T,H,T)) + P((T,T,H)) =\]</span></p>
+<p><span class="math display">\[= 1/8 + 1/8 + 1/8 = 3/8 =\]</span></p>
+<p><span class="math display">\[= \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
+<p>In general, the probability of getting <em>x</em> head in <em>n</em> trials <strong>in any order</strong> is:</p>
+<p><span class="math display">\[P(X = x) = f(x; n = \text{number of trials}, p = \text{probability of success}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n\]</span></p>
+<p>Notice that <span class="math inline">\(\binom{3}{1} = |\{\{1\}, \{2\}, \{3\}\}| = 3\)</span> - it is a number of 1-element combinations from the set of 3 elements.</p>
+<p>As for the binomial experiment, we can think of every single combination as a set of coordinates that indicates the place of success/successes in a sequence of outcomes.</p>
+<p>In our example, the elements of sets <span class="math inline">\(\{1\}, \{2\}, \{3\}\)</span> indicate that success (heads) can appear only in the first trial, only in the second, or only in the third trial.</p>
+<p>If we have for example <span class="math inline">\(\binom{3}{2} = 3 = |\{\{1,2\}, \{1,3\}, \{2,3\}\}|\)</span>, the elements of sets <span class="math inline">\(\{1,2\}, \{1,3\}, \{2,3\}\)</span> indicate that heads can appear in the first <strong>and</strong> second trial, in the first <strong>and</strong> third, or in the second <strong>and</strong> third trial.</p>
+<p>Do not confuse <span class="math inline">\((H, T, H)\)</span> - the sequence (the order of elements is important) - with the set <span class="math inline">\(\{H, T, H\} = \{H, T\} = \{T, H\}\)</span></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="levels-of-measurement-a-summary.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tabular-presentation-of-data-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="random-variable-and-probability-distribution-definitions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

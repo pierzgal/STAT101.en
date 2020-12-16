@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <title>5.4 Continuous probability distributions - uniform and normal distributions | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="5.4 Continuous probability distributions - uniform and normal distributions | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="5.4 Continuous probability distributions - uniform and normal distributions | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="5.4 Continuous probability distributions - uniform and normal distributions | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="levels-of-measurement-a-summary.html"/>
-<link rel="next" href="tabular-presentation-of-data-distributions.html"/>
+<link rel="prev" href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"/>
+
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -322,35 +322,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reliability-and-validity" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Reliability and Validity</h2>
-<div class="figure">
-<img src="images/stat/visual-representation-of-reliability-and-validity-gareis-and-grant-2008-png.jpg" alt="" />
-<p class="caption">Reliability and Validity</p>
+<div id="continuous-probability-distributions---uniform-and-normal-distributions" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Continuous probability distributions - uniform and normal distributions</h2>
+<div id="uniform-probability-distribution" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Uniform probability distribution</h3>
+<div id="example-14" class="section level4" number="5.4.1.1">
+<h4><span class="header-section-number">5.4.1.1</span> Example</h4>
+<p>RV <em>X</em> - <em>the amount of time to wait, in minutes, that a person must wait for a metro train on the platform</em> - is <strong>uniformly distributed</strong> with parameters <span class="math inline">\(a = 0\)</span> - the minimum value, and <span class="math inline">\(b = 6\)</span> - the maximum value, <span class="math inline">\(X \sim U(0, 6)\)</span>. What is the probability that you need to wait at least 4 minutes until the train leaves?</p>
+<p><strong>Solution:</strong></p>
+<p>We solve this problem using the uniform distribution function:</p>
+<p><span class="math display">\[P(X = x) = f(x; a, b) = \frac{1}{b - a}, \text{ for } 0 \leq x \leq 6\]</span></p>
+<p>Integrating uniform distribution function over the interval <span class="math inline">\([0, x]\)</span>, we obtain: <span class="math inline">\(P(X &lt; x) = \frac{x}{b-a}\)</span>, then,</p>
+<p><span class="math display">\[P(X \geq 4) = 1 - P(Z &lt; 4) = 1 - \frac{4}{6-0} = \frac{1}{3}\]</span></p>
+<p>Answer: The probability that you need to wait at least 4 minutes until the train leaves equals <span class="math inline">\(\frac{1}{3}\)</span>.</p>
 </div>
-<p><strong>Reliability</strong> refers to the consistency of a measure. Psychologists consider three types of consistency: over time (test-retest reliability), across items (internal consistency), and across different researchers (inter-rater reliability).</p>
-<p><strong>Validity</strong> is the extent to which the scores from a measure represent the variable they are intended to. When a measure has good test-retest reliability and internal consistency, researchers should be more confident that the scores represent what they are supposed to. There has to be more to it, however, because a measure can be extremely reliable but have no validity whatsoever.</p>
-<p>“The usefulness of a measurement tool is reliant on the extent to which it can be considered reliable and accurate as an indicator of behavior. Reliability is an indication of the consistency of the measurement. The degree to which an instrument reflects what it is proposed to measure is reflected in validity. <strong>Internal</strong> <strong>consistency</strong> is a form of reliability. This property is most relevant to performance measures that consist of multiple items that are to be summarized clinically into a composite score. Clinical inferences made from a composite score of multiple items are strengthened by evidence that all items—in the case of the FGA, dynamic balance—are measuring the same construct.28 As an index of a test’s ability to differentiate among patients, a high degree of internal consistency also supports the use of the instrument as a screening tool”.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
-<p><strong>Three essential types of validity</strong></p>
-<ol style="list-style-type: decimal">
-<li>Face validity is the extent to which a measurement method appears “on its face” to measure the construct of interest.</li>
-<li>Content validity is the extent to which a measure “covers” the construct of interest.</li>
-<li>Criterion validity is the extent to which people’s scores on a measure are correlated with other variables (known as criteria) that one would expect them to be correlated with.</li>
-</ol>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="20">
-<li id="fn20"><p>Retrieved from: <a href="https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/" class="uri">https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/</a><a href="reliability-and-validity.html#fnref20" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="normal-probability-distribution" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Normal probability distribution</h3>
+<div id="example-15" class="section level4" number="5.4.2.1">
+<h4><span class="header-section-number">5.4.2.1</span> Example</h4>
+<p>For normally distributed rv <em>X</em> with parameters <span class="math inline">\(E(X) = 72\)</span> and <span class="math inline">\(Var(X) = 144\)</span>, compute:</p>
+<ul>
+<li><p><span class="math inline">\(P(X &lt; 84)\)</span></p></li>
+<li><p><span class="math inline">\(P(60 &lt; X &lt; 69)\)</span></p></li>
+<li><p><span class="math inline">\(P(X \geq 102)\)</span></p></li>
+</ul>
+<p><strong>Solution</strong>:</p>
+<p>In order to use tables of the values of cumulative standardised normal distribution function, we need to standardise rv <em>X</em>. As a result we obtain the values of a standardised rv <em>Z</em>.</p>
+<p>We standardise values of <em>X</em> employing the following formula: <span class="math inline">\(Z = \frac{Y - \mu_Y}{\sigma_Y}\)</span>. In the example <em>Y</em> = <em>X</em>.</p>
+<p><strong>a)</strong> Compute <span class="math inline">\(P(X &lt; 84)\)</span>,</p>
+<p><span class="math display">\[P(X &lt; x) = P(Z &lt; \frac{X – \mu_X}{\sigma_X}) \rightarrow P(Z &lt; z)\]</span></p>
+<p><span class="math inline">\(P(X &lt; 84) = P(Z &lt; [(84 – 72) / 12] = 1)\)</span>. In the tables we find that for <em>Z</em> = 1 the required probability is equal to 0.8413.</p>
+<p><strong>b)</strong> Compute <span class="math inline">\(P(60 &lt; X &lt; 69)\)</span>,</p>
+<p><span class="math display">\[P(x_1 &lt; X &lt; x_2) \rightarrow P(z_1 &lt; Z &lt; z_2)\]</span></p>
+<p>Then, <em>Z</em> is contained in <span class="math inline">\((z_1, z_2)\)</span></p>
+<p>We do computation as follows: <span class="math inline">\(P(Z &lt; z_2) – P(Z &lt; z_1)\)</span>.</p>
+<p>Then, <span class="math inline">\(P(60 &lt; X &lt; 69) = P(-1 &lt; Z &lt; -0.25) = P(Z &lt; -0.25) – P(Z &lt; -1)\)</span>, and from the tables we obtain 0.4013 – 0.1587 = 0.2426.</p>
+<p><strong>c)</strong> Compute <span class="math inline">\(P(X \geq 102)\)</span>,</p>
+<p><span class="math display">\[P(X &gt; x) \rightarrow P(Z &gt; z) = 1 – P(Z &lt; z)\]</span></p>
+<p>Then, <span class="math inline">\(P(X &lt; 102) = P(Z &lt; 2.5)\)</span>, and from the tables for <span class="math inline">\(Z = 2.5\)</span> we have 0.9938, and finally <span class="math inline">\(1 – 0.9938 = 0.0062\)</span>.</p>
 </div>
+<div id="example-16" class="section level4" number="5.4.2.2">
+<h4><span class="header-section-number">5.4.2.2</span> Example</h4>
+<p>Assume that a random variable Z is normally distributed, with parameters <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. What is the probability that <span class="math inline">\(-1.96 &lt; Z &lt; 1.96\)</span>.</p>
+<p>Normal probability density function is as follows:</p>
+<p><span class="math display">\[f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)}\]</span></p>
+<p>To find the probability that <span class="math inline">\(-1.96 &lt; Z &lt; 1.96\)</span>, we can apply a computer algebra system (CAS) like Mathematica or other software that is able to integrate functions (e.g. <span class="sans-serif">R</span>). We can also try to integrate the normal density function without the aid of a computer, but it is very difficult. Some functions (e.g. polynomials) are easy to integrate but the normal density function is not.</p>
+<p>To find the probability, that <span class="math inline">\(-1.96 &lt; Z &lt; 1.96\)</span> we have to integrate the normal density function with the parameters <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span> (the standard normal density function), from -1.96 to 1.96. So, we need to instruct a program we use to determine:</p>
+<p><span class="math display">\[Integral = \int_{-1.96}^{1.96}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)} dx\]</span></p>
+<p>We know that <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>, so we can simplify the formula above:</p>
+<p><span class="math display">\[I = \int_{-1.96}^{1.96}\frac{1}{\sqrt{2\pi}}e^{-z^2/2} dz\]</span></p>
+<p>For example, using Wolfram Integral Calculator which is available for free at: <a href="http://www.wolframalpha.com/calculators/integral-calculator/" class="uri">http://www.wolframalpha.com/calculators/integral-calculator/</a>, insert in the dialog box the following code:</p>
+<pre><code>integrate 1/\sqrt(2\pi)e^(-x^2/2) from -1.96 to 1.96</code></pre>
+<p>Wolfram Calculator will integrate the function from -1.96 to 1.96 and the outcome should be 0.95 = 95%.</p>
+<p>Use the calculator to obtain the probability for the following intervals:</p>
+<p><span class="math inline">\(-1.645 &lt; Z &lt; 1.645\)</span></p>
+<p><span class="math inline">\(-2.575 &lt; Z &lt; 2.575\)</span></p>
+<p>Use <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>.</p>
+
+</div>
+</div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="levels-of-measurement-a-summary.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tabular-presentation-of-data-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

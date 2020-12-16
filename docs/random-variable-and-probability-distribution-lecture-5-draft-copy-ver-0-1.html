@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <title>5 Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1] | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="5 Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1] | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="5 Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1] | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="5 Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1] | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="levels-of-measurement-a-summary.html"/>
-<link rel="next" href="tabular-presentation-of-data-distributions.html"/>
+<link rel="prev" href="further-examples.html"/>
+<link rel="next" href="random-variable-and-probability-distribution-definitions.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -257,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.24" data-path="histogram-and-box-plot.html"><a href="histogram-and-box-plot.html"><i class="fa fa-check"></i><b>3.24</b> Histogram and box-plot</a></li>
 <li class="chapter" data-level="3.25" data-path="skewness-of-data-distribution.html"><a href="skewness-of-data-distribution.html"><i class="fa fa-check"></i><b>3.25</b> Skewness of data distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="introduction-to-statistical-inference-lecture-4-draft-copy-ver-0-3.html"><a href="introduction-to-statistical-inference-lecture-4-draft-copy-ver-0-3.html"><i class="fa fa-check"></i><b>4</b> Introduction to statistical inference [Lecture 4 - draft copy, ver. 0.3]</a>
+<li class="chapter" data-level="4" data-path="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-3.html"><a href="elements-of-statistical-inference-lecture-4-draft-copy-ver-0-3.html"><i class="fa fa-check"></i><b>4</b> Elements of statistical inference [Lecture 4 - draft copy, ver. 0.3]</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>4.1</b> Introduction</a>
 <ul>
@@ -290,7 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.7" data-path="further-examples.html"><a href="further-examples.html#various-examples"><i class="fa fa-check"></i><b>4.3.7</b> Various examples (*)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><a href="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.1]</a>
+<li class="chapter" data-level="5" data-path="random-variable-and-probability-distribution-lecture-5-draft-copy-ver-0-1.html"><a href="random-variable-and-probability-distribution-lecture-5-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1]</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a></li>
 <li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
@@ -302,7 +302,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html"><i class="fa fa-check"></i><b>5.4</b> Continuous probability distributions - uniform and normal distributions</a>
 <ul>
 <li class="chapter" data-level="5.4.1" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html#uniform-probability-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Uniform probability distribution</a></li>
-<li class="chapter" data-level="5.4.2" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html#normal-probability-distribution"><i class="fa fa-check"></i><b>5.4.2</b> Normal probability distribution</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -322,35 +321,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reliability-and-validity" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Reliability and Validity</h2>
-<div class="figure">
-<img src="images/stat/visual-representation-of-reliability-and-validity-gareis-and-grant-2008-png.jpg" alt="" />
-<p class="caption">Reliability and Validity</p>
-</div>
-<p><strong>Reliability</strong> refers to the consistency of a measure. Psychologists consider three types of consistency: over time (test-retest reliability), across items (internal consistency), and across different researchers (inter-rater reliability).</p>
-<p><strong>Validity</strong> is the extent to which the scores from a measure represent the variable they are intended to. When a measure has good test-retest reliability and internal consistency, researchers should be more confident that the scores represent what they are supposed to. There has to be more to it, however, because a measure can be extremely reliable but have no validity whatsoever.</p>
-<p>“The usefulness of a measurement tool is reliant on the extent to which it can be considered reliable and accurate as an indicator of behavior. Reliability is an indication of the consistency of the measurement. The degree to which an instrument reflects what it is proposed to measure is reflected in validity. <strong>Internal</strong> <strong>consistency</strong> is a form of reliability. This property is most relevant to performance measures that consist of multiple items that are to be summarized clinically into a composite score. Clinical inferences made from a composite score of multiple items are strengthened by evidence that all items—in the case of the FGA, dynamic balance—are measuring the same construct.28 As an index of a test’s ability to differentiate among patients, a high degree of internal consistency also supports the use of the instrument as a screening tool”.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
-<p><strong>Three essential types of validity</strong></p>
-<ol style="list-style-type: decimal">
-<li>Face validity is the extent to which a measurement method appears “on its face” to measure the construct of interest.</li>
-<li>Content validity is the extent to which a measure “covers” the construct of interest.</li>
-<li>Criterion validity is the extent to which people’s scores on a measure are correlated with other variables (known as criteria) that one would expect them to be correlated with.</li>
-</ol>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="20">
-<li id="fn20"><p>Retrieved from: <a href="https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/" class="uri">https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/</a><a href="reliability-and-validity.html#fnref20" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="random-variable-and-probability-distribution-lecture-5---draft-copy-ver.-0.1" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Random variable and probability distribution [Lecture 5 - draft copy, ver. 0.1]</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="levels-of-measurement-a-summary.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tabular-presentation-of-data-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="further-examples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-variable-and-probability-distribution-definitions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

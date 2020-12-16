@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <title>5.3 Discrete probability distributions - Bernoulli and binomial distributions | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="5.3 Discrete probability distributions - Bernoulli and binomial distributions | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="5.3 Discrete probability distributions - Bernoulli and binomial distributions | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.3 Reliability and Validity | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="5.3 Discrete probability distributions - Bernoulli and binomial distributions | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="levels-of-measurement-a-summary.html"/>
-<link rel="next" href="tabular-presentation-of-data-distributions.html"/>
+<link rel="prev" href="how-to-define-random-variable-and-probability-distribution-an-example.html"/>
+<link rel="next" href="continuous-probability-distributions-uniform-and-normal-distributions.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -322,26 +322,139 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reliability-and-validity" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Reliability and Validity</h2>
-<div class="figure">
-<img src="images/stat/visual-representation-of-reliability-and-validity-gareis-and-grant-2008-png.jpg" alt="" />
-<p class="caption">Reliability and Validity</p>
+<div id="discrete-probability-distributions---bernoulli-and-binomial-distributions" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Discrete probability distributions - Bernoulli and binomial distributions</h2>
+<p>Wikipedia.org gives a good and concise definition of Binomial distribution:</p>
+<p>"In probability theory and statistics, the binomial distribution with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> is the discrete probability distribution of the number of successes in a sequence of <span class="math inline">\(n\)</span> independent yes/no experiments [usually called a binomial experiment - M.P], each of which yields success with probability <span class="math inline">\(p\)</span>. A <span class="sans-serif">success/failure</span> experiment is also called a Bernoulli experiment or Bernoulli trial; when <span class="math inline">\(n\)</span> = 1, <strong>the binomial distribution is a Bernoulli distribution</strong>. (…)</p>
+<p>The binomial distribution is frequently used to model the number of successes in a sample of size <span class="math inline">\(n\)</span> drawn with replacement from a population of size <span class="math inline">\(N\)</span>. If the sampling is carried out without replacement, the draws are not independent and so the resulting distribution is a hypergeometric distribution, not a binomial one. However, for <span class="math inline">\(N\)</span> much larger than <span class="math inline">\(n\)</span>, the binomial distribution is a good approximation, and widely used".</p>
+<div id="remark-about-random-sampling" class="section level4" number="5.3.0.1">
+<h4><span class="header-section-number">5.3.0.1</span> Remark about random sampling</h4>
+<p><strong>Sampling with replacement</strong>:</p>
+<p>Consider a population of potato sacks, each of which has either 12, 13, 14, 15, 16, 17, or 18 potatoes, and all the values are equally likely. Suppose that, in this population, there is exactly one sack with each number. So the whole population has seven sacks. If I sample two with replacement, then I first pick one (say 14). I had a 1/7 probability of choosing that one. Then I replace it. Then I pick another. Every one of them still has 1/7 probability of being chosen. And there are exactly 49 different possibilities here (assuming we distinguish between the first and second.) They are: (12,12), (12,13), (12, 14), (12,15), (12,16), (12,17), (12,18), (13,12), (13,13), (13,14), etc.</p>
+<p><strong>Sampling without replacement</strong>:</p>
+<p>Consider the same population of potato sacks, each of which has either 12, 13, 14, 15, 16, 17, or 18 potatoes, and all the values are equally likely. Suppose that, in this population, there is exactly one sack with each number. So the whole population has seven sacks. If I sample two without replacement, then I first pick one (say 14). I had a 1/7 probability of choosing that one. Then I pick another. At this point, there are only six possibilities: 12, 13, 15, 16, 17, and 18. So there are only 42 different possibilities here (again assuming that we distinguish between the first and the second.) They are: (12,13), (12,14), (12,15), (12,16), (12,17), (12,18), (13,12), (13,14), (13,15), etc.</p>
+<p>When we sample with replacement, the two sample values are independent. Practically, this means that what we get on the first one doesn’t affect what we get on the second. Mathematically, this means that the covariance between the two is zero.</p>
+<p>In sampling without replacement, the two sample values aren’t independent. Practically, this means that what we got on the for the first one affects what we can get for the second one. Mathematically, this means that the covariance between the two isn’t zero.</p>
+<p>When we sample without replacement, and get a non-zero covariance, the covariance depends on the population size. If the population is very large, this covariance is very close to zero. In that case, sampling with replacement isn’t much different from sampling without replacement. In some discussions, people describe this difference as sampling from an infinite population (sampling with replacement) versus sampling from a finite population (without replacement).</p>
+<p>Source: <a href="https://www.ma.utexas.edu/users/parker/sampling/repl.htm" class="uri">https://www.ma.utexas.edu/users/parker/sampling/repl.htm</a></p>
 </div>
-<p><strong>Reliability</strong> refers to the consistency of a measure. Psychologists consider three types of consistency: over time (test-retest reliability), across items (internal consistency), and across different researchers (inter-rater reliability).</p>
-<p><strong>Validity</strong> is the extent to which the scores from a measure represent the variable they are intended to. When a measure has good test-retest reliability and internal consistency, researchers should be more confident that the scores represent what they are supposed to. There has to be more to it, however, because a measure can be extremely reliable but have no validity whatsoever.</p>
-<p>“The usefulness of a measurement tool is reliant on the extent to which it can be considered reliable and accurate as an indicator of behavior. Reliability is an indication of the consistency of the measurement. The degree to which an instrument reflects what it is proposed to measure is reflected in validity. <strong>Internal</strong> <strong>consistency</strong> is a form of reliability. This property is most relevant to performance measures that consist of multiple items that are to be summarized clinically into a composite score. Clinical inferences made from a composite score of multiple items are strengthened by evidence that all items—in the case of the FGA, dynamic balance—are measuring the same construct.28 As an index of a test’s ability to differentiate among patients, a high degree of internal consistency also supports the use of the instrument as a screening tool”.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
-<p><strong>Three essential types of validity</strong></p>
+<div id="some-characteristics-of-the-binomial-distribution" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Some characteristics of the binomial distribution</h3>
+<p>Suppose <span class="math inline">\(X\)</span> has <strong>Bernoulli distribution</strong> with parameter <em>p</em> - probability of success. Then</p>
+<ul>
+<li><p><span class="math inline">\(E(X) = p\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = p(1-p)\)</span></p></li>
+</ul>
+<p>then, if <span class="math inline">\(Y = \Sigma X_i = X_1 + X_2 + ... + X_n\)</span>, <em>Y</em> has <strong>binomial distribution</strong> with parameters <em>p</em> = probability of success and <em>n</em> = number of trials (or sample size).</p>
+<p>If <span class="math inline">\(Y \sim Bin(n, p),\)</span></p>
+<ul>
+<li><p><span class="math inline">\(E(Y) = np\)</span></p></li>
+<li><p><span class="math inline">\(Var(Y) = np(1-p)\)</span></p></li>
+</ul>
+<p>And also for the variable <span class="math inline">\(\frac{Y}{n} = \hat{p}\)</span> - sample proportion, we have:</p>
+<ul>
+<li><p><span class="math inline">\(E(\frac{Y}{n}) = p\)</span></p></li>
+<li><p><span class="math inline">\(Var(\frac{Y}{n}) = \frac{p(1-p)}{n}\)</span></p></li>
+</ul>
+<p>According to the <strong>Central Limit Theorem (CLT)</strong>, if <em>n</em> is sufficiently large, sample proportion has <strong>approximately normal distribution</strong>, <span class="math inline">\(\hat{p} \text{ } \dot{\sim} \text{ } N(p, \sqrt{\frac{p(1-p)}{n}})\)</span>.</p>
+<p>Notice that if <span class="math inline">\(Y = X_1 + X_2 + ... + X_n\)</span>, and <span class="math inline">\(Y \sim Binom(n, p)\)</span>, and <span class="math inline">\(X_i = \{0 = \text{failure}, 1 = \text{success}\}\)</span>, then <strong>the mean</strong> = <span class="math inline">\(E(Y) = Y/n = \Sigma X/n = E(Y)= p\)</span> and <strong>the variance</strong> = <span class="math inline">\(Var(Y) = \frac{p(1-p)}{n}\)</span>, where <em>p</em> is a proportion (fraction, relative frequency) of “successes”.</p>
+</div>
+<div id="examples" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Examples</h3>
+<div id="example-10" class="section level4" number="5.3.2.1">
+<h4><span class="header-section-number">5.3.2.1</span> Example</h4>
+<p>Assuming that the selection of items for a sample can be treated as independent trials, and that the probability that any 1 item is defective is 0.01, find:</p>
 <ol style="list-style-type: decimal">
-<li>Face validity is the extent to which a measurement method appears “on its face” to measure the construct of interest.</li>
-<li>Content validity is the extent to which a measure “covers” the construct of interest.</li>
-<li>Criterion validity is the extent to which people’s scores on a measure are correlated with other variables (known as criteria) that one would expect them to be correlated with.</li>
+<li><p>The probability of 1 defective item in a random sample of 15 items from a production line;</p></li>
+<li><p>The probability of 1 defective item in a random sample of 1 item from a production line.</p></li>
 </ol>
+<p><strong>Solution</strong>:</p>
+<p>The experiment in the example is composed of <em>n</em> independent Bernoulli trials (experiments), therefore it is a binomial experiment, wherein selecting a defective item is a “success”.</p>
+<p>Assigning positive integer numbers to outcomes of the experiment we construct <strong>rv</strong> that indicates the number of defective items in a batch, so the binomial random variable for this experiment can be <em>X</em> = the number of defective items (“successes”) in a sample (in a batch), <em>n</em> stands for the sample size (the batch size).</p>
+<p>We assume that selecting each item for the sample is an independent trial, then we can apply the binomial probability formula.</p>
+<p>The probability of success <em>p</em> (a defective item) is 0.01, while the probability of failure (an acceptable item) is 1-0.01 = 0.99.</p>
+<p><strong>The binomial probability function is</strong>: <span class="math display">\[P(X = x) = f(x; n, p) = \binom{n}{x} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n\]</span></p>
+<p>The probability of 1 defective item in a random sample of <strong>15 items</strong> from a production line is:</p>
+<p><span class="math display">\[P(1 \text{ defective item}) = P(1 \text{ success}) = P(X = 1) =\]</span></p>
+<p><span class="math display">\[= \binom{15}{1} \times 0.01^1 \times 0.99^{14} = 0.1303\]</span></p>
+<p>The probability of 1 defective item in a random sample of <strong>1 item</strong> from a production line is:</p>
+<p><span class="math display">\[P(1 \text{ defective item}) = P(1 \text{ success}) = P(X = 1) =\]</span></p>
+<p><span class="math display">\[= \binom{1}{1} \times 0.01^1 \times 0.99^{0} = 0.01\]</span></p>
+<p>Notice that for <em>n</em> = 1, <strong>a binomial distribution is just a Bernoulli distribution</strong>. The Bernoulli distribution is the binomial distribution for <em>n</em> (number of trials) = 1.</p>
+</div>
+<div id="example-11" class="section level4" number="5.3.2.2">
+<h4><span class="header-section-number">5.3.2.2</span> Example</h4>
+<p>Random variable <em>X</em> - # of heads in <em>n</em> tosses of a fair coin has binomial distribution with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p = 0.5\)</span>. Find the probability that in 10 tosses you get <strong>heads</strong> at least 7 times.</p>
+<p><strong>Solution:</strong></p>
+<p>We have <span class="math inline">\(X \sim Bin(10, 0.5)\)</span>.</p>
+<p>Cumulative binomial probability function is:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \sum_{a=0}^x \binom{n}{a} p^a(1-p)^{n-a}, \text{ for } x = 0, 1, 2, ..., n\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[P(X \geq 7 | n = 10, p = 0.5) = P(X = 7) + P(X = 8) + P(X = 9) + P(X = 10) =\]</span></p>
+<p><span class="math display">\[= \sum_{a = 7}^{10} \binom{10}{a} 0.5^a(1-0.5)^{10-a} =\]</span></p>
+<p><span class="math display">\[\binom{10}{7}(\frac{1}{2})^7(\frac{1}{2})^3 + \binom{10}{8}(\frac{1}{2})^8(\frac{1}{2})^2 + \binom{10}{9}(\frac{1}{2})^9(\frac{1}{2})^1 + \binom{10}{10}(\frac{1}{2})^{10}(\frac{1}{2})^0 = \frac{176}{1024}\]</span></p>
+</div>
+<div id="example-12" class="section level4" number="5.3.2.3">
+<h4><span class="header-section-number">5.3.2.3</span> Example</h4>
+<p>Let <span class="math inline">\(X = X_1 + X_2 + ... + X_n\)</span> be <strong>the number of times a respondent is willing to pay a particular price for a product</strong>. Assume that rv <span class="math inline">\(X_i \sim Bern(p = 0.6)\)</span> - each person (trial) is a Bernoulli rv: either the person is willing to pay a particular price (1) <strong>or</strong> is not (0). If you draw a sample of size <em>n</em> = 100 from a population, what is the <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>?</p>
+<p>We have <span class="math inline">\(X \sim Bin(100, 0.6)\)</span>.</p>
+<p><span class="math display">\[P(X \geq 65 | n = 100, p = 0.6) = \sum_{k = 65}^{100} \binom{100}{k} 0.6^k(1-0.6)^{100-k}\]</span></p>
+<p>Instead of computing the probability employing binomial distribution function, we can use the normal approximation to the binomial because the condition <span class="math inline">\(np \wedge n(1-p) &gt; 5\)</span> is satisfied. It is often handy to replace the binomial distribution with the normal distribution if the criteria above are satisfied - then approximation of the probability is sufficiently good.</p>
+<p>The <strong>Central Limit Theorem</strong> asserts that the normal approximations to the probability distributions of the <strong>sample sum</strong> and <strong>sample mean</strong> of independent random draws with replacement from a population improve as the number of draws grows (<span class="math inline">\(n\rightarrow \infty\)</span>). In practice, we can use normal approximation to binomial if <span class="math inline">\(np \wedge n(1-p) &gt; 5\)</span>.</p>
+<p>Normal distribution requires two parameters: <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
+<p>For binomial rv <em>X</em>, recall that,</p>
+<ul>
+<li><p><span class="math inline">\(E(X) = np\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = np(1-p)\)</span></p></li>
+<li><p><span class="math inline">\(E(\frac{X}{n}) = p\)</span></p></li>
+<li><p><span class="math inline">\(Var(\frac{X}{n}) = \frac{p(1-p)}{n}\)</span></p></li>
+</ul>
+<p>Then, we can approximate the distribution of rv <em>X</em> with normal distribution with parameters <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span>.</p>
+<p><span class="math display">\[N(np, \sqrt{np(1-p)})\]</span></p>
+<p>Instead sample sum <span class="math inline">\(\Sigma X_i = X\)</span>, we can use sample proportion <span class="math inline">\(\frac{X}{n} = \bar{X} = \hat{p}\)</span> <strong>equivalently</strong>. If <em>X</em> has binomial distribution, we have: <span class="math inline">\(\mu_{\hat{p}} = p\)</span> and <span class="math inline">\(\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}\)</span>.</p>
+<p><span class="math display">\[N(p, \sqrt{\frac{p(1-p)}{n}})\]</span></p>
+<p>In the example <span class="math inline">\(p = 0.6\)</span> and <span class="math inline">\(n = 100\)</span>, then <span class="math inline">\(\frac{X}{n} \sim N(0.6, 0.0490)\)</span>.</p>
+<p>Then, <span class="math display">\[P(X \geq 65 | \mu = 60, \sigma = 4.90) = P(\frac{X}{n} \geq 0.65 | \mu = 0.6, \sigma = 0.0490) =\]</span> <span class="math display">\[= \int_{t_0(X = 65)}^{t_1(\infty)}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt\]</span></p>
+<p>Because probability tables cannot be printed for every normal distribution, as there is an infinite variety of normal distributions, it is <strong>common practice to convert a normal to a standard normal</strong> and then to use the standard normal table to find probabilities - without tables or computer algebra systems, we need to compute probabilities employing integration by hand but it is difficult and time-consuming.</p>
+<p>Tables are printed for <strong>standard normal distributions</strong> with parameters <span class="math inline">\(\mu = 0, \sigma = 1\)</span>.</p>
+<p>To convert a normally distributed variable <em>X</em> with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> to a standard normal variable, usually denoted <em>Z</em>, we use the following formula:</p>
+<p><span class="math display">\[Z = \frac{X - \mu}{\sigma}\]</span></p>
+<p><img src="z_score_mosaic" id="fig:my_label" alt="Variable $X \sim N(2, 0.5)$ and $Z \sim N(0, 1)$. Area of shaded in magenta region is the same for the distributions centered at 2 ($x &gt; 1.5$) and at 0 ($x &gt; -1$)." /> <span class="math display">\[fig:my_label\]</span></p>
+<p>If <span class="math inline">\(X \sim N(\mu, \sigma)\)</span>, then <span class="math inline">\(Z = \frac{(X-\mu)}{\sigma} \sim N(0, 1)\)</span>.</p>
+<p>Thus, <span class="math inline">\(Z = \frac{\frac{X}{n} – p}{\sqrt{\frac{p(1-p)}{n}}}\)</span> and for <span class="math inline">\(\frac{X}{n} = 0.65\)</span> we finally obtain <span class="math inline">\(Z = 1.02\)</span>, then</p>
+<p><span class="math display">\[P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02) = \int_{t_0(Z = 1.02)}^{t_1(\infty)}f(t)dt\]</span></p>
+<p>Now, we can find probability in the tables. We get <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02) = 1 – P(Z \leq 1.02) = 1 – 0.8461 = 0.1539 = 15.39\%\)</span>.</p>
+<p>Answer: <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = 15.39\%\)</span></p>
+<p>To get better approximation we should apply <strong>continuity correction</strong>. It means that instead <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>, we compute <span class="math inline">\(P(X \geq 64.5) = P(\frac{X}{n} \geq 0.645)\)</span><a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>.</p>
+<p><strong>Check</strong> whether or not we get better approximation using continuity correction, if we know that true value of the probability that <span class="math inline">\(X \geq 65\)</span> is = <strong>0.1795</strong> - this is the true value that we obtained employing binomial formula.</p>
+<p><span class="sans-serif">You do not need to apply a continuity correction during the final exam of this course</span>.</p>
+</div>
+<div id="example-13" class="section level4" number="5.3.2.4">
+<h4><span class="header-section-number">5.3.2.4</span> Example</h4>
+<p>Suppose that the proportion of Polish people who trust the president of RP is equal to 60% and let rv <em>X</em> to be the number of people who trust Polish president - <span class="math inline">\(X \sim Bin(n, 0.6)\)</span>. Find the probability that in the random sample of 15 people, at most 3 (<span class="math inline">\(\hat{p} = 0.2 = \frac{3}{15}\)</span>) trust the president.</p>
+<p><strong>Solution:</strong></p>
+<p>RV <em>X</em> has binomial distribution, <span class="math inline">\(X \sim Bin(15, 0.6)\)</span></p>
+<p>To calculate <span class="math inline">\(P(X \leq 3 | n = 15, p = 0.6)\)</span> we can employ the binomial distribution function <strong>or</strong> apply a normal approximation to the binomial distribution (only if the condition <span class="math inline">\(np \wedge n(1-p) &gt; 5\)</span> is satisfied) with a continuity correction like in the previous example.</p>
+<p>We need to use a cumulative form of the binomial distribution function:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \sum_{a=0}^x \binom{n}{a} p^a(1-p)^{n-a}, \text{dla } x = 0, 1, 2, ..., n\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[P(X \leq 3 | n = 15, p = 0.6) = \sum_{x=0}^{3}\binom{15}{x}0.6^x(1-0.6)^{15-x} =\]</span> <span class="math display">\[= \sum_{x=0}^{3}\frac{15!}{(15-x)!x!}0.6^x(1-0.6)^{15-x} =\]</span> <span class="math display">\[= \binom{15}{0}0.6^0(1-0.6)^{15-0} + \binom{15}{1}0.6^1(1-0.6)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(1-0.6)^{15-2} + \binom{15}{3}0.6^3(1-0.6)^{15-3} =\]</span> <span class="math display">\[= \frac{15!}{(15)!0!}0.6^0(0.4)^{15-0} + \binom{15}{1}0.6^1(0.4)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(0.4)^{15-2} +\]</span> <span class="math display">\[\frac{1\times2\times3\times...\times15}{(1\times2\times3\times...\times12)1\times2\times3}0.6^3(1-0.6)^{15-3} =\]</span> <span class="math display">\[= \frac{15!}{(15)!0!}0.6^0(0.4)^{15-0} + \binom{15}{1}0.6^1(0.4)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(0.4)^{15-2} + \frac{13\times14\times15}{1\times2\times3}0.6^3(0.4)^{15-3} = 0.0019.\]</span></p>
+<p>Now, let us compute the probability using the <strong>normal approximation</strong>. Remember that you should use a continuity correction to get a better approximation, therefore instead <em>X</em> = 3, we do computations for a slightly different value, namely <em>X</em> = 3.5 or equivalently for <span class="math inline">\(\hat{p} = 0.233(3) = \frac{3.5}{15} = \frac{7}{30}\)</span>.</p>
+<p>Finally,</p>
+<p><span class="math display">\[P(X \leq 3.5 | n = 15, p = 0.6) = \int_{t_0(-\infty)}^{t_1(x = 3.5)}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt =\]</span></p>
+<p><span class="math display">\[= P(Z &lt; \frac{3.5-np}{\sqrt{p(1-p)n}}) = P(Z &lt; -2.9) = \int_{t_0(-\infty)}^{t_1(z = -2.9)}\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-t^2}{2}}dt = 0.0019.\]</span></p>
+<p><strong>Remark</strong>: For continuous rv’s we have <span class="math inline">\(P(Z &lt; z) = P(Z \leq z)\)</span> and also <span class="math inline">\(P(Z &gt; z) = P(Z \geq z)\)</span>.</p>
+<p>Equivalently, we can do computations employing proportions, i.e. <span class="math inline">\(\frac{X}{n} = \hat{p}\)</span>, but remember to use modified formulas for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
+<p><span class="math display">\[P(\frac{X}{n} \leq \frac{3.5}{15} = \frac{7}{30} | n = 15, p = 0.6) = \int_{t_0(-\infty)}^{t_1(\frac{7}{30})}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt =\]</span> <span class="math display">\[= P(Z &lt; \frac{\frac{7}{30}-p}{\sqrt{\frac{p(1-p)}{n}}}) = P(Z &lt; -2.9) = P(Z &gt; 2.9) = 1 - P(Z &lt; 2.9) = 0.0019.\]</span></p>
+<p>As you may notice, the approximation is very good.</p>
+<p><strong>The answer</strong>: The probability, that in the random sample of 15 Polish people,  3 trust the president of Poland equals 0.0019 = 0.19%.</p>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="20">
-<li id="fn20"><p>Retrieved from: <a href="https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/" class="uri">https://opentextbc.ca/researchmethods/chapter/reliability-and-validity-of-measurement/</a><a href="reliability-and-validity.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<ol start="21">
+<li id="fn21"><p>In general, we add <span class="math inline">\(\frac{1}{2}\)</span> to <em>X</em> - if we want to find <span class="math inline">\(P(X \leq x)\)</span> - or subtract <span class="math inline">\(\frac{1}{2}\)</span> from <em>X</em> - for <span class="math inline">\(P(X \geq x)\)</span>.<a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#fnref21" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -349,8 +462,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="levels-of-measurement-a-summary.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tabular-presentation-of-data-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-to-define-random-variable-and-probability-distribution-an-example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continuous-probability-distributions-uniform-and-normal-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

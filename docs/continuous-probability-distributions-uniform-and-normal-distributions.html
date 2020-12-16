@@ -326,7 +326,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">5.4</span> Continuous probability distributions - uniform and normal distributions</h2>
 <div id="uniform-probability-distribution" class="section level3" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Uniform probability distribution</h3>
-<div id="example-14" class="section level4" number="5.4.1.1">
+<div id="example-13" class="section level4" number="5.4.1.1">
 <h4><span class="header-section-number">5.4.1.1</span> Example</h4>
 <p>RV <em>X</em> - <em>the amount of time to wait, in minutes, that a person must wait for a metro train on the platform</em> - is <strong>uniformly distributed</strong> with parameters <span class="math inline">\(a = 0\)</span> - the minimum value, and <span class="math inline">\(b = 6\)</span> - the maximum value, <span class="math inline">\(X \sim U(0, 6)\)</span>. What is the probability that you need to wait at least 4 minutes until the train leaves?</p>
 <p><strong>Solution:</strong></p>
@@ -339,7 +339,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="normal-probability-distribution" class="section level3" number="5.4.2">
 <h3><span class="header-section-number">5.4.2</span> Normal probability distribution</h3>
-<div id="example-15" class="section level4" number="5.4.2.1">
+<div id="example-14" class="section level4" number="5.4.2.1">
 <h4><span class="header-section-number">5.4.2.1</span> Example</h4>
 <p>For normally distributed rv <em>X</em> with parameters <span class="math inline">\(E(X) = 72\)</span> and <span class="math inline">\(Var(X) = 144\)</span>, compute:</p>
 <ul>
@@ -362,7 +362,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P(X &gt; x) \rightarrow P(Z &gt; z) = 1 – P(Z &lt; z)\]</span></p>
 <p>Then, <span class="math inline">\(P(X &lt; 102) = P(Z &lt; 2.5)\)</span>, and from the tables for <span class="math inline">\(Z = 2.5\)</span> we have 0.9938, and finally <span class="math inline">\(1 – 0.9938 = 0.0062\)</span>.</p>
 </div>
-<div id="example-16" class="section level4" number="5.4.2.2">
+<div id="example-15" class="section level4" number="5.4.2.2">
 <h4><span class="header-section-number">5.4.2.2</span> Example</h4>
 <p>Assume that a random variable Z is normally distributed, with parameters <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. What is the probability that <span class="math inline">\(-1.96 &lt; Z &lt; 1.96\)</span>.</p>
 <p>Normal probability density function is as follows:</p>
@@ -379,6 +379,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(-1.645 &lt; Z &lt; 1.645\)</span></p>
 <p><span class="math inline">\(-2.575 &lt; Z &lt; 2.575\)</span></p>
 <p>Use <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>.</p>
+</div>
+<div id="example---normal-approximation-of-the-binomial-distribution" class="section level4" number="5.4.2.3">
+<h4><span class="header-section-number">5.4.2.3</span> Example - Normal approximation of the binomial distribution</h4>
+<p>Let <span class="math inline">\(X = X_1 + X_2 + ... + X_n\)</span> be <strong>the number of times a respondent is willing to pay a particular price for a product</strong>. Assume that rv <span class="math inline">\(X_i \sim Bern(p = 0.6)\)</span> - each person (trial) is a Bernoulli rv: either the person is willing to pay a particular price (1) <strong>or</strong> is not (0). If you draw a sample of size <em>n</em> = 100 from a population, what is the <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>?</p>
+<p>We have <span class="math inline">\(X \sim Bin(100, 0.6)\)</span>.</p>
+<p><span class="math display">\[P(X \geq 65 | n = 100, p = 0.6) = \sum_{k = 65}^{100} \binom{100}{k} 0.6^k(1-0.6)^{100-k}\]</span></p>
+<p>Instead of computing the probability employing binomial distribution function, we can use the normal approximation to the binomial because the condition <span class="math inline">\(np \wedge n(1-p) &gt; 5\)</span> is satisfied. It is often handy to replace the binomial distribution with the normal distribution if the criteria above are satisfied - then approximation of the probability is sufficiently good.</p>
+<p>The <strong>Central Limit Theorem</strong> asserts that the normal approximations to the probability distributions of the <strong>sample sum</strong> and <strong>sample mean</strong> of independent random draws with replacement from a population improve as the number of draws grows (<span class="math inline">\(n\rightarrow \infty\)</span>). In practice, we can use normal approximation to binomial if <span class="math inline">\(np \wedge n(1-p) &gt; 5\)</span>.</p>
+<p>Normal distribution requires two parameters: <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
+<p>For binomial rv <em>X</em>, recall that,</p>
+<ul>
+<li><p><span class="math inline">\(E(X) = np\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = np(1-p)\)</span></p></li>
+<li><p><span class="math inline">\(E(\frac{X}{n}) = p\)</span></p></li>
+<li><p><span class="math inline">\(Var(\frac{X}{n}) = \frac{p(1-p)}{n}\)</span></p></li>
+</ul>
+<p>Then, we can approximate the distribution of rv <em>X</em> with normal distribution with parameters <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span>.</p>
+<p><span class="math display">\[N(np, \sqrt{np(1-p)})\]</span></p>
+<p>Instead sample sum <span class="math inline">\(\Sigma X_i = X\)</span>, we can use sample proportion <span class="math inline">\(\frac{X}{n} = \bar{X} = \hat{p}\)</span> <strong>equivalently</strong>. If <em>X</em> has binomial distribution, we have: <span class="math inline">\(\mu_{\hat{p}} = p\)</span> and <span class="math inline">\(\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}\)</span>.</p>
+<p><span class="math display">\[N(p, \sqrt{\frac{p(1-p)}{n}})\]</span></p>
+<p>In the example <span class="math inline">\(p = 0.6\)</span> and <span class="math inline">\(n = 100\)</span>, then <span class="math inline">\(\frac{X}{n} \sim N(0.6, 0.0490)\)</span>.</p>
+<p>Then, <span class="math display">\[P(X \geq 65 | \mu = 60, \sigma = 4.90) = P(\frac{X}{n} \geq 0.65 | \mu = 0.6, \sigma = 0.0490) =\]</span> <span class="math display">\[= \int_{t_0(X = 65)}^{t_1(\infty)}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt\]</span></p>
+<p>Because probability tables cannot be printed for every normal distribution, as there is an infinite variety of normal distributions, it is <strong>common practice to convert a normal to a standard normal</strong> and then to use the standard normal table to find probabilities - without tables or computer algebra systems, we need to compute probabilities employing integration by hand but it is difficult and time-consuming.</p>
+<p>Tables are printed for <strong>standard normal distributions</strong> with parameters <span class="math inline">\(\mu = 0, \sigma = 1\)</span>.</p>
+<p>To convert a normally distributed variable <em>X</em> with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> to a standard normal variable, usually denoted <em>Z</em>, we use the following formula:</p>
+<p><span class="math display">\[Z = \frac{X - \mu}{\sigma}\]</span></p>
+<div class="figure">
+<img src="images/stat/z_score_mosaic.svg" alt="" />
+<p class="caption">Figure 5.1. Z-score transformation</p>
+</div>
+<p>Variable <span class="math inline">\(X \sim N(2, 0.5)\)</span> and <span class="math inline">\(Z \sim N(0, 1)\)</span>. In Fig. 5.1, areas shaded in magenta regions are equall for the distributions centred at 2 (<span class="math inline">\(x &gt; 1.5\)</span>) and at 0 (<span class="math inline">\(x &gt; -1\)</span>).</p>
+<p>If <span class="math inline">\(X \sim N(\mu, \sigma)\)</span>, then <span class="math inline">\(Z = \frac{(X-\mu)}{\sigma} \sim N(0, 1)\)</span>.</p>
+<p>Thus, <span class="math inline">\(Z = \frac{\frac{X}{n} – p}{\sqrt{\frac{p(1-p)}{n}}}\)</span> and for <span class="math inline">\(\frac{X}{n} = 0.65\)</span> we finally obtain <span class="math inline">\(Z = 1.02\)</span>, then</p>
+<p><span class="math display">\[P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02) = \int_{t_0(Z = 1.02)}^{t_1(\infty)}f(t)dt\]</span></p>
+<p>Now, we can find probability in the tables. We get <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02) = 1 – P(Z \leq 1.02) = 1 – 0.8461 = 0.1539 = 15.39\%\)</span>.</p>
+<p>Answer: <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = 15.39\%\)</span></p>
+<p>To get better approximation we should apply <strong>continuity correction</strong>. It means that instead <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>, we compute <span class="math inline">\(P(X \geq 64.5) = P(\frac{X}{n} \geq 0.645)\)</span><a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>.</p>
+<p><strong>Check</strong> whether or not we get better approximation using continuity correction, if we know that true value of the probability that <span class="math inline">\(X \geq 65\)</span> is = <strong>0.1795</strong> - this is the true value that we obtained employing binomial formula.</p>
 
 </div>
 </div>
@@ -410,6 +448,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<div class="footnotes">
+<hr />
+<ol start="21">
+<li id="fn21"><p>In general, we add <span class="math inline">\(\frac{1}{2}\)</span> to <em>X</em> - if we want to find <span class="math inline">\(P(X \leq x)\)</span> - or subtract <span class="math inline">\(\frac{1}{2}\)</span> from <em>X</em> - for <span class="math inline">\(P(X \geq x)\)</span>.<a href="continuous-probability-distributions-uniform-and-normal-distributions.html#fnref21" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>

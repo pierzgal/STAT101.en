@@ -161,10 +161,10 @@ examples
 example-10
 example-11
 example-12
-example-13
 continuous-probability-distributions---uniform-and-normal-distributions
 uniform-probability-distribution
-example-14
+example-13
 normal-probability-distribution
+example-14
 example-15
-example-16
+example---normal-approximation-of-the-binomial-distribution

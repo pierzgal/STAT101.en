@@ -153,6 +153,8 @@ example-8
 example-9
 random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.1
 random-variable-and-probability-distribution---definitions
+random-variable
+probability-distribution-function
 how-to-define-random-variable-and-probability-distribution---an-example
 discrete-probability-distributions---bernoulli-and-binomial-distributions
 remark-about-random-sampling

@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2021-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -292,7 +292,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><a href="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.1]</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a></li>
+<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#random-variable"><i class="fa fa-check"></i><b>5.1.1</b> Random variable</a></li>
+<li class="chapter" data-level="5.1.2" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#probability-distribution-function"><i class="fa fa-check"></i><b>5.1.2</b> Probability distribution (function)</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
 <li class="chapter" data-level="5.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><i class="fa fa-check"></i><b>5.3</b> Discrete probability distributions - Bernoulli and binomial distributions</a>
 <ul>
@@ -324,12 +328,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="random-variable-and-probability-distribution---definitions" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Random variable and probability distribution - definitions</h2>
+<div id="random-variable" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Random variable</h3>
 <blockquote>
 <p>Let S be the sample space of an experiment. The outcomes can take any form such as colors, letters, or brands of cat food. A random variable is any function <span class="math inline">\(X\)</span> that converts outcomes into real numbers:</p>
 <p><span class="math inline">\(X: S \rightarrow R\)</span> For a given outcome <span class="math inline">\(s \in S\)</span> we use the functional notation <span class="math inline">\(X(s) \in R\)</span> to denote the associated real number.</p>
 </blockquote>
-<p>We have already seen several examples of random variables. For example, suppose that a coin is flipped 3 times. Let us encode the outcomes as strings of the symbols H and T, so the sample space is <span class="math inline">\(S \in \{TTT,TTH,THT,HTT,THH,HTH,HHT,HHH\}\)</span>.</p>
-<p>Let X be the number of heads that we get. We can think of this as a function <span class="math inline">\(X: S \in R\)</span> that takes in a string of symbols <span class="math inline">\(s \in S\)</span> and spits out the number <span class="math inline">\(X(s)\)</span> of Hs that this string contains. Here is a table showing the “graph” of this function:</p>
+<p>For example, suppose that a coin is flipped 3 times. Let us encode the outcomes as strings of the symbols H and T, so the sample space is <span class="math inline">\(S \in \{TTT,TTH,THT,HTT,THH,HTH,HHT,HHH\}\)</span>.</p>
+<p>Let X be the number of heads that we get. We can think of this as a function <span class="math inline">\(X: S \in R\)</span> that takes in a string of symbols <span class="math inline">\(s \in S\)</span> and returns the number <span class="math inline">\(X(s)\)</span> of Hs that this string contains. Here is a part of the “graph” of this function:</p>
+<ul>
+<li><span class="math inline">\((H, H, H) \rightarrow 3\)</span>;</li>
+<li><span class="math inline">\((H, H, T) \rightarrow 2\)</span>;</li>
+<li><span class="math inline">\((T, H, H) \rightarrow 2\)</span>;</li>
+<li><span class="math inline">\((...) \rightarrow ...\)</span>;</li>
+<li>(…)</li>
+<li><span class="math inline">\((T, T, T) \rightarrow 0\)</span>.</li>
+</ul>
 <p>We will use the notation <span class="math inline">\(X(S) \subseteq R\)</span> to denote the set of all possible values of the random variable X, which we call the “support” of the random variable. In this example we have <span class="math inline">\(X(S) \in \{0,1,2,3\}\)</span>.</p>
 <p>Let <span class="math inline">\(S=\)</span> outcomes of 3 coin tosses = <span class="math inline">\(\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}\)</span>.</p>
 <ul>
@@ -341,6 +355,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A random variable partitions <span class="math inline">\(S\)</span> into events (subsets of sample points).<br />
 Note that indicators partition the sample space into two events.<br />
 </p>
+</div>
+<div id="probability-distribution-function" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Probability distribution (function)</h3>
+<blockquote>
+<p>[Basic definition] A probability distribution is a list of all of the possible outcomes of a random variable along with their corresponding probability values.</p>
+</blockquote>
+<p>In probability theory and statistics, a probability distribution is the mathematical function that gives the probabilities of occurrence of different possible outcomes (values of a random variable) for an experiment.</p>
+<p>The probability distribution of a discrete random variable <span class="math inline">\(X\)</span> is a list of each possible value of rv. <span class="math inline">\(X\)</span> together with the probability that rv. <span class="math inline">\(X\)</span> takes that value in one trial of the random experiment.</p>
+</div>
 </div>
             </section>
 

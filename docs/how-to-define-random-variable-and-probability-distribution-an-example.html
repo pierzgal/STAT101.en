@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2021-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -292,7 +292,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><a href="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.1]</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a></li>
+<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#random-variable"><i class="fa fa-check"></i><b>5.1.1</b> Random variable</a></li>
+<li class="chapter" data-level="5.1.2" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#probability-distribution-function"><i class="fa fa-check"></i><b>5.1.2</b> Probability distribution (function)</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
 <li class="chapter" data-level="5.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><i class="fa fa-check"></i><b>5.3</b> Discrete probability distributions - Bernoulli and binomial distributions</a>
 <ul>
@@ -391,7 +395,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[ P(\{(H,T,T), (T,H,T), (T,T,H)\}) = P((H,T,T)) + P((T,H,T)) + P((T,T,H)) = \]</span></p>
 <p><span class="math display">\[ = 1/8 + 1/8 + 1/8 = 3/8 = \]</span></p>
 <p><span class="math display">\[ = \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
-<p>In general, the probability of getting  head in  trials  is:</p>
+<p>In general, the probability of getting  heads in  trials  is:</p>
 <p><span class="math display">\[ P(X = x) = f(x; n = \text{number of trials}, p = \text{probability of success}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n \]</span></p>
 <p>Notice that <span class="math inline">\(\binom{3}{1} = |\{\{1\}, \{2\}, \{3\}\}| = 3\)</span> - it is a number of 1-element combinations from the set of 3 elements.</p>
 <p>As for the binomial experiment, we can think of the every single combination as a set of coordinates that indicates the place of success/successes in a sequence of outcomes.</p>
@@ -409,7 +413,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P(\{(H,T,T), (T,H,T), (T,T,H)\}) = P((H,T,T)) + P((T,H,T)) + P((T,T,H)) =\]</span></p>
 <p><span class="math display">\[= 1/8 + 1/8 + 1/8 = 3/8 =\]</span></p>
 <p><span class="math display">\[= \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
-<p>In general, the probability of getting <em>x</em> head in <em>n</em> trials <strong>in any order</strong> is:</p>
+<p>In general, the probability of getting <em>x</em> heads in <em>n</em> trials <strong>in any order</strong> is:</p>
 <p><span class="math display">\[P(X = x) = f(x; n = \text{number of trials}, p = \text{probability of success}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n\]</span></p>
 <p>Notice that <span class="math inline">\(\binom{3}{1} = |\{\{1\}, \{2\}, \{3\}\}| = 3\)</span> - it is a number of 1-element combinations from the set of 3 elements.</p>
 <p>As for the binomial experiment, we can think of every single combination as a set of coordinates that indicates the place of success/successes in a sequence of outcomes.</p>

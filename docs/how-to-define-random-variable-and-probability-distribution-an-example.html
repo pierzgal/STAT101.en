@@ -383,21 +383,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Why is the probability of, for example, tossing 1 head (1 success) equal to <span class="math inline">\(3/8\)</span>?</p>
-<p>In the example, the probability of getting heads is <span class="math inline">\(1/2\)</span>, therefore, the probability of getting tails is also <span class="math inline">\(1/2\)</span>, because <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
-<p>The random experiment from the example is composed of 3 levels (trials) (it is a compound experiment): first toss (first trial), second toss (second trial), third toss (third trial).</p>
-<p>In compound experiments we employ the  (in the example we use the multiplication rule for independent events) to compute probabilities.</p>
-<p>We begin with computing the probability of getting one head in 3 trials :</p>
-<p><span class="math display">\[ P((H,T,T)) = P((1,0,0)) = p^1 \times (1-p)^2 = (1/2)^1 \times (1/2)^2 = 1/8 \]</span></p>
-<p><span class="math display">\[ P((T,H,T)) = P((0,1,0)) = (1-p) \times p \times (1-p) = (1/2) \times (1/2) \times (1/2) = 1/8 \]</span></p>
-<p><span class="math display">\[ P((T,T,H)) = P((0,0,1)) = (1-p)^2 \times p^1 = (1/2)^2 \times (1/2)^1 = 1/8 \]</span></p>
-<p>Then, the probability of getting one head in 3 trials  is:</p>
-<p><span class="math display">\[ P(\{(H,T,T), (T,H,T), (T,T,H)\}) = P((H,T,T)) + P((T,H,T)) + P((T,T,H)) = \]</span></p>
-<p><span class="math display">\[ = 1/8 + 1/8 + 1/8 = 3/8 = \]</span></p>
-<p><span class="math display">\[ = \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
 <p>In general, the probability of getting  heads in  trials  is:</p>
 <p><span class="math display">\[ P(X = x) = f(x; n = \text{number of trials}, p = \text{probability of success}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ for } x = 0, 1, 2, ..., n \]</span></p>
-<p>Why is the probability of, for example, tossing 1 head (1 success) equal to <span class="math inline">\(3/8\)</span>?</p>
+<p>Why is the probability of, for example, tossing one head (1 success) equal to <span class="math inline">\(3/8\)</span>?</p>
 <p>In the example, the probability of getting heads is <span class="math inline">\(1/2\)</span>, therefore, the probability of getting tails is also <span class="math inline">\(1/2\)</span>, because <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
 <p>The random experiment from the example is composed of 3 levels (trials) (it is a compound experiment): first toss (first trial), second toss (second trial), third toss (third trial).</p>
 <p>In compound experiments, we employ the <strong>multiplication rule</strong> (in the example we use the multiplication rule for independent events) to compute probabilities.</p>

@@ -300,8 +300,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
 <li class="chapter" data-level="5.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><i class="fa fa-check"></i><b>5.3</b> Discrete probability distributions - Bernoulli and binomial distributions</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#some-characteristics-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Some characteristics of the binomial distribution</a></li>
-<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#examples"><i class="fa fa-check"></i><b>5.3.2</b> Examples</a></li>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#binary-random-variables-and-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Binary random variables and Binomial distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#some-characteristics-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Some characteristics of the binomial distribution</a></li>
+<li class="chapter" data-level="5.3.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#examples"><i class="fa fa-check"></i><b>5.3.3</b> Examples</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html"><i class="fa fa-check"></i><b>5.4</b> Continuous probability distributions - uniform and normal distributions</a>
 <ul>
@@ -331,8 +332,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Wikipedia.org gives a good and concise definition of Binomial distribution:</p>
 <p>"In probability theory and statistics, the binomial distribution with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> is the discrete probability distribution of the number of successes in a sequence of <span class="math inline">\(n\)</span> independent yes/no experiments [usually called a binomial experiment - M.P], each of which yields success with probability <span class="math inline">\(p\)</span>. A <span class="sans-serif">success/failure</span> experiment is also called a Bernoulli experiment or Bernoulli trial; when <span class="math inline">\(n\)</span> = 1, <strong>the binomial distribution is a Bernoulli distribution</strong>. (…)</p>
 <p>The binomial distribution is frequently used to model the number of successes in a sample of size <span class="math inline">\(n\)</span> drawn with replacement from a population of size <span class="math inline">\(N\)</span>. If the sampling is carried out without replacement, the draws are not independent and so the resulting distribution is a hypergeometric distribution, not a binomial one. However, for <span class="math inline">\(N\)</span> much larger than <span class="math inline">\(n\)</span>, the binomial distribution is a good approximation, and widely used".</p>
-<div id="remark-about-random-sampling" class="section level4" number="5.3.0.1">
-<h4><span class="header-section-number">5.3.0.1</span> Remark about random sampling</h4>
+<div id="binary-random-variables-and-binomial-distribution" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Binary random variables and Binomial distribution</h3>
+<p>A binary variable (the <strong>Bernoulli variable</strong>) is a variable that has two possible outcomes. For example, sex (male/female) is an example of a binary categorical variable.</p>
+<p>A random variable can be transformed into a binary variable by defining a “success” and a “failure”. For example, consider rolling a fair six-sided die and recording the value of the face. The random variable, value of the face, is not binary. If we are interested, however, in the event A={an even number is rolled}, then the “success” is rolling 2, 4, or 6. The failure would be any value not equal to 2, 4, 6. Therefore, we can create a new variable with two outcomes, namely A = {2, 4, 6} and B = {not an even number} or {1, 3, 5}. This new variable is now a binary variable.</p>
+<p>For the Bernoulli random variable, we can define the <strong>Bernoulli distribution</strong>. The Bernoulli distribution, named after Swiss mathematician Jacob Bernoulli, is the discrete probability distribution of a Bernoulli random variable which takes the value 1 with probability p and the value 0 with probability q = 1. It can be thought of as a model for the set of possible outcomes of any single experiment that asks a yes–no (binary) question. This gives outcomes that are boolean-valued: <strong>success/yes/true/one</strong> with probability p and <strong>failure/no/false/zero</strong> with probability q.</p>
+<div id="binomial-experiment" class="section level4" number="5.3.1.1">
+<h4><span class="header-section-number">5.3.1.1</span> Binomial experiment</h4>
+<p>We have a binomial experiment if ALL of the following four conditions are satisfied:</p>
+<p>The experiment consists of n finite identical trials.
+Each trial results in one of the two outcomes, called success and failure.
+The probability of success, denoted p, remains the same from trial to trial.
+The n trials are independent. That is, the outcome of any trial does not affect the outcome of the others.</p>
+<p>If the four conditions are satisfied, then the random variable X = number of successes in
+n trials, is a binomial random variable with: <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma^2 = np(1-p)\)</span></p>
+<p>For the binomial experiment, if we define a random variable X as the sum of “successes” in the n trials of the binomial experiment, the probability distribution function for rv. X is known as a binomial distribution.</p>
+</div>
+<div id="the-binomial-formula" class="section level4" number="5.3.1.2">
+<h4><span class="header-section-number">5.3.1.2</span> The Binomial Formula</h4>
+<p>For a binomial random variable with probability of success, p, and n trials…</p>
+<p><span class="math display">\[P(Y = k) = f(y; n = \text{the number of trials}, p = \text{a probability of success}) = \\ = \binom{n}{k} p^x(1-p)^{n-k} = \frac{n!}{(n-k)!k!} p^k(1-p)^{n-k}, \text{ for } k = 0, 1, 2, ..., n\]</span></p>
+<p>Basically, binomial random variable is a sum of n identical Bernoulli random variables.</p>
+<p>If the range of the binary rv. <span class="math inline">\(X\)</span> is 0 or 1 <span class="math inline">\(X \in {1 = success, 0 = failure}\)</span>,
+then, <span class="math inline">\(Y = X1 + X2 + ... + X_n\)</span> (<span class="math inline">\(X_i\)</span> are independent and identically distributed, i.i.d.) is binomially distributed (<span class="math inline">\(Y \sim Bin(\mu, \sigma^2)\)</span>), with <span class="math inline">\(\mu = np\)</span>, <span class="math inline">\(\sigma^2 = np(1-p)\)</span>.</p>
+<p><em>Remark</em>: The exclamation mark (!) is used in math to represent factorial operations. The factorial of a number means to take that number and multiply it by every number that comes before it - down to one (excluding 0).</p>
+</div>
+<div id="remark-about-random-sampling" class="section level4" number="5.3.1.3">
+<h4><span class="header-section-number">5.3.1.3</span> Remark about random sampling</h4>
 <p><strong>Sampling with replacement</strong>:</p>
 <p>Consider a population of potato sacks, each of which has either 12, 13, 14, 15, 16, 17, or 18 potatoes, and all the values are equally likely. Suppose that, in this population, there is exactly one sack with each number. So the whole population has seven sacks. If I sample two with replacement, then I first pick one (say 14). I had a 1/7 probability of choosing that one. Then I replace it. Then I pick another. Every one of them still has 1/7 probability of being chosen. And there are exactly 49 different possibilities here (assuming we distinguish between the first and second.) They are: (12,12), (12,13), (12, 14), (12,15), (12,16), (12,17), (12,18), (13,12), (13,13), (13,14), etc.</p>
 <p><strong>Sampling without replacement</strong>:</p>
@@ -342,8 +368,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>When we sample without replacement, and get a non-zero covariance, the covariance depends on the population size. If the population is very large, this covariance is very close to zero. In that case, sampling with replacement isn’t much different from sampling without replacement. In some discussions, people describe this difference as sampling from an infinite population (sampling with replacement) versus sampling from a finite population (without replacement).</p>
 <p>Source: <a href="https://www.ma.utexas.edu/users/parker/sampling/repl.htm" class="uri">https://www.ma.utexas.edu/users/parker/sampling/repl.htm</a></p>
 </div>
-<div id="some-characteristics-of-the-binomial-distribution" class="section level3" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Some characteristics of the binomial distribution</h3>
+</div>
+<div id="some-characteristics-of-the-binomial-distribution" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Some characteristics of the binomial distribution</h3>
 <p>Suppose <span class="math inline">\(X\)</span> has <strong>Bernoulli distribution</strong> with parameter <em>p</em> - probability of success. Then</p>
 <ul>
 <li><p><span class="math inline">\(E(X) = p\)</span></p></li>
@@ -363,10 +390,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>According to the <strong>Central Limit Theorem (CLT)</strong>, if <em>n</em> is sufficiently large, sample proportion has <strong>approximately normal distribution</strong>, <span class="math inline">\(\hat{p} \text{ } \dot{\sim} \text{ } N(p, \sqrt{\frac{p(1-p)}{n}})\)</span>.</p>
 <p>Notice that if <span class="math inline">\(Y = X_1 + X_2 + ... + X_n\)</span>, and <span class="math inline">\(Y \sim Binom(n, p)\)</span>, and <span class="math inline">\(X_i = \{0 = \text{failure}, 1 = \text{success}\}\)</span>, then <strong>the mean</strong> = <span class="math inline">\(E(Y) = Y/n = \Sigma X/n = E(Y)= p\)</span> and <strong>the variance</strong> = <span class="math inline">\(Var(Y) = \frac{p(1-p)}{n}\)</span>, where <em>p</em> is a proportion (fraction, relative frequency) of “successes”.</p>
 </div>
-<div id="examples" class="section level3" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Examples</h3>
-<div id="example-10" class="section level4" number="5.3.2.1">
-<h4><span class="header-section-number">5.3.2.1</span> Example</h4>
+<div id="examples" class="section level3" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Examples</h3>
+<div id="example-10" class="section level4" number="5.3.3.1">
+<h4><span class="header-section-number">5.3.3.1</span> Example</h4>
 <p>Assuming that the selection of items for a sample can be treated as independent trials, and that the probability that any 1 item is defective is 0.01, find:</p>
 <ol style="list-style-type: decimal">
 <li><p>The probability of 1 defective item in a random sample of 15 items from a production line;</p></li>
@@ -386,8 +413,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[= \binom{1}{1} \times 0.01^1 \times 0.99^{0} = 0.01\]</span></p>
 <p>Notice that for <em>n</em> = 1, <strong>a binomial distribution is just a Bernoulli distribution</strong>. The Bernoulli distribution is the binomial distribution for <em>n</em> (number of trials) = 1.</p>
 </div>
-<div id="example-11" class="section level4" number="5.3.2.2">
-<h4><span class="header-section-number">5.3.2.2</span> Example</h4>
+<div id="example-11" class="section level4" number="5.3.3.2">
+<h4><span class="header-section-number">5.3.3.2</span> Example</h4>
 <p>Random variable <em>X</em> - # of heads in <em>n</em> tosses of a fair coin has binomial distribution with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p = 0.5\)</span>. Find the probability that in 10 tosses you get <strong>heads</strong> at least 7 times.</p>
 <p><strong>Solution:</strong></p>
 <p>We have <span class="math inline">\(X \sim Bin(10, 0.5)\)</span>.</p>
@@ -398,8 +425,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[= \sum_{a = 7}^{10} \binom{10}{a} 0.5^a(1-0.5)^{10-a} =\]</span></p>
 <p><span class="math display">\[\binom{10}{7}(\frac{1}{2})^7(\frac{1}{2})^3 + \binom{10}{8}(\frac{1}{2})^8(\frac{1}{2})^2 + \binom{10}{9}(\frac{1}{2})^9(\frac{1}{2})^1 + \binom{10}{10}(\frac{1}{2})^{10}(\frac{1}{2})^0 = \frac{176}{1024}\]</span></p>
 </div>
-<div id="example-12" class="section level4" number="5.3.2.3">
-<h4><span class="header-section-number">5.3.2.3</span> Example</h4>
+<div id="example-12" class="section level4" number="5.3.3.3">
+<h4><span class="header-section-number">5.3.3.3</span> Example</h4>
 <p>Suppose that the proportion of Polish people who trust the president of RP is equal to 60% and let rv <em>X</em> to be the number of people who trust Polish president - <span class="math inline">\(X \sim Bin(n, 0.6)\)</span>. Find the probability that in the random sample of 15 people, at most 3 (<span class="math inline">\(\hat{p} = 0.2 = \frac{3}{15}\)</span>) trust the president.</p>
 <p><strong>Solution:</strong></p>
 <p>RV <em>X</em> has binomial distribution, <span class="math inline">\(X \sim Bin(15, 0.6)\)</span></p>

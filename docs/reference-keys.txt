@@ -158,6 +158,9 @@ bernoulli-random-variable
 probability-distribution-function
 how-to-define-random-variable-and-probability-distribution---an-example
 discrete-probability-distributions---bernoulli-and-binomial-distributions
+binary-random-variables-and-binomial-distribution
+binomial-experiment
+the-binomial-formula
 remark-about-random-sampling
 some-characteristics-of-the-binomial-distribution
 examples

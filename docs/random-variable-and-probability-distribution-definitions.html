@@ -292,7 +292,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#random-variable"><i class="fa fa-check"></i><b>5.1.1</b> Random variable</a></li>
+<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#random-variables"><i class="fa fa-check"></i><b>5.1.1</b> Random variables</a></li>
 <li class="chapter" data-level="5.1.2" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#probability-distribution-function"><i class="fa fa-check"></i><b>5.1.2</b> Probability distribution (function)</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
@@ -342,11 +342,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="random-variable-and-probability-distribution---definitions" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Random variable and probability distribution - definitions</h2>
-<div id="random-variable" class="section level3" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Random variable</h3>
 <blockquote>
-<p>Let S be the sample space of an experiment. The outcomes can take any form such as colors, letters, or brands of cat food. A random variable is any function <span class="math inline">\(X\)</span> that converts outcomes into real numbers: <span class="math inline">\(X: S \rightarrow R\)</span> For a given outcome <span class="math inline">\(s \in S\)</span> we use the functional notation <span class="math inline">\(X(s) \in R\)</span> to denote the associated real number.</p>
+<p>Let S be the sample space of an experiment. The outcomes can take any form such as colors, letters, or brands of cat food. A <strong>random variable</strong> is any function <span class="math inline">\(X\)</span> that converts outcomes into real numbers: <span class="math inline">\(X: S \rightarrow R\)</span> For a given outcome <span class="math inline">\(s \in S\)</span> we use the functional notation <span class="math inline">\(X(s) \in R\)</span> to denote the associated real number.</p>
 </blockquote>
+<blockquote>
+<p>In probability theory and statistics, a <strong>probability distribution</strong> is the mathematical function that gives the probabilities of occurrence of different possible outcomes (real values of a random variable) for an experiment.</p>
+</blockquote>
+<div id="random-variables" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Random variables</h3>
+<div id="random-variable-and-probability-distribution-function-for-a-single-toss-of-a-fair-coin" class="section level4" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> Random variable and probability distribution function for a single toss of a fair coin</h4>
+<p>The possible outcomes for one coin toss can be described by the sample space <span class="math inline">\(S =\{{\text{heads}},{\text{tails}\}\)</span>. We can introduce a real-valued random variable <span class="math inline">\(X(S)\)</span> that models a $1 payoff for a successful bet on heads as follows:</p>
+<p><span class="math display">\[
+\begin{equation}
+    X(S)=
+    \begin{cases}
+      0, &amp; \text{if } s_1 = \text{ heads} \\
+      1, &amp; \text{if } s_2 = \text{ tails}
+    \end{cases}
+  \end{equation}
+\]</span></p>
+<p>If the coin is a fair coin, rv. <span class="math inline">\(X\)</span> has a probability distribution function <span class="math inline">\(P(X_{(S)})\)</span> given by:</p>
+<p><span class="math display">\[
+\begin{equation}
+    P(X)=
+    \begin{cases}
+      1/2, &amp; \text{if } X(S) = 1 \\
+      1/2, &amp; \text{if } X(S) = 0
+    \end{cases}
+  \end{equation}
+\]</span></p>
+</div>
+<div id="two-dice-flip" class="section level4" number="5.1.1.2">
+<h4><span class="header-section-number">5.1.1.2</span> Two dice flip</h4>
+<p>A random variable can also be used to describe the process of rolling dice and the possible outcomes. The most obvious representation for the two-dice case is to take the set of pairs of numbers n1 and n2 from <span class="math inline">\(S = \{1, 2, 3, 4, 5, 6\}\)</span> (representing the numbers on the two dice) as the sample space S.</p>
+<p>The total number rolled (the sum of the numbers in each pair) is then a random variable X given by the function that maps the pair to the sum, as follows:</p>
+<p><span class="math display">\[X((n_1, n_2)) = n_1 + n_2\]</span></p>
+</div>
+<div id="three-flips-of-a-coin" class="section level4" number="5.1.1.3">
+<h4><span class="header-section-number">5.1.1.3</span> Three flips of a coin</h4>
 <p>For example, suppose that a coin is flipped 3 times. Let us encode the outcomes as strings of the symbols H and T, so the sample space is <span class="math inline">\(S \in \{TTT,TTH,THT,HTT,THH,HTH,HHT,HHH\}\)</span>.</p>
 <p>Let X be the number of heads that we get. We can think of this as a function <span class="math inline">\(X: S \in R\)</span> that takes in a string of symbols <span class="math inline">\(s \in S\)</span> and returns the number <span class="math inline">\(X(s)\)</span> of Hs that this string contains. Here is a part of the “graph” of this function:</p>
 <ul>
@@ -364,8 +398,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><span class="math inline">\(R_M(p) =\)</span> 1 if all coins match, 0 otherwise. So <span class="math inline">\(R_M(HHH)=1, R_M(HHT)=0\)</span>. <span class="math inline">\(R_M\)</span> is an <em>indicator</em> or <em>characteristic</em> random variable: <span class="math inline">\(1\)</span> if event happens, <span class="math inline">\(0\)</span> otherwise.</p></li>
 </ul>
 <p>Note <strong>functions</strong>: <span class="math inline">\(R_H:S\rightarrow \{0,1,2,3\},\; R_M:S\rightarrow \{0,1\}\)</span></p>
-<div id="bernoulli-random-variable" class="section level4" number="5.1.1.1">
-<h4><span class="header-section-number">5.1.1.1</span> Bernoulli random variable</h4>
+</div>
+<div id="bernoulli-random-variable" class="section level4" number="5.1.1.4">
+<h4><span class="header-section-number">5.1.1.4</span> Bernoulli random variable</h4>
 <p>An <em>indicator</em> (or <em>Bernoulli</em> or <em>characteristic</em>) random variable is a random variable with range 0,1.</p>
 <p>A random variable partitions <span class="math inline">\(S\)</span> into events (subsets of sample points).<br />
 Note that indicators partition the sample space into two events.<br />

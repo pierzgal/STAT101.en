@@ -153,7 +153,10 @@ example-8
 example-9
 random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.3
 random-variable-and-probability-distribution---definitions
-random-variable
+random-variables
+random-variable-and-probability-distribution-function-for-a-single-toss-of-a-fair-coin
+two-dice-flip
+three-flips-of-a-coin
 bernoulli-random-variable
 probability-distribution-function
 how-to-define-random-variable-and-probability-distribution---an-example

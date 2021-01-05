@@ -151,7 +151,7 @@ example-6
 example-7
 example-8
 example-9
-random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.1
+random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.3
 random-variable-and-probability-distribution---definitions
 random-variable
 bernoulli-random-variable
@@ -174,3 +174,15 @@ normal-probability-distribution
 example-14
 example-15
 example---normal-approximation-of-the-binomial-distribution
+the-basics-of-statistical-inference-lecture-6---draft-copy-ver.-0.1
+statistics-and-sampling-variability
+sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc.
+sampling-distribution-of-a-sample-mean
+sampling-distribution-for-a-sample-sum-s
+central-limit-theorem-clt
+centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
+ctg-dla-estymatora-częstości-proporcji-z-próby
+point-and-interval-estimation
+point-estimation
+interval-estimation
+worked-example

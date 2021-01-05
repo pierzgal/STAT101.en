@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.2 Levels of measurement - a summary | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.2 Levels of measurement - a summary | STAT 101 IPS (WSMiP UŁ)" />
+  <title>6.2 Sampling distribution for a statistic (a sample mean, a sample proportion etc.) | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="6.2 Sampling distribution for a statistic (a sample mean, a sample proportion etc.) | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.2 Levels of measurement - a summary | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="6.2 Sampling distribution for a statistic (a sample mean, a sample proportion etc.) | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.2 Levels of measurement - a summary | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="6.2 Sampling distribution for a statistic (a sample mean, a sample proportion etc.) | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="types-of-data-and-the-scales-of-measurement.html"/>
-<link rel="next" href="reliability-and-validity.html"/>
+<link rel="prev" href="statistics-and-sampling-variability.html"/>
+<link rel="next" href="central-limit-theorem-clt.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -340,67 +340,342 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="levels-of-measurement---a-summary" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Levels of measurement - a summary</h2>
+<div id="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc." class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Sampling distribution for a statistic (a sample mean, a sample proportion etc.)</h2>
+<p>A statistic, such as the sample mean or the sample standard deviation, is a number computed from a sample. Since a sample is random, every statistic is a random variable: it varies from sample to sample in a way that cannot be predicted with certainty. As a random variable it has a mean, a standard deviation, and a probability distribution. The probability distribution of a statistic is called its sampling distribution. Typically sample statistics are are computed in order to estimate the corresponding population parameters.</p>
+<p>A <em>sampling distribution</em> is the probability distribution of a sample statistic that is formed when samples of size n are repeatedly taken from a population. If the sample statistic is the sample mean, then the distribution is the sampling distribution of sample means.</p>
+<blockquote>
+<p>Every sample statistic has a sampling distribution.</p>
+</blockquote>
+<p>The sampling distribution of a statistic is the distribution of that statistic, considered as a random variable, when derived from a random sample of size n. It may be considered as the distribution of the statistic for all possible samples from the same population of a given sample size.</p>
+<p>Sampling distributions are important in statistics because they provide a major simplification to statistical inference. More specifically, they allow analytical considerations to be based on the probability distribution of a statistic.</p>
+<blockquote>
+<p>The standard deviation of the sampling distribution of a statistic is referred to as the standard error of that quantity.</p>
+</blockquote>
+<p>Consider the Venn diagram below (Figure 6.1).</p>
+<div class="figure">
+<img src="images/stat/IMG_1332.JPG" alt="" />
+<p class="caption">Figure 6.1. The idea of samplig distribution of a statistic</p>
+</div>
+<p>The rectangle represents a large population, and each circle represents a sample of size n. Because the sample entries can differ, the sample means can also differ. The mean of Sample 1 is x1 = 3.5; the mean of Sample 2 is x2; and so on. <strong>The sampling distribution of the sample means for samples of size n for this population</strong> consists of x1, x2, x3, and so on. If the samples are drawn with replacement, then an infinite number of samples can be drawn from the population.</p>
+<div id="sampling-distribution-of-a-sample-mean" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Sampling distribution of a sample mean</h3>
+<p>Suppose a population consists of four houses (N = 4), where the value of rv. X, the number of rooms for rent in each unit, is listed below:</p>
+<ol style="list-style-type: decimal">
+<li>first house (2 rooms),</li>
+<li>first house (3 rooms),</li>
+<li>first house (4 rooms),</li>
+<li>first house (5 rooms).</li>
+</ol>
+<p><strong>Consider drawing a random sample of size 2 with replacement</strong>. There are four possibilities on the first draw from the population and also four possibilities on the second draw from the population. That is, we select a unit at random, put it back, and then select another unit at random. Denote by X1 and X2 the observation of X obtained in the first and second drawing, respectively.</p>
+<p>The population distribution of X is given in Table 6.1.</p>
 <table>
-<colgroup>
-<col width="10%" />
-<col width="13%" />
-<col width="16%" />
-<col width="33%" />
-<col width="26%" />
-</colgroup>
+<caption>Table 6.1. The population distribution</caption>
 <thead>
 <tr class="header">
-<th>Type</th>
-<th>Qualitative</th>
-<th>Qualitative</th>
-<th>Quantitative</th>
-<th>Quantitative</th>
+<th>i</th>
+<th>X</th>
+<th>Probability</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><em>Subtype</em></td>
-<td><strong>Nominal</strong></td>
-<td><strong>Ordinal</strong></td>
-<td><strong>Interval</strong></td>
-<td><strong>Ratio</strong></td>
+<td>1</td>
+<td>2</td>
+<td>1/4</td>
 </tr>
 <tr class="even">
-<td><em>Basic</em> <em>features</em></td>
-<td>Distinct categories (e.g. gender)</td>
-<td>Ordered categories (e.g. Likert scales, IQ)</td>
-<td>Meaningful distances (e.g. dates, temperature measured using Celsius or Fahrenheit scales)</td>
-<td>Absolute zero (e.g. weight, height, age, voting turnout, sample size)</td>
+<td>2</td>
+<td>3</td>
+<td>1/4</td>
 </tr>
 <tr class="odd">
-<td><em>Possible math operations</em></td>
-<td><span class="math inline">\(=, \neq\)</span></td>
-<td><span class="math inline">\(&gt;, &lt;\)</span></td>
-<td><span class="math inline">\(+, -\)</span></td>
-<td><span class="math inline">\(\times, \div\)</span></td>
+<td>3</td>
+<td>4</td>
+<td>1/4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>1/4</td>
+</tr>
+<tr class="odd">
+<td>Sum</td>
+<td>-</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
-<div id="types-of-data-and-levels-of-measurement---intuitions" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Types of data and levels of measurement - intuitions</h3>
+<p><strong>Find the sampling distribution of the sample mean</strong> <span class="math inline">\(\bar{X} = (X1 + X2) / 2\)</span>.</p>
+<blockquote>
+<p>In practice, only a single random sample, not 16 possible samples, would be taken from the population; the sample size would be very small relative to a much larger population size, and, of course, not all observations in the population would be known.</p>
+</blockquote>
+<p>For each of the 16 possible samples (see Table 6.2) also lists a sample mean (found by adding the two observations and dividing by 2) and its probability of occurrence (expressed as 1⁄16, since each of the 16 possible samples is equally likely). When cast into a relative frequency or probability distribution, the 16 sample means form the sampling distribution of the mean, previously defined as the probability distribution of means for all possible random samples of a given size from some population.</p>
+<table>
+<caption>Table 6.2. All possible 2-samples</caption>
+<thead>
+<tr class="header">
+<th>i</th>
+<th align="left">All possible samples (4 * 4 = 16)</th>
+<th align="left">Mean (<span class="math inline">\(\bar{X}\)</span>)</th>
+<th align="left">Probability (<span class="math inline">\(P_i\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td align="left">2, 2</td>
+<td align="left">2</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td align="left">2, 3</td>
+<td align="left">2.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td align="left">2, 4</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td align="left">2, 5</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td align="left">3, 2</td>
+<td align="left">2.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td align="left">3, 3</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td align="left">3, 4</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td align="left">3, 5</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td align="left">4, 2</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td align="left">4, 3</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td align="left">4, 4</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td align="left">4, 5</td>
+<td align="left">4.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td align="left">5, 2</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td align="left">5, 3</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td align="left">5, 4</td>
+<td align="left">4.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td align="left">5, 5</td>
+<td align="left">5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>Sum</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>Not all values of the sample mean occur with equal probabilities since some values occur more than once among the 16 possible samples. For instance, a sample mean value of 3.5 appears among 4 of 16 possibilities and has a probability of 4⁄16.</p>
+<p>Table 6.3 presents the sampling distribution of the mean for samples of size n = 2 from a miniature population N = 4.</p>
+<table>
+<caption>Table 6.3. Sampling distribution of the mean (samples of size two)</caption>
+<thead>
+<tr class="header">
+<th>i</th>
+<th>Sample mean (<span class="math inline">\(\bar{x}\)</span>)</th>
+<th>Probability (<span class="math inline">\(p_i\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>5</td>
+<td>1/16</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4.5</td>
+<td>2/16</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>3/16</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3.5</td>
+<td>4/16</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3</td>
+<td>3/16</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>2.5</td>
+<td>2/16</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>2</td>
+<td>1/16</td>
+</tr>
+<tr class="even">
+<td>Sum</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 6.2 summarizes the process of constructing the sampling distribution of a sample mean.</p>
 <div class="figure">
-<img src="images/stat/Levels_of_measurement.jpg" alt="" />
-<p class="caption">Levels of measurement</p>
+<img src="images/stat/IMG_0164.jpeg" alt="" />
+<p class="caption">Figure 6.2. The sampling distribution of the sample mean for samples of size two; f stands for an absolute frequency</p>
 </div>
+</div>
+<div id="sampling-distribution-for-a-sample-sum-s" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Sampling distribution for a sample sum (<span class="math inline">\(S\)</span>)</h3>
+<p>Przeprowadźmy eksperyment polegający na rzucie dwiema sześciennymi kostkami do gry. Zdefiniujmy zmienną  = suma oczek, które wypadły przy rzucie dwiema kostkami do gry.</p>
+<p>Rozkład prawdopodobieństwa zmiennej, która może przyjąć 6 wartości z identycznym prawdopodobieństwem jest rozkładem jednostajnym (rzut pojedynczą kostką sześcienną).</p>
+<p>Jaki będzie rozkład prawdopodobieństwa dla sumy oczek (lub średniej arytmetycznej wyniku) przy rzucie dwiema kostkami?</p>
+<p>W tabeli 6.4 przedstawiono wszystkie możliwe kombinacje wyników, czyli przestrzeń zdarzeń elementarnych:</p>
+<table>
+<caption>Table 6.4. Sample space for the sum of outcomes in flipping two fair dice</caption>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="left">Pierwsza kość (X1)</th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>Druga kość (X2)</strong></td>
+<td align="left"><strong><em>1</em></strong></td>
+<td align="left"><strong><em>2</em></strong></td>
+<td align="left"><strong><em>3</em></strong></td>
+<td align="left"><strong><em>4</em></strong></td>
+<td align="left"><strong><em>5</em></strong></td>
+<td align="left"><strong><em>6</em></strong></td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>1</em></strong></td>
+<td align="left">S = 2</td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">7</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>2</em></strong></td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">7</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>3</em></strong></td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">4 + 3 = 7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>4</em></strong></td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">3 + 4 = 7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>5</em></strong></td>
+<td align="left">6</td>
+<td align="left">7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>6</em></strong></td>
+<td align="left">7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+<td align="left">6+6 = 12</td>
+</tr>
+</tbody>
+</table>
+<p>Rysunek 6.2 przedstawia rozkład prawdopodobieństwa sumy S z próby dwuelementowej (suma wyników dwóch rzutów sześciościenną kością), który kształtem przypomina rozkład normalny. Rozkład prawdopodobieństwa  do gry (rozkład zmiennej <span class="math inline">\(X_1\)</span>) był , ale przy rzucie dwiema (<span class="math inline">\(X_1+X_2\)</span>) lub tym bardziej, co można pokazać, większą liczbą kostek, rozkład prawdopodobieństwa sumy  wyników (<span class="math inline">\(S = X_1+X_2+ ... +X_n\)</span>), lub wartości przeciętnej wyników (<span class="math inline">\(\overline{X}\)</span>) wraz z wzrostem liczby kostek, coraz bardziej przypomina rozkład normalny.</p>
 <div class="figure">
-<img src="images/stat/Continuous-and-discrete-variables.jpg" alt="" />
-<p class="caption">Continuous and Discrete</p>
+<img src="images/stat/Dice_Distribution_(bar).svg" alt="" />
+<p class="caption">Figure 6.2. Sampling distribution for the random variable S = sum of outcomes in flipping two fair dice (Source: Wikipedia.org)</p>
 </div>
-</div>
-<div id="frequency-distribution" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Frequency distribution</h3>
-<p>A sequence of observation, made on a set of objects included in the sample drawn from population is known as statistical data.</p>
-<p>Main methods of data collection include census, sample data (including survey, experimental and quasi-experimental research), and also administrative by-product. A census refers to data collection about everyone or everything in a group or statistical population and has advantages such as accuracy and detail, and disadvantages such as cost and time. A sampling is a data collection method that includes only part of the total population and has advantages such as cost and time, and disadvantages such as accuracy and detail. Administrative by-product data are collected as a by-product of an organization’s day-to-day operations and has advantages such as accuracy, time and simplicity, and disadvantages such as no flexibility and lack of control.</p>
-<p>Collected, but unordered, data are stored in columns of databases (e.g. in MS Excel files, in SQL databases - eg. MySQL). In databases, each column represent a single variable, each row represents a single observation. Data may be organized into frequency distributions before we start to examine them.</p>
-<p>We can organize an unordered set of collected data into a frequency distribution.</p>
-<p>A frequency distribution is a tabular representation of a survey data set used to organize and summarize the data. Specifically, it is a list of either qualitative or quantitative values that a variable takes in a data set and the associated number of times each value occurs (frequencies). The frequency distribution is the basic building block of statistical analytical methods and the first step in analyzing survey data. It helps researchers (a) organize and summarize the survey data in a tabular format, (b) interpret the data, and (c) detect outliers (<strong>extreme and rare values</strong>) in the survey data set.</p>
 </div>
 </div>
             </section>
@@ -408,8 +683,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="types-of-data-and-the-scales-of-measurement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reliability-and-validity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="statistics-and-sampling-variability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="central-limit-theorem-clt.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

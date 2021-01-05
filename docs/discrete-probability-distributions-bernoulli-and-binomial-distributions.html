@@ -353,12 +353,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="binomial-experiment" class="section level4" number="5.3.1.1">
 <h4><span class="header-section-number">5.3.1.1</span> Binomial experiment</h4>
 <p>We have a binomial experiment if ALL of the following four conditions are satisfied:</p>
-<p>The experiment consists of n finite identical trials.
-Each trial results in one of the two outcomes, called success and failure.
-The probability of success, denoted p, remains the same from trial to trial.
-The n trials are independent. That is, the outcome of any trial does not affect the outcome of the others.</p>
-<p>If the four conditions are satisfied, then the random variable X = number of successes in
-n trials, is a binomial random variable with: <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma^2 = np(1-p)\)</span></p>
+<p>The experiment consists of n finite identical trials. Each trial results in one of the two outcomes, called success and failure. The probability of success, denoted p, remains the same from trial to trial. The n trials are independent. That is, the outcome of any trial does not affect the outcome of the others.</p>
+<p>If the four conditions are satisfied, then the random variable X = number of successes in n trials, is a binomial random variable with: <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma^2 = np(1-p)\)</span></p>
 <p>For the binomial experiment, if we define a random variable X as the sum of “successes” in the n trials of the binomial experiment, the probability distribution function for rv. X is known as a binomial distribution.</p>
 </div>
 <div id="the-binomial-formula" class="section level4" number="5.3.1.2">
@@ -366,8 +362,7 @@ n trials, is a binomial random variable with: <span class="math inline">\(\mu = 
 <p>For a binomial random variable with probability of success, p, and n trials…</p>
 <p><span class="math display">\[P(Y = k) = f(y; n = \text{the number of trials}, p = \text{a probability of success}) = \\ = \binom{n}{k} p^x(1-p)^{n-k} = \frac{n!}{(n-k)!k!} p^k(1-p)^{n-k}, \text{ for } k = 0, 1, 2, ..., n\]</span></p>
 <p>Basically, binomial random variable is a sum of n identical Bernoulli random variables.</p>
-<p>If the range of the binary rv. <span class="math inline">\(X\)</span> is 0 or 1 <span class="math inline">\(X \in {1 = success, 0 = failure}\)</span>,
-then, <span class="math inline">\(Y = X1 + X2 + ... + X_n\)</span> (<span class="math inline">\(X_i\)</span> are independent and identically distributed, i.i.d.) is binomially distributed (<span class="math inline">\(Y \sim Bin(\mu, \sigma^2)\)</span>), with <span class="math inline">\(\mu = np\)</span>, <span class="math inline">\(\sigma^2 = np(1-p)\)</span>.</p>
+<p>If the range of the binary rv. <span class="math inline">\(X\)</span> is 0 or 1 <span class="math inline">\(X \in {1 = success, 0 = failure}\)</span>, then, <span class="math inline">\(Y = X1 + X2 + ... + X_n\)</span> (<span class="math inline">\(X_i\)</span> are independent and identically distributed, i.i.d.) is binomially distributed (<span class="math inline">\(Y \sim Bin(\mu, \sigma^2)\)</span>), with <span class="math inline">\(\mu = np\)</span>, <span class="math inline">\(\sigma^2 = np(1-p)\)</span>.</p>
 <p><em>Remark</em>: The exclamation mark (!) is used in math to represent factorial operations. The factorial of a number means to take that number and multiply it by every number that comes before it - down to one (excluding 0).</p>
 </div>
 <div id="remark-about-random-sampling" class="section level4" number="5.3.1.3">

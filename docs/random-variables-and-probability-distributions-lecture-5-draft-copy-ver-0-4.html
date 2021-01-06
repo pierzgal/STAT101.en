@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.2 Review of some mathematical concepts used in statistics and data science | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="1.2 Review of some mathematical concepts used in statistics and data science | STAT 101 IPS (WSMiP UŁ)" />
+  <title>5 Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.4] | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="5 Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.4] | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.2 Review of some mathematical concepts used in statistics and data science | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="5 Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.4] | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.2 Review of some mathematical concepts used in statistics and data science | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="5 Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.4] | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"/>
-<link rel="next" href="statistics-an-introduction-lecture-2.html"/>
+<link rel="prev" href="further-examples.html"/>
+<link rel="next" href="random-variable-and-probability-distribution-definitions.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -340,249 +340,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="review-of-some-mathematical-concepts-used-in-statistics-and-data-science" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Review of some mathematical concepts used in statistics and data science</h2>
-<div id="algebra-review---some-basic-rules" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Algebra review - some basic rules</h3>
-<div id="identity" class="section level4" number="1.2.1.1">
-<h4><span class="header-section-number">1.2.1.1</span> Identity</h4>
-<p>There are equalities of two different types: <strong>equations</strong> and <strong>identities</strong>. An equality <span class="math inline">\(=\)</span> is not the same as identity <span class="math inline">\(\equiv\)</span>.</p>
-<p>The <span class="math inline">\(\equiv\)</span> symbol originally meant “is identically equal to”. An identity is a type of equality which is true for all values, e.g.:</p>
-<p><span class="math inline">\((a+b)^2 \equiv a^2+2ab+b^2.\)</span></p>
-</div>
-<div id="differences---delta-notation" class="section level4" number="1.2.1.2">
-<h4><span class="header-section-number">1.2.1.2</span> Differences - Delta notation</h4>
-<p>The Greek letter <span class="math inline">\(\Delta\)</span> (capital delta) is the symbol used to indicate the difference in a measured quantity, usually at two different times.</p>
-</div>
-<div id="summation---sigma-notation" class="section level4" number="1.2.1.3">
-<h4><span class="header-section-number">1.2.1.3</span> Summation - Sigma notation</h4>
-<p>In physics there are often contexts in which it’s necessary to add several quantities. A useful abbreviation for representing such a sum is the Greek letter <span class="math inline">\(\Sigma\)</span> (capital sigma). Suppose we wish to add a set of five numbers represented by <span class="math inline">\(x1, x2, x3, x4, x5\)</span>. In the abbreviated notation, we would write the sum as</p>
-<p><span class="math inline">\(x1 + x2 + x3 + x4 + x5 = \sum_{i=1}^{5} x_i\)</span></p>
-<p>where the subscript i on x represents any one of the numbers in the set. For example, if there are five masses in a system, <span class="math inline">\(m1, m2, m3, m4, m5\)</span>, the total mass of the system <span class="math inline">\(M = m1 + m2 + m3 + m4 + m5\)</span> could be expressed as</p>
-<p><span class="math inline">\(M = \sum_{i=1}^{5} m_i\)</span></p>
-</div>
-<div id="absolute-value" class="section level4" number="1.2.1.4">
-<h4><span class="header-section-number">1.2.1.4</span> Absolute value</h4>
-<p>The magnitude of a quantity x, written x, is simply the absolute value of that quantity. The sign of x is always positive, regardless of the sign of x. For example, if x = -5, then |x| = 5; if x = 8, then |x| = 8.</p>
-</div>
-<div id="basic-algebraic-operations" class="section level4" number="1.2.1.5">
-<h4><span class="header-section-number">1.2.1.5</span> Basic algebraic operations</h4>
-<p>When algebraic operations are performed, the laws of arithmetic apply. Symbols such as x, y, and z are usually used to represent unspecified quantities, called the unknowns (or variables).</p>
-<p>First, consider the equation</p>
-<p><span class="math inline">\(8x = 32\)</span></p>
-<p>If we wish to solve for x, we can divide (or multiply) each side of the equation by the same factor without destroying the equality. In this case, if we divide both sides by 8, we have</p>
-<p><span class="math inline">\(\frac{8x}{8} = \frac{32}{8}\)</span></p>
-<p><span class="math inline">\(x = 4\)</span></p>
-<p>Also, consider the equation</p>
-<p><span class="math inline">\(x + 2 = 8\)</span></p>
-<p>In this type of expression, we can add or subtract the same quantity from each side. If we subtract 2 from each side, we have</p>
-<p><span class="math inline">\(x + 2 - 2 = 8 - 2\)</span></p>
-<p><span class="math inline">\(x = 6\)</span></p>
-<p>Now, consider the equation</p>
-<p><span class="math inline">\(\frac{x}{5} = 9\)</span></p>
-<p>If we multiply each side by 5,</p>
-<p><span class="math inline">\((\frac{x}{5}) \times 5 = 9 \times 5\)</span></p>
-<p><span class="math inline">\(x = 45\)</span></p>
-<p><strong>In all cases, whatever operation is performed on the left side of the equality must also be performed on the right side.</strong></p>
-</div>
-<div id="some-useful-arithmetic-rules" class="section level4" number="1.2.1.6">
-<h4><span class="header-section-number">1.2.1.6</span> Some useful arithmetic rules</h4>
-<p>Należy przypomnieć następujące zasady mnożenia, dzielenia, dodawania i odejmowania ułamków, gdzie a, b, c i d to cztery liczby:</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>Rule</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Multiplying</td>
-<td><span class="math inline">\((\frac{a}{b})(\frac{c}{d}) = \frac{ac}{bd}\)</span></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Dividing</td>
-<td><span class="math inline">\((\frac{a/b}{c/d}) = \frac{ad}{bc}\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Adding</td>
-<td><span class="math inline">\((\frac{a}{b}) \pm (\frac{c}{d}) = \frac{ad \pm bc}{bd}\)</span></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="powers" class="section level4" number="1.2.1.7">
-<h4><span class="header-section-number">1.2.1.7</span> Powers</h4>
-<p>The following rules apply:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(x^nx^m = x^{n+m}\)</span></li>
-<li><span class="math inline">\(\frac{x^n}{x^m} = x^{n-m}\)</span></li>
-<li><span class="math inline">\(x^{\frac{1}{n}} = \sqrt[n]{x}\)</span></li>
-<li><span class="math inline">\((x^n)^m = x^{nm}\)</span></li>
-</ol>
-</div>
-<div id="logarithms" class="section level4" number="1.2.1.8">
-<h4><span class="header-section-number">1.2.1.8</span> Logarithms</h4>
-<p>Suppose a quantity x is expressed as a power of some quantity a:</p>
-<p><span class="math inline">\(x = a^y\)</span></p>
-<p>The number a is called the base number. The logarithm of x with respect to the base a is equal to the exponent to which the base must be raised to satisfy the expression <span class="math inline">\(x = a^y\)</span>:</p>
-<p><span class="math inline">\(y = \log_a x\)</span></p>
-<p>In practice, the two bases most often used are base 10, called the common logarithm base, and base <span class="math inline">\(e = 2.718 282\)</span>, called Euler’s constant or the natural logarithm base.</p>
-<p>For any base:</p>
-<ul>
-<li><span class="math inline">\(\log{(ab)} = \log a + \log b\)</span></li>
-<li><span class="math inline">\(\log{a/b} = \log a + \log b\)</span></li>
-<li><span class="math inline">\(\log{a^n} = n \log a\)</span></li>
-</ul>
-<p>Also,</p>
-<ul>
-<li><span class="math inline">\(\ln e\)</span></li>
-<li><span class="math inline">\(\ln e^a = a\)</span></li>
-<li><span class="math inline">\(\ln(1/a) = -\ln a\)</span></li>
-</ul>
-</div>
-<div id="factoring" class="section level4" number="1.2.1.9">
-<h4><span class="header-section-number">1.2.1.9</span> Factoring</h4>
-<p>Some useful formulas for factoring an equation are the following:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(ax + ay + az = a(x + y + z)\)</span></li>
-<li><span class="math inline">\(a^2 + 2ab + b^2 = (a + b)^2\)</span> - so called “perfect square”</li>
-<li><span class="math inline">\(a^2 + b^2 = (a + b)(a - b)\)</span></li>
-</ol>
-</div>
-<div id="linear-equations" class="section level4" number="1.2.1.10">
-<h4><span class="header-section-number">1.2.1.10</span> Linear equations</h4>
-<p>A linear equation has the general form</p>
-<p><span class="math inline">\(y = mx + b\)</span></p>
-<p>where m and b are constants. This equation is referred to as linear because the graph of y versus x is a straight line. The constant b, called the y-intercept, represents the value of y at which the straight line intersects the y axis.</p>
-<p>The constant m is equal to the slope of the straight line. If any two points on the straight line are specified by the coordinates (x1, y1) and (x2, y2), the slope of the straight line can be expressed as</p>
-<p><span class="math inline">\(Slope = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\Delta{y}}{\Delta{x}}\)</span></p>
-<p>Note that m and b can have either positive or negative values. If <span class="math inline">\(m &gt; 0\)</span>, the straight line has a positive slope. If <span class="math inline">\(m &lt; 0\)</span>, the straight line has a negative slope.</p>
-<p><strong>Solving Simultaneous Linear Equations</strong></p>
-<p>Consider the equation <span class="math inline">\(3x + 5y = 15\)</span>, which has two unknowns, x and y. Such an equation does not have a unique solution. For example, <span class="math inline">\((x = 0, y = 3)\)</span>, <span class="math inline">\((x = 5, y = 0)\)</span>, and (<span class="math inline">\(x = 2, y = \frac{9}{5}\)</span>) are all solutions to this equation.</p>
-<p>If a problem has two unknowns (variables), a unique solution is possible only if we have two equations. In general, if a problem has n unknowns, its solution requires n equations. To solve two simultaneous equations involving two unknowns, x and y, we solve one of the equations for x in terms of y and substitute this expression into the other equation.</p>
-</div>
-</div>
-<div id="functions" class="section level3" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> Functions</h3>
-<p><strong>A function from a set A to another set B is an assignment of some element of B to each element in A</strong>. A function is a rule that assigns each input exactly one output. We call the output the image of the input. The set of all inputs for a function is called the <strong>domain</strong>. The set of all allowable outputs is called the <strong>codomain</strong>.</p>
-<p>In mathematics, a function is a binary relation between two sets that associates every element of the first set to exactly one element of the second set.</p>
-<div class="figure">
-<img src="images/calculus/range.svg" alt="" />
-<p class="caption">Figure 1.1. Function<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-</div>
-<div class="figure">
-<img src="images/calculus/Function_color_example_3.svg" alt="" />
-<p class="caption">Figure 1.2. Function<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-</div>
-<p>A <strong>mathematical model</strong> is an abstract concept through which we use mathematical language and notation to describe a phenomenon in the world around us. Models describe our beliefs about how the world functions. In mathematical modelling, we translate those beliefs into the language of mathematics.</p>
-<p>A <strong>function can serve as a simple kind of mathematical model</strong>. Remember that a function is just a rule, f, that expresses the dependency of one variable quantity, y, on another variable quantity, x. We can think of the rule (given as a graph, a formula, or a table of values) as a representation of some natural <em>cause and effect</em> relationship – if x, then y – between the two variable quantities.</p>
-<p>For a mathematical model, we often seek an algebraic formula that captures observed behavior accurately and can be used to predict behavior not yet observed.</p>
-</div>
-<div id="three-basic-concepts-of-calculus" class="section level3" number="1.2.3">
-<h3><span class="header-section-number">1.2.3</span> Three basic concepts of calculus</h3>
-<ol style="list-style-type: decimal">
-<li>Limit of function;</li>
-<li>Derivative;</li>
-<li>Integral.</li>
-</ol>
-</div>
-<div id="limits" class="section level3" number="1.2.4">
-<h3><span class="header-section-number">1.2.4</span> Limits</h3>
-<p>In mathematics, a limit is the value that a function (or sequence) “approaches” as the input (or index) “approaches” some value. Limits are essential to calculus and mathematical analysis, and are used to define e.g. derivatives, and integrals.</p>
-<p>For <span class="math inline">\(f(x)\)</span>, we have <span class="math display">\[\lim_{x \rightarrow c}f(x)=L\]</span></p>
-<p>For example,</p>
-<p><span class="math display">\[\lim_{x \rightarrow 0}\frac{1}{x}=\infty\]</span></p>
-<p>or,</p>
-<p><span class="math display">\[\lim_{x \rightarrow \infty}\frac{1}{x}=0\]</span></p>
-<p>In formulas, a limit of a function is usually written as</p>
-<p><span class="math display">\[\lim_{x \to c}f(x)=L\]</span></p>
-<p>and is read as “the limit of f of x as x approaches c equals L”. The fact that a function f approaches the limit L as x approaches c is usually denoted by a right arrow <span class="math inline">\(\to\)</span>, as in:</p>
-<p><span class="math display">\[f(x)\to L{\text{ as }}x\to c\]</span> which reads <span class="math inline">\(f(x)\)</span> tends to <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> tends to <span class="math inline">\(c\)</span>.</p>
-<div class="figure">
-<img src="images/calculus/header-calculus-limits-and-continuity.svg" alt="" />
-<p class="caption">Figure 1.3. Limits<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
-</div>
-</div>
-<div id="derivative" class="section level3" number="1.2.5">
-<h3><span class="header-section-number">1.2.5</span> Derivative</h3>
-<p>First, a function must be specified that relates one variable to another (e.g., a coordinate as a function of time). Suppose one of the variables is called y (the dependent variable), and the other x (the independent variable). We might have a function relationship such as</p>
-<p><span class="math inline">\(y(x) = ax^2 + bx + c\)</span></p>
-<p>If a, b, and c are specified constants, y can be calculated for any value of x. We usually deal with continuous functions, that is, those for which y varies “smoothly” with x.</p>
-<p>The derivative of y with respect to x is defined as the limit as <span class="math inline">\(\Delta x\)</span> approaches zero of the slopes of chords drawn between two points on the y versus x curve.</p>
-<p>Mathematically, we write this definition as</p>
-<p><span class="math display">\[\frac{dy}{dx} = \lim_{\Delta x \to\ 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to\ 0} \frac{y(x + \Delta x) - y(x)}{\Delta x}\]</span></p>
-<p>where <span class="math inline">\(\Delta y = y_2 - y_1\)</span> and <span class="math inline">\(\Delta x = x_2 - x_1\)</span>.</p>
-<p>Note that <span class="math inline">\(dy/dx\)</span> does not mean <span class="math inline">\(dy\)</span> divided by <span class="math inline">\(dx\)</span>, but rather is simply a notation of the limiting process of the derivative (differentiation operator).</p>
-<p>A useful expression to remember when <span class="math inline">\(y = ax^n\)</span>, where a is a constant and n is any positive or negative number (integer or fraction), is</p>
-<p><span class="math inline">\(\frac{dy}{dx} = nax^{n-1}\)</span></p>
-<div class="figure">
-<img src="images/calculus/Derivative_-_geometric_meaning.svg" alt="" />
-<p class="caption">Figure 1.4. Derivative - visual representation<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
-</div>
-</div>
-<div id="integral" class="section level3" number="1.2.6">
-<h3><span class="header-section-number">1.2.6</span> Integral</h3>
-<p>We think of integration as the inverse of differentiation. As an example, consider the expression</p>
-<p>1.1 <span class="math inline">\(f(x) = \frac{dy}{dx} = 3ax^2 + b\)</span></p>
-<p>which was the result of differentiating the function</p>
-<p>1.2 <span class="math inline">\(y(x) = ax^3 = bx + c\)</span></p>
-<p>We can write equation 1.1 as <span class="math inline">\(dy = f(x)dx = (3ax^2 + b)dx\)</span> and obtain <span class="math inline">\(y(x)\)</span> by “summing” over all values of x. Mathematically, we write this inverse operation as</p>
-<p><span class="math display">\[y(x) = \int f(x) dx\]</span></p>
-<p><span class="math display">\[ y(x) = \int (3az^2 + b)dx = ax^3 + bx + c\]</span> where c is a constant of the integration. This type of integral is called an indefinite integral because its value depends on the choice of c.</p>
-</div>
-<div id="integral-as-an-area---intuitive-explanation" class="section level3" number="1.2.7">
-<h3><span class="header-section-number">1.2.7</span> Integral as an area - intuitive explanation</h3>
-<p>For a general continuous function f(x), the integral can be described as the area under the curve bounded by f(x) and the x axis, between two specified values of x, say, <span class="math inline">\(x1\)</span> and <span class="math inline">\(x2\)</span>, as in the Figure 1.5.</p>
-<p>The area of the blue element in Figure 1.5 is approximately <span class="math inline">\(f(x_i) \Delta x_i\)</span>. If we sum all these area elements between <span class="math inline">\(x1\)</span> and <span class="math inline">\(x2\)</span> and take the limit of this sum as <span class="math inline">\(\Delta x_i \to 0\)</span>, we obtain the true area under the curve bounded by f(x) and the x axis, between the limits <span class="math inline">\(x1\)</span> and <span class="math inline">\(x2\)</span>:</p>
-<p><span class="math display">\[Area  = \lim_{\Delta x_i \to\ 0} \sum_i f(x_i)\Delta x_i = \int_{x_1}^{x_2} f(x)dx\]</span> Integrals of this type are called definite integrals.</p>
-<div class="figure">
-<img src="images/calculus/AppendixB_defInt.png" alt="" />
-<p class="caption">Figure 1.5. Definite integral as an area under a curve<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
-</div>
-<div class="figure">
-<img src="images/calculus/4_2_NegF.svg" alt="" />
-<p class="caption">Figure 1.6. Definite integral as an area under a curve<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
-</div>
-<div class="figure">
-<img src="images/calculus/4_3_TrapArea.svg" alt="" />
-<p class="caption">Figure 1.7. Definite integral as an area under a curve<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
-</div>
-<div id="summary" class="section level4" number="1.2.7.1">
-<h4><span class="header-section-number">1.2.7.1</span> Summary</h4>
-<div class="figure">
-<img src="images/calculus/calculus_thumb.svg" alt="" />
-<p class="caption">Figure 1.8. Summary of basic calulus concepts<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
-</div>
-
-</div>
-</div>
-</div>
-<!-- </div> -->
-<div class="footnotes">
-<hr />
-<ol start="2">
-<li id="fn2"><p>Retrieved from: Sets and Functions. <a href="https://mathigon.org/course/sets-and-functions/function-properties" class="uri">https://mathigon.org/course/sets-and-functions/function-properties</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Retrieved from: Loup Vaillant. <a href="http://loup-vaillant.fr/tutorials/from-imperative-to-functional" class="uri">http://loup-vaillant.fr/tutorials/from-imperative-to-functional</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Retrieved from: Math24. <a href="https://www.math24.net/definition-limit-function/" class="uri">https://www.math24.net/definition-limit-function/</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>Retrieved from: Wikimedia. <a href="https://commons.wikimedia.org/wiki/File:Derivative_-_geometric_meaning.svg" class="uri">https://commons.wikimedia.org/wiki/File:Derivative_-_geometric_meaning.svg</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Retrieved from: Serway, R. A., &amp; Jewett, J. W. (2018). <em>Physics for scientists and engineers with modern physics</em>. Cengage learning.<a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Retrieved from: Active Calculus. <a href="https://activecalculus.org/single/sec-4-3-definite-integral.html" class="uri">https://activecalculus.org/single/sec-4-3-definite-integral.html</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>Retrieved from: Active Calculus. <a href="https://activecalculus.org/single/sec-4-3-definite-integral.html" class="uri">https://activecalculus.org/single/sec-4-3-definite-integral.html</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p>Retrieved from: Derivatives on Unequally Spaced Grids. <a href="http://cococubed.asu.edu/code_pages/fdcoef.shtml" class="uri">http://cococubed.asu.edu/code_pages/fdcoef.shtml</a><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#fnref9" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.4" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.4]</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistics-an-introduction-lecture-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="further-examples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-variable-and-probability-distribution-definitions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

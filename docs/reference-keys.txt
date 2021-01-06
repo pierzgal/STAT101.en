@@ -92,7 +92,7 @@ plot-the-data-from-the-above-example-using-histograms-and-smooth-density-curves
 box-plots---additional-example
 histogram-and-box-plot
 skewness-of-data-distribution
-introduction-to-statistical-inference-lecture-4---draft-copy-ver.-0.3
+introduction-to-statistical-inference-lecture-4---draft-copy-ver.-0.4
 introduction
 logic
 boolean-operators
@@ -130,6 +130,7 @@ introduction-1
 essential-definitions-and-concepts
 probabilities-are-defined-on-sets-of-uncertain-events.
 basic-terminology
+sample-space
 probability-model
 three-definitions-of-probability
 axioms-of-probability
@@ -137,7 +138,6 @@ further-examples
 example-1
 example-2
 example-3
-sample-space
 conditional-probability-and-independence
 multiplication-rule
 two-stage-experiments

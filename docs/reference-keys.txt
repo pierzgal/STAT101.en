@@ -183,8 +183,8 @@ sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc.
 sampling-distribution-of-a-sample-mean
 sampling-distribution-for-a-sample-sum-s
 central-limit-theorem-clt
-centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
-ctg-dla-estymatora-częstości-proporcji-z-próby
+clt-for-the-sample-mean
+clt-for-a-sample-proportion
 point-and-interval-estimation
 point-estimation
 interval-estimation

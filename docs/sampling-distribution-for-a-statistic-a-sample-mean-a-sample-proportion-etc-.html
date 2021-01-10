@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-01-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,7 @@
 
 
 
-<script src="assets/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="assets/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="assets/viz-1.8.2/viz.js"></script>
 <link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
@@ -340,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc." class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Sampling distribution for a statistic (a sample mean, a sample proportion etc.)</h2>
-<p>A statistic, such as the sample mean or the sample standard deviation, is a number computed from a sample. Since a sample is random, every statistic is a random variable: it varies from sample to sample in a way that cannot be predicted with certainty. As a random variable it has a mean, a standard deviation, and a probability distribution. The probability distribution of a statistic is called its sampling distribution. Typically sample statistics are are computed in order to estimate the corresponding population parameters.</p>
+<p>A statistic, such as the sample mean or the sample standard deviation, is a number computed from a sample. Since a sample is random, every statistic is a random variable: it varies from sample to sample in a way that cannot be predicted with certainty. As a random variable it has a mean, a standard deviation, and a probability distribution. The probability distribution of a statistic is called its sampling distribution. Typically sample statistics are computed in order to estimate the corresponding population parameters.</p>
 <p>A <em>sampling distribution</em> is the probability distribution of a sample statistic that is formed when samples of size n are repeatedly taken from a population. If the sample statistic is the sample mean, then the distribution is the sampling distribution of sample means.</p>
 <blockquote>
 <p>Every sample statistic has a sampling distribution.</p>
@@ -352,18 +352,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>Consider the Venn diagram below (Figure 6.1).</p>
 <div class="figure">
-<img src="images/stat/IMG_1332.JPG" alt="" />
-<p class="caption">Figure 6.1. The idea of samplig distribution of a statistic</p>
+<img src="images/stat/IMG_0168.JPG" alt="" />
+<p class="caption">Figure 6.1. The idea of sampling distribution of a statistic (e.g. a sample mean)</p>
 </div>
-<p>The rectangle represents a large population, and each circle represents a sample of size n. Because the sample entries can differ, the sample means can also differ. The mean of Sample 1 is x1 = 3.5; the mean of Sample 2 is x2; and so on. <strong>The sampling distribution of the sample means for samples of size n for this population</strong> consists of x1, x2, x3, and so on. If the samples are drawn with replacement, then an infinite number of samples can be drawn from the population.</p>
+<p>The rectangle represents a large population, and each circle represents a sample of size n. Because the sample entries can differ, the sample means can also differ. The mean of Sample 1 (S1) is <span class="math inline">\(\bar{x_1} = 3,5\)</span>; the mean of Sample 2 is <span class="math inline">\(\bar{x_2}\)</span>; and so on. <strong>The sampling distribution of the sample means for samples of size n for this population</strong> consists of <span class="math inline">\(\bar{x_1}, \bar{x_2}, \bar{x_3}\)</span>, and so on. If the samples are drawn with replacement, then an infinite number of samples can be drawn from the population.</p>
 <div id="sampling-distribution-of-a-sample-mean" class="section level3" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> Sampling distribution of a sample mean</h3>
 <p>Suppose a population consists of four houses (N = 4), where the value of rv. X, the number of rooms for rent in each unit, is listed below:</p>
 <ol style="list-style-type: decimal">
 <li>first house (2 rooms),</li>
-<li>first house (3 rooms),</li>
-<li>first house (4 rooms),</li>
-<li>first house (5 rooms).</li>
+<li>second house (3 rooms),</li>
+<li>third house (4 rooms),</li>
+<li>fourth house (5 rooms).</li>
 </ol>
 <p><strong>Consider drawing a random sample of size 2 with replacement</strong>. There are four possibilities on the first draw from the population and also four possibilities on the second draw from the population. That is, we select a unit at random, put it back, and then select another unit at random. Denote by X1 and X2 the observation of X obtained in the first and second drawing, respectively.</p>
 <p>The population distribution of X is given in Table 6.1.</p>
@@ -595,7 +595,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <thead>
 <tr class="header">
 <th align="right"></th>
-<th align="left">Pierwsza kość (X1)</th>
+<th align="left"><strong>Pierwsza kość (X1)</strong></th>
 <th align="left"></th>
 <th align="left"></th>
 <th align="left"></th>

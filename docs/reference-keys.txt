@@ -179,7 +179,7 @@ normal-probability-distribution
 example-14
 example-15
 example---normal-approximation-of-the-binomial-distribution
-the-basics-of-statistical-inference-lecture-6---draft-copy-ver.-0.1
+the-basics-of-statistical-inference-lecture-6---draft-copy-ver.-0.2
 statistics-and-sampling-variability
 sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc.
 sampling-distribution-of-a-sample-mean

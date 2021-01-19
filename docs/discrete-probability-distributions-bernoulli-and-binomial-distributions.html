@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-17" />
+<meta name="date" content="2021-01-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -386,20 +386,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>each voter has two outcomes - to vote (denoted 1) or to abstain from voting (denoted 0),</p></li>
 <li><p>the probability of voting is constant: 4/5 = 0.8 = the probability of “success” in a single <em>Bernoulli</em> trial <span class="math inline">\(X_i\)</span>, (i = 1, 2, 3).</p></li>
 </ul>
-<p>So how can we find probabilities? Let’s look at a tree diagram of the situation (see Figure A).</p>
+<p>So how can we find probabilities? Let’s look at a tree diagram of the situation (see Figure A and B).</p>
 <p>Finding the probability distribution of X involves a couple key concepts. First, notice that there are multiple ways to get 0, 1, 2, or 3 people voted. In fact, we can use the <em>combinations without repetitions</em> (<span class="math inline">\(C(n, x)\)</span>) to figure out how many ways there are. For example, P(X = 2) is the same regardless of the order in which we get 2 correct; we can just multiply the probability of one line by 3, since there are 3 ways to have 3 “successes”.</p>
 <p>Not only that, since the decisions of eligible voters are independent, we can just multiply the probability of getting “success” or “failure”.</p>
 <p>The general equation of the Binomial distribution is,</p>
 <p><span class="math display">\[P(\text{x &quot;successes&quot; in n trials}) = C_x^n(p^x \times (1-p)^{n-x})\]</span></p>
-<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_x^n = nCx =\)</span> liczba <span class="math inline">\(x\)</span>-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
+<p>where: <span class="math inline">\(p\)</span> = probability of a “success” (denoted with <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = probability of a “failure”, coded as <span class="math inline">\(0\)</span>; <span class="math inline">\(C_x^n = nCx =\)</span> the number of <span class="math inline">\(x\)</span>-combinations from the set of <span class="math inline">\(n\)</span> elements.</p>
 <p>Inspect Figures A and B to understand the above general equation of the Binomial distribution.</p>
 <div class="figure">
 <img src="images/stat/IMG_0181.JPG" alt="" />
-<p class="caption">Figure A: Funkcja rozkładu dwumianowego - wyjaśnienie (etap I)</p>
+<p class="caption">Figure A: Binomial distribution function - informal derivation (part I)</p>
 </div>
 <div class="figure">
 <img src="images/stat/IMG_0182.JPG" alt="" />
-<p class="caption">Figure B: Funkcja rozkładu dwumianowego - wyjaśnienie (etap II)</p>
+<p class="caption">Figure B: Binomial distribution function - informal derivation (part II)</p>
 </div>
 </div>
 <div id="remark-about-random-sampling" class="section level4" number="5.3.1.5">

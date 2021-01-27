@@ -191,3 +191,8 @@ point-and-interval-estimation
 point-estimation
 interval-estimation
 worked-example
+hypothesis-testing---introduction-lecture-7---draft-copy-ver.-0.1
+the-basics-of-hypothesis-testing
+examples.
+important-concepts-in-hypothesis-testing---summary
+testing-outcomes

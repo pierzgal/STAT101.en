@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7.1 The basics of hypothesis testing | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7.1 The basics of hypothesis testing | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7.1 The basics of hypothesis testing | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7.1 The basics of hypothesis testing | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="mean-and-standard-deviation.html"/>
-<link rel="next" href="parameter-and-statistic-summary-of-symbols.html"/>
+<link rel="prev" href="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-1.html"/>
+<link rel="next" href="examples-.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -347,46 +347,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="useful-formulas-descriptive-statistics" class="section level2" number="3.9">
-<h2><span class="header-section-number">3.9</span> Useful formulas (descriptive statistics)</h2>
-<table>
-<colgroup>
-<col width="0%" />
-<col width="23%" />
-<col width="9%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Id</th>
-<th align="center">Unordered data distribution</th>
-<th align="center">Type of available data - relative or absolute frequency</th>
-<th align="center">Frequency distribution (ordered data distribution)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-<td align="center">Absolute frequencies - <span class="math inline">\(f_i\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{k}x_if_i\]</span> <span class="math inline">\(n\)</span> = number of observations (sample or population size); <span class="math inline">\(k\)</span> = number of distinct values (# of rows in a frequency distribution). <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{k}(x_i - \bar{x})^2f_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span> or you can use formulas for the relative frequency of observations <span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center">-</td>
-<td align="center">Relative frequencies (fraction, proportion) - <span class="math inline">\(p_i = f_i/n\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math inline">\(k\)</span> = number of distinct values (groups). <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-</tbody>
-</table>
+<div id="the-basics-of-hypothesis-testing" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> The basics of hypothesis testing</h2>
+<p>In most practical data analysis it is possible to carry out inferences (from sample to population) based on graphical techniques (e.g. investigating the empirical distributions).</p>
+<p>In certain cases it is important to make quantitative statements about the degree of uncertainty in an inference. This requires a formal and quantitative approach to inference.</p>
+<p>In the standard setup we are considering <span style="color: blue"><em>hypotheses</em></span>, which are statements about a population. For example, the statement that the mean of a population is positive is a hypothesis.</p>
+<p>If the data are inconclusive or strongly support the null hypothesis, then we decide in favor of the null hypothesis. Only if the data strongly favor the alternative hypothesis do we decide in favor of the alternative hypothesis over the null.</p>
+<p>If hypothesis A represents a “conventional wisdom” that somebody is trying to overturn by proposing hypothesis B, then A should be the null hypothesis and B should be the alternative hypothesis. Thus, if somebody is claiming that cigarette smoking is not associated with lung cancer, the null hypothesis would be that cigarette smoking is associated with lung cancer, and the alternative would be that it is not. Then once the data are collected and analyzed, if the results are inconclusive, we would stick with the standard view that smoking and lung cancer are related.</p>
+<p>If the consequences of mistakenly accepting hypothesis A are more severe than the consequences of mistakenly accepting hypothesis B, then B should be the null hypothesis and A should be the alternative. For example, suppose that somebody is proposing that a certain drug prevents baldness, but it is suspected that the drug may be very toxic. If we adopt the use of the drug and it turns out to be toxic, people may die. On the other hand if we do not adopt the use of the drug and it turns out to be effective and non-toxic, some people will needlessly become bald. The consequence of the first error is far more severe than the consequence of the second error. Therefore we take as the null hypothesis that the drug is toxic, and as the alternative we take the hypothesis that the drug is non-toxic and effective.</p>
+<p>If hypothesis A is a much simpler explanation for a phenomenon than hypothesis B, we should take hypothesis A as the null hypothesis and hypothesis B as the alternative hypothesis. This is called the <span style="color: blue"><em>principle of parsimony</em></span>, or <span style="color: blue"><em>Occam’s razor</em></span>. Stated another way, if we have no reason to favor one hypothesis over another, the simplest explanation is preferred.</p>
+<p>Note that there is no general theoretical justification for this principal, and it does sometimes happen that the simplest possible explanation turns out to be incorrect.</p>
+<p>Next we need to consider the level of <span style="color: blue"><em>evidence</em></span> in the data for each of the two hypotheses. The standard method is to use a <span style="color: blue"><em>test statistic</em></span> <span class="math inline">\(T(X_1, \ldots, X_n)\)</span> such that extreme values of <span class="math inline">\(T\)</span> indicate evidence for the alternative hypothesis, and non-extreme values of <span class="math inline">\(T\)</span> indicate evidence for the null hypothesis.</p>
+<p>“Extreme” may mean “<em>closer to</em> <span class="math inline">\(+\infty\)</span>” (a <span style="color: blue">right-tailed test</span>), or “<em>closer to</em> <span class="math inline">\(-\infty\)</span>” (a <span style="color: blue">left-tailed test</span>), or “<em>closer to one of</em> <span class="math inline">\(\pm \infty\)</span>”, depending on the context. The first two cases are called <span style="color: blue">one-sided tests</span>, while the final case is called a <span style="color: blue">two-sided test</span>.</p>
+<p>The particular definition of “extreme” for a given problem is called the <span style="color: blue">rejection region</span>.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="mean-and-standard-deviation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parameter-and-statistic-summary-of-symbols.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="examples-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

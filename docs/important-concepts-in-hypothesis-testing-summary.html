@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7.3 Important concepts in hypothesis testing - summary | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7.3 Important concepts in hypothesis testing - summary | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7.3 Important concepts in hypothesis testing - summary | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7.3 Important concepts in hypothesis testing - summary | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="mean-and-standard-deviation.html"/>
-<link rel="next" href="parameter-and-statistic-summary-of-symbols.html"/>
+<link rel="prev" href="examples-.html"/>
+
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -347,46 +347,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="useful-formulas-descriptive-statistics" class="section level2" number="3.9">
-<h2><span class="header-section-number">3.9</span> Useful formulas (descriptive statistics)</h2>
+<div id="important-concepts-in-hypothesis-testing---summary" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Important concepts in hypothesis testing - summary</h2>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: null hypothesis - the state of the world that you assume is true. Typically, this is a world of “no effect,” in which probability distributions are easy to calculate or simulate. <span class="math inline">\(H_0\)</span> is a specific mathematical statement about a population parameter.</li>
+<li><span class="math inline">\(H_A\)</span>: alternative hypothesis - a state of the world different from the null. Typically, this is a world in which the effect you are testing is real.</li>
+<li>Test statistic: the estimate that you are testing. Typically, this is a something that you have computed from data and are trying to understand in the context of the null distribution.</li>
+<li>Null distribution: the sampling distribution of the test statistic under the null hypothesis.</li>
+<li><span class="math inline">\(p\)</span>-value: probability of observing something as strange or stranger as what you observed, <em>under the assumption that the null hypothesis is true</em>.</li>
+<li><span class="math inline">\(\alpha\)</span>-level: a threshold beyond which you begin to doubt the null hypothesis. This is a line in the sand that you draw to purposefully gauge your dubiousness.</li>
+</ul>
+<blockquote>
+<p>Two possible outcomes:</p>
+</blockquote>
+<ul>
+<li>Reject <span class="math inline">\(H_0\)</span> at <span class="math inline">\(\alpha\)</span>-significance level: observations are so unlikely under the null hypothesis, that it is likely false</li>
+<li>Fail to reject <span class="math inline">\(H_0\)</span> at <span class="math inline">\(\alpha\)</span>-significance level: observations are reasonably likely under null hypothesis, so can’t rule out possibility that it is true</li>
+</ul>
+<p><strong>Important</strong>:
+- We never confirm the null hypothesis – we only fail to reject!
+- Always report <span class="math inline">\(p\)</span>-values and a confidence interval.
+- One-sided vs. two-sided tests: one-sided test are almost never used in practice.</p>
+<div id="testing-outcomes" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Testing Outcomes</h3>
+<p>For a defendant on trial:</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: innocent until proven guilty.</li>
+<li>Type I error: <span class="math inline">\(\Pr(\text{reject} | H_0)\)</span> - convicting an innocent person.</li>
+<li>Type II error: <span class="math inline">\(\Pr(\text{fail to reject} | H_0^c) = 1- Power\)</span> - letting a guilty person go free.</li>
+<li>(‘<em>Alpha</em>’) The probability of committing a Type I error. Also known as the significance level.</li>
+<li>(‘<em>Beta</em>’) The probability of committing a Type II error.</li>
+<li><em>Power</em> is the probability the null hypothesis is rejected given that it is false (ie. <span class="math inline">\(1 - \beta\)</span>). <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are probabilities of committing an error so we want these values to be low. However, we cannot decrease both. As <span class="math inline">\(\alpha\)</span> decreases, <span class="math inline">\(\beta\)</span> increases.</li>
+</ul>
+<blockquote>
+<p>Note! Type I error is also thought of as the event that we reject the null hypothesis GIVEN the null is true. In other words, Type I error is a conditional event and <span class="math inline">\(\alpha\)</span> is a conditional probability. The same idea applies to Type II error and <span class="math inline">\(\beta\)</span>.</p>
+</blockquote>
 <table>
-<colgroup>
-<col width="0%" />
-<col width="23%" />
-<col width="9%" />
-<col width="66%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th align="center">Id</th>
-<th align="center">Unordered data distribution</th>
-<th align="center">Type of available data - relative or absolute frequency</th>
-<th align="center">Frequency distribution (ordered data distribution)</th>
+<th align="center">Decision \Truth</th>
+<th align="center"><span class="math inline">\(H_0\)</span> is true</th>
+<th align="center"><span class="math inline">\(H_0\)</span> is false</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">1</td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-<td align="center">Absolute frequencies - <span class="math inline">\(f_i\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{k}x_if_i\]</span> <span class="math inline">\(n\)</span> = number of observations (sample or population size); <span class="math inline">\(k\)</span> = number of distinct values (# of rows in a frequency distribution). <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{k}(x_i - \bar{x})^2f_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span> or you can use formulas for the relative frequency of observations <span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
+<td align="center">Reject <span class="math inline">\(H_0\)</span></td>
+<td align="center">Type I error</td>
+<td align="center">Correct decision</td>
 </tr>
 <tr class="even">
-<td align="center">2</td>
-<td align="center">-</td>
-<td align="center">Relative frequencies (fraction, proportion) - <span class="math inline">\(p_i = f_i/n\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math inline">\(k\)</span> = number of distinct values (groups). <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
+<td align="center">Fail to Reject <span class="math inline">\(H_0\)</span></td>
+<td align="center">Correct decision</td>
+<td align="center">Type II error</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>The “reality”, or truth, about the null hypothesis is unknown and therefore we do not know if we have made the correct decision or if we committed an error. We can, however, define the likelihood of these events.</p>
+</blockquote>
+
 </div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="mean-and-standard-deviation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parameter-and-statistic-summary-of-symbols.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="examples-.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

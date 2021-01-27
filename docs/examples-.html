@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7.2 Examples. | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7.2 Examples. | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7.2 Examples. | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.9 Useful formulas (descriptive statistics) | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7.2 Examples. | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="mean-and-standard-deviation.html"/>
-<link rel="next" href="parameter-and-statistic-summary-of-symbols.html"/>
+<link rel="prev" href="the-basics-of-hypothesis-testing.html"/>
+<link rel="next" href="important-concepts-in-hypothesis-testing-summary.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -347,46 +347,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="useful-formulas-descriptive-statistics" class="section level2" number="3.9">
-<h2><span class="header-section-number">3.9</span> Useful formulas (descriptive statistics)</h2>
-<table>
-<colgroup>
-<col width="0%" />
-<col width="23%" />
-<col width="9%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Id</th>
-<th align="center">Unordered data distribution</th>
-<th align="center">Type of available data - relative or absolute frequency</th>
-<th align="center">Frequency distribution (ordered data distribution)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-<td align="center">Absolute frequencies - <span class="math inline">\(f_i\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{k}x_if_i\]</span> <span class="math inline">\(n\)</span> = number of observations (sample or population size); <span class="math inline">\(k\)</span> = number of distinct values (# of rows in a frequency distribution). <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{k}(x_i - \bar{x})^2f_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span> or you can use formulas for the relative frequency of observations <span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center">-</td>
-<td align="center">Relative frequencies (fraction, proportion) - <span class="math inline">\(p_i = f_i/n\)</span></td>
-<td align="center"><span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math inline">\(n\)</span> = number of observations; <span class="math inline">\(k\)</span> = number of distinct values (groups). <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-</tbody>
-</table>
+<div id="examples." class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Examples.</h2>
+<p><em>Example 1.</em> Suppose we are investigating a coin, and the null hypothesis is that the coin is fair (equally likely to land heads or tails) while the alternative is that the coin is unfairly biased in favour of heads. If we observe data <span class="math inline">\(X_1, \ldots, X_n\)</span> where each <span class="math inline">\(X_i\)</span> is <span class="math inline">\(H\)</span> or <span class="math inline">\(T\)</span>, then the test statistic <span class="math inline">\(T(X_1, \ldots, X_n)\)</span> may be the number of heads, and the rejection region would be “large values of <span class="math inline">\(T\)</span>” (since the maximum value of <span class="math inline">\(T\)</span> is <span class="math inline">\(n\)</span>, we might also say “<span class="math inline">\(T\)</span> close to <span class="math inline">\(n\)</span>”).</p>
+<p>On the other hand, if the alternative hypothesis was that the coin is unfairly biased in favour of tails, the rejection region would be “small values of <span class="math inline">\(T\)</span>” (since the minimum value of <span class="math inline">\(T\)</span> is zero, we might also say “<span class="math inline">\(T\)</span> close to zero”).</p>
+<p>Finally, if the alternative hypothesis was that the coin is unfairly biased in any way, the rejection region would be “large or small values of <span class="math inline">\(T\)</span>” (<span class="math inline">\(T\)</span> close to <span class="math inline">\(0\)</span> or <span class="math inline">\(n\)</span>).</p>
+<p><em>Example 2.</em> Suppose we observe <span class="math inline">\(28\)</span> heads and <span class="math inline">\(12\)</span> tails in <span class="math inline">\(40\)</span> flips of a coin. Our observed test statistic value is <span class="math inline">\(T_{\rm obs} = 28\)</span>. You may recall that under the null hypothesis (<span class="math inline">\(P(H) = P(T) = 1/2\)</span>) the probability of observing exactly <span class="math inline">\(k\)</span> heads out of <span class="math inline">\(40\)</span> flips is <span class="math inline">\({40 \choose k}/2^{40}\)</span> (where <span class="math inline">\({n \choose k} = n! / (n-k)!k!\)</span>). Therefore the probability of observing a test statistic value of <span class="math inline">\(28\)</span> or larger under the null hypothesis (i.e. the p-value) is</p>
+<p><span class="math display">\[
+P(T = 28) + P(T = 29) + \cdots + P(T = 40)
+\]</span></p>
+<p>which equals,</p>
+<p><span class="math display">\[
+{40 \choose 28}/2^{40} + {40 \choose 29}/2^{40} + \cdots + {40 \choose
+40}/2^{40}.
+\]</span></p>
+<p>This value can be calculated on a computer. It is approximately <span class="math inline">\(.008\)</span>, indicating that it is very unlikely to observe 28 or more heads in 40 flips of a fair coin. Thus the data suggests that the coin is not fair, and in particular it is biased in favor of heads.</p>
+<p>Put another way, if we decide in favor of the alternative hypothesis, there is <span class="math inline">\(&lt;1\%\)</span> chance that we are committing a type I error.</p>
+<blockquote>
+<p>An alternative approach to calculating this p-value is to use a normal approximation. Under the null distribution, <span class="math inline">\(T\)</span> has mean <span class="math inline">\(n/2\)</span> and standard deviation <span class="math inline">\(\sqrt{n}/2\)</span> (recall the standard deviation formula for the binomial distribution is <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span> and substitute <span class="math inline">\(p=1/2\)</span>). Thus the standardized test statistic is <span class="math inline">\(T^*_{\rm obs} = 2(T_{\rm obs} - n/2)/\sqrt{n}\)</span>, which is <span class="math inline">\(2.53\)</span> in this case. Since <span class="math inline">\(T^*_{\rm obs}\)</span> has mean <span class="math inline">\(0\)</span> and standard deviation <span class="math inline">\(1\)</span> we may approximate its distribution with a standard normal distribution. Thus the p-value can be approximated as the probability that a standard normal value exceeds <span class="math inline">\(2.53\)</span>. From a table of the standard normal distribution, this is seen to be approximately <span class="math inline">\(.006\)</span>, which is close to the true value of (approximately) <span class="math inline">\(.008\)</span> and can be calculated without the use of a computer.</p>
+</blockquote>
+<hr />
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="mean-and-standard-deviation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parameter-and-statistic-summary-of-symbols.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-basics-of-hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="important-concepts-in-hypothesis-testing-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

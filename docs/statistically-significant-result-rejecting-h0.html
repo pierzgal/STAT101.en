@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.4 Point and interval estimation | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="6.4 Point and interval estimation | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7.2 Statistically significant result (rejecting H0) | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7.2 Statistically significant result (rejecting H0) | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.4 Point and interval estimation | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7.2 Statistically significant result (rejecting H0) | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.4 Point and interval estimation | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7.2 Statistically significant result (rejecting H0) | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="central-limit-theorem-clt.html"/>
-<link rel="next" href="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-25.html"/>
+<link rel="prev" href="the-basics-of-hypothesis-testing.html"/>
+<link rel="next" href="important-concepts-in-hypothesis-testing-summary.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -354,93 +354,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="point-and-interval-estimation" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Point and interval estimation</h2>
-<div id="point-estimation" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Point estimation</h3>
-<p>In statistics, point estimation involves the use of sample data to calculate a single value (known as a point estimate since it identifies a point in some parameter space) which is to serve as a “best guess” or “best estimate” of an unknown population parameter (for example, the population mean). More formally, it is the application of a point estimator to the data to obtain a point estimate.</p>
-<blockquote>
-<p>Point estimation can be contrasted with interval estimation: such interval estimates are typically either confidence intervals, in the case of frequentist inference, or credible intervals, in the case of Bayesian inference.</p>
-</blockquote>
-</div>
-<div id="interval-estimation" class="section level3" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Interval estimation</h3>
-<p>[From Wikipedia.org] In statistics, interval estimation is the use of sample data to calculate an interval of possible values of an unknown population parameter [such as a sample mean]; this is in contrast to point estimation, which gives a single value. Jerzy Neyman (1937) identified interval estimation (“estimation by interval”) as distinct from point estimation (“estimation by unique estimate”). In doing so, he recognized that then-recent work quoting results in the form of an estimate plus-or-minus a standard deviation indicated that interval estimation was actually the problem statisticians really had in mind.</p>
-<p>The most prevalent forms of interval estimation are:</p>
-<ol style="list-style-type: decimal">
-<li>confidence intervals (<strong>CI</strong>) (a frequentist method); and</li>
-<li>credible intervals (a Bayesian method).</li>
-</ol>
-<p>Figure 6.3 summarizes the idea of the confidence interval for sample means (<span class="math inline">\(\bar{X}\)</span>) in populations with the true mean <span class="math inline">\(\mu\)</span> and the true standard deviation <span class="math inline">\(\sigma\)</span>.</p>
-<div class="figure">
-<img src="images/stat/IMG_1333.JPG" alt="" />
-<p class="caption">Figure 6.3. The idea of CI for sample means</p>
-</div>
-<p><strong>The general formula for a confidence interval for a sample mean</strong> <span class="math inline">\(p\)</span>:</p>
-<p><span class="math display">\[P(\bar{x} - z_{\alpha/2} \sqrt{ \frac{\sigma^2}{n} } &lt; \mu &lt; \bar{x} + z_{\alpha/2} \sqrt{ \frac{\sigma^2}{n} } ) = 1 - \alpha\]</span></p>
-<blockquote>
-<p>For the most common, <span class="math inline">\(95\%\)</span> CI, we substitute <span class="math inline">\(z_{\alpha/2}\)</span> with <span class="math inline">\(1.96\)</span>.</p>
-</blockquote>
-<div id="worked-example" class="section level4" number="6.4.2.1">
-<h4><span class="header-section-number">6.4.2.1</span> Worked example</h4>
-<p>A random sample of 985 constituents was polled. Of those surveyed, 592 people intended to vote for the Republican candidate in the upcoming election (sample proportion = <span class="math inline">\(\hat{p} = 0.601\)</span>). Construct 95% confidence interval for proportion <span class="math inline">\(p\)</span> of voters in the population who intend to vote for the Republican candidate (Notice that the set of selected constituents forms a random sample from the Bernoulli distribution.). Based on this information, can you conclude that the candidate will win the election?</p>
-<p><strong>Solution</strong>:</p>
-<p>Statistical inference deals with the question: <strong>can we infer something from the random sample about the unknown population parameters</strong> (e.g. p = proportion, <span class="math inline">\(\mu\)</span> = mean, <span class="math inline">\(\sigma\)</span> = standard deviation)?</p>
-<p>Two essential tools of statistical inference are <strong>point estimate and interval estimate</strong> (point estimate <span class="math inline">\(\pm\)</span> margin of error). Interval estimate is usually called a <strong>confidence interval</strong>.</p>
-<p>For example, it is possible to infer about the population proportion from a sample proportion (point estimate of the population parameter).</p>
-<p>The list below presents three essential <strong>point estimators</strong> that you should be familiar with:</p>
-<ul>
-<li><p>sample proportion <span class="math inline">\(\hat{p} = \frac{\Sigma X_i}{n}\)</span>, where <span class="math inline">\(\Sigma X_i\)</span> (sometimes denoted by Y or S or simply by X) is a <strong>sample sum</strong>, <span class="math inline">\(\Sigma X_i = X_1 + X_2 + ... + X_n\)</span> and <span class="math inline">\(X_i\)</span> are Bernoulli random variables (binary rv).</p></li>
-<li><p>sample mean <span class="math inline">\(\bar{X} = \frac{\Sigma X_i}{n}\)</span></p></li>
-<li><p>sample standard deviation <span class="math inline">\(S(X) = \frac{\Sigma (X_i - \bar{X})^2}{n-1}\)</span></p></li>
-</ul>
-<p>Notice that the formula for a sample standard deviation is slightly different from the standard deviation formula for a population, i.e. we divide by <em>n</em>-1, not by <em>n</em>. It was proven that we need to divide by <em>n</em>-1 to get a better estimation. However, if you divide by <em>n</em>, not by <em>n</em>-1, in computing a sample SD, the estimate will be also pretty good.</p>
-<p>Recall that if <span class="math inline">\(X_i\)</span> are Bernoulli random variables and <span class="math inline">\(X = \{X_1, X_2, ..., X_n\}\)</span>, then <span class="math inline">\(E({X_i}) = p\)</span> and <span class="math inline">\(Var(X_i) = p(1-p)\)</span>.</p>
-<p>For any estimate <span class="math inline">\(\hat{\theta}\)</span> (e.g. <span class="math inline">\(\hat{p}\)</span>) we would like the sampling distribution of <span class="math inline">\(\hat{\theta}\)</span> to have a mean equal to the parameter estimated (<span class="math inline">\(E(\hat{\theta}) = \theta\)</span>). An estimator possessing this property is said to be <strong>unbiased</strong> - this is the most desirable property of a good estimator.</p>
-<p>Three estimators listed above are unbiased estimators, <span class="math inline">\(E(\hat{p}) = p\)</span>, for instance.</p>
-<p>If we compute the value of a point estimate, we can determine confidence interval, that is, numerical interval that is very likely to contain the true value of the population parameter. Most often we want to find a <strong>95% confidence interval</strong> and then we are 95% confident that the true value of the population parameter is in our confidence interval - we can say that 95% of the observed confidence intervals will hold the true value of the parameter.</p>
-<p>Confidence intervals consist of a range of values (interval) that act as good estimates of the unknown population parameter. However, in infrequent cases, none of these values may cover the value of the parameter. The level of confidence (e.g. 0.95) of the confidence interval indicates the probability that the confidence range captures this true population parameter given a distribution of samples.</p>
-<p>Assuming a 0.95 confidence level, we conclude that 95% of all possible confidence intervals, for all possible random samples, cover the true value of the parameter (e.g. <span class="math inline">\(p\)</span>). This statement is a loose interpretation, but it helps to understand the general idea of the interval estimation.</p>
-<p>To determine an upper and a lower bound of the confidence interval for proportion <em>p</em> we need to know what the probability distribution of the sample proportion is.</p>
-<p>From the <strong>Central Limit Theorem</strong> we know that, if <em>n</em> (<em>n</em> = sample size) is sufficiently large, <span class="math inline">\(\hat{p} \sim N(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}})\)</span>. The standard deviation of the sample proportion <span class="math inline">\(\sqrt{\frac{p(1-p)}{n}}\)</span> is called a <strong>standard error</strong> (<span class="math inline">\(SE(\hat{p})\)</span>) of the sample proportion<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>.</p>
-<p>To obtain the formula for the confidence interval (CI) for a proportion, we use the normally distributed standardised variable <em>Z</em>. Recall that for any estimate <span class="math inline">\(\hat{\theta}\)</span>, <span class="math inline">\(Z = \frac{\hat{\theta} - \mu_{\hat{\theta}}}{\sigma_{\hat{\theta}}}\)</span>.</p>
-<p>For the sample proportion <span class="math inline">\(\hat{p}\)</span> we have <span class="math inline">\(Z = \frac{\hat{p} - \mu_{\hat{p}}}{\sigma_{\hat{p}}} = \frac{\hat{p} - p}{\sqrt{\frac{p(1-p)}{n} }}\)</span>.</p>
-<p>To determine a confidence interval that contains the true value of <em>p</em> with the probability of 95%, we need to follow the procedure below.</p>
-<p>We can read from the table of the standard normal distribution (rv <em>Z</em>) that</p>
-<p><span class="math display">\[P(-z_{\alpha/2} &lt; Z &lt; z_{\alpha/2}) = 1-\alpha\]</span> <span class="math display">\[P(-z_{0.05/2} &lt; Z &lt; z_{0.05/2}) = 0.95\]</span> <span class="math display">\[P(-1.96 &lt; Z &lt; 1.96) = 0.95\]</span></p>
-<p>The quantity <span class="math inline">\(\alpha\)</span> is called a significance level. Then, substituting <em>Z</em> with <span class="math inline">\(\frac{\hat{p} - \mu_{\hat{p}}}{\sigma_{\hat{p}}}\)</span> we obtain:</p>
-<p><span class="math display">\[P(- z_{\alpha/2} &lt; Z &lt; z_{\alpha/2}) = P(- z_{\alpha/2} &lt; \frac{\hat{p} - \mu_{\hat{p}}}{\sigma_{\hat{p}}} = \frac{\hat{p} - p}{\sqrt{ \frac{p(1-p)}{n} }} &lt; z_{\alpha/2}) = 1 - \alpha\]</span></p>
-<p>Rearranging the expression above, we obtain <strong>the general formula that allows us to determine a confidence interval for a proportion</strong> <span class="math inline">\(p\)</span>:</p>
-<p><span class="math display">\[P(\hat{p} - z_{\alpha/2} \sqrt{ \frac{p(1-p)}{n} } &lt; p &lt; \hat{p} + z_{\alpha/2} \sqrt{ \frac{p(1-p)}{n} } ) = 1 - \alpha\]</span></p>
-<p>For the most common, <span class="math inline">\(95\%\)</span> CI, we substitute <span class="math inline">\(z_{\alpha/2}\)</span> with <span class="math inline">\(1.96\)</span>.</p>
-<p>Finally,</p>
-<p><span class="math display">\[P( 0.601 - 1.96\sqrt{\frac{0.601(1-0.601)}{985}} &lt; p &lt; 0.601 + 1.96\sqrt{\frac{0.601(1-0.601)}{985}} ) = 0.95\]</span>
-<span class="math display">\[P( 0.601 - 0.0306 &lt; p &lt; 0.601 + 0.0306 ) = 0.95\]</span></p>
-<p>Because we do not know the true value of <em>p</em>, in the formula, we replaced <em>p</em> with a sample proportion <span class="math inline">\(\hat{p}\)</span> to compute the standard error and determine the mean.</p>
-<p>We can also write:</p>
-<p><span class="math display">\[\hat{p} \pm 1.96\sqrt{ \frac{p(1-p)}{n}}\]</span></p>
-<p><span class="math display">\[0.601 \pm 0.0306\]</span></p>
-<p>where 0.0306 is a <strong>margin of error</strong>.</p>
-<p>We conclude that numerical interval <span class="math display">\[0.5704, 0.6316\]</span> (that is based on the data from the sample of 985 voters) contains the true value of the unknown population parameter <em>p</em> with the probability of 95%.</p>
-<p>Moreover, because the greatest lower bound of the CI (57.04%) is higher than 50%, we have 95% confidence that the candidate will win the election.</p>
-
-</div>
-</div>
-</div>
-<!-- </div> -->
-<div class="footnotes">
-<hr />
-<ol start="22">
-<li id="fn22"><p>Similarly, <span class="math inline">\(\sigma_{\bar{X}} = \frac{\sigma_X}{\sqrt{n}}\)</span> is called a standard error of the sample mean.<a href="point-and-interval-estimation.html#fnref22" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="statistically-significant-result-rejecting-h0" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Statistically significant result (rejecting H0)</h2>
+<p>In statistical hypothesis testing, a result has statistical significance when it is very unlikely to have occurred given the null hypothesis. More precisely, a study’s defined significance level (the threshold value), denoted by <span class="math inline">\(\alpha\)</span>, is the probability of the study rejecting the null hypothesis, given that the null hypothesis was assumed to be true; and the p-value of a result, p, is the probability of obtaining a result at least as extreme, given that the null hypothesis is true. The result is statistically significant, by the standards of the study, when <span class="math inline">\(p \leq \alpha\)</span>. The significance level for a study is chosen before data collection, and is typically set to 5% or much lower — depending on the field of study.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="central-limit-theorem-clt.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-25.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-basics-of-hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="important-concepts-in-hypothesis-testing-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

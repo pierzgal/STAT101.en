@@ -196,8 +196,9 @@ the-basics-of-hypothesis-testing
 statistically-significant-result-rejecting-h0
 important-concepts-in-hypothesis-testing---summary
 testing-outcomes
-examples.
-example.
-example.-1
-example.-2
-example.-3
+worked-examples
+example-16
+example-17
+example-18
+example-19
+example-20

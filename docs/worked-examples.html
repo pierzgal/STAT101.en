@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.2 Constructs and operational definitions10 | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="2.2 Constructs and operational definitions10 | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7.4 Worked examples | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7.4 Worked examples | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.2 Constructs and operational definitions10 | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7.4 Worked examples | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.2 Constructs and operational definitions10 | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7.4 Worked examples | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="essential-concepts.html"/>
-<link rel="next" href="data-collection.html"/>
+<link rel="prev" href="important-concepts-in-hypothesis-testing-summary.html"/>
+
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -355,29 +355,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="constructs-and-operational-definitionslecture-21" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Constructs and operational definitions<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></h2>
-<p>“Some variables, such as height, weight, and eye color are well-defined, concrete entities that can be observed and measured directly. On the other hand, many variables studied by behavioral scientists are internal characteristics that people use to help describe and explain behavior. For example, we say that a student does well in school because he or she is intelligent. Or we say that someone is anxious in social situations, or that someone seems to be hungry. Variables like intelligence, anxiety, and hunger are called constructs, and because they are intangible and cannot be directly observed, they are often called hypothetical constructs.”</p>
-<p><strong>Constructs</strong> are internal attributes or characteristics that cannot be directly observed but are useful for describing and explaining behavior. An <strong>operational definition</strong> identifies a measurement procedure (a set of operations) for measuring an external behavior and uses the resulting measurements as a definition and a measurement of a hypothetical construct. Note that an operational definition has two components. First, it describes a set of operations for measuring a construct. Second, it defines the construct in terms of the resulting measurements.</p>
-<div id="conceptualisation-and-operationalisation" class="section level3" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Conceptualisation and operationalisation</h3>
-<p><strong>Conceptualization</strong> is the mental process by which fuzzy and imprecise constructs (concepts) and their constituent components are defined in concrete and precise terms. For example, the process of understanding what is included and what is excluded in the concept of e.g. “prejudice” is the conceptualization process. The conceptualization process is all the more important because of the imprecision, vagueness, and ambiguity of many social science constructs. While defining constructs such as prejudice or compassion, we must understand that sometimes, these constructs are not real or can exist independently, but are simply imaginary creations in our mind.</p>
-<p>Once a theoretical construct is defined, exactly how do we measure it? <strong>Operationalization</strong> refers to the process of developing indicators or items for measuring these constructs. For instance, if an unobservable theoretical construct such as socioeconomic status is defined as the level of family income, it can be operationalized using an indicator that asks respondents the question: what is your annual family income? Given the high level of subjectivity and imprecision inherent in social science constructs, we tend to measure most of those constructs (except a few demographic constructs such as age, gender, education, and income) using multiple indicators. This process allows us to examine the closeness amongst these indicators as an assessment of their accuracy (reliability).</p>
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="10">
-<li id="fn10"><p>Retrieved from: Gravetter, F.J., Wallnau, L.B., Forzano, L.A.B. and Witnauer, J.E., 2020. *Essentials of statistics for the behavioral sciences*. Cengage Learning.<a href="constructs-and-operational-definitionslecture-21.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<div id="worked-examples" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Worked examples</h2>
+<div id="example-16" class="section level3" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Example</h3>
+<p>Suppose you flip a fair coin 20 times to see if it is not “fair.” In this case, we operationalize the notion of fairness in the null hypothesis as</p>
+<ul>
+<li>H0: p=0.50 (a coin is fair)</li>
+</ul>
+<p>Note that the coin is unfair if π is any value other than 0.50, so we
+state the alternative hypothesis as</p>
+<ul>
+<li>H1: p in not equal 0.50</li>
+</ul>
+<p>Thus, values of X = sum of heads (or tails) either much lower than 10 (out of 20) or much higher than 10 can be cause to reject H0. We may choose e.g. 0.025 significance level (in both tails of the probability distribution).</p>
+<ol style="list-style-type: decimal">
+<li>Let’s assume that we obtained 7 heads.</li>
 </ol>
+<p><span class="math inline">\(P(X &lt;= 7) = ?\)</span> - p-value (left-tailed)</p>
+<p>Since this p-value is higher than 0.05, H0 cannot be rejected at the 0.05
+level.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>What if we get 15 heads?</li>
+</ol>
+<p><span class="math inline">\(P(X &lt;= 7) = ?\)</span></p>
 </div>
+<div id="example-17" class="section level3" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Example</h3>
+<p>Suppose we are investigating a coin, and the null hypothesis is that the coin is fair (equally likely to land heads or tails) while the alternative is that the coin is unfairly biased in favour of heads. If we observe data <span class="math inline">\(X_1, \ldots, X_n\)</span> where each <span class="math inline">\(X_i\)</span> is <span class="math inline">\(H\)</span> or <span class="math inline">\(T\)</span>, then the test statistic <span class="math inline">\(T(X_1, \ldots, X_n)\)</span> may be the number of heads, and the rejection region would be ‘large values of <span class="math inline">\(T\)</span>’ (since the maximum value of <span class="math inline">\(T\)</span> is <span class="math inline">\(n\)</span>, we might also say ‘<span class="math inline">\(T\)</span> close to <span class="math inline">\(n\)</span>’).</p>
+<p>On the other hand, if the alternative hypothesis was that the coin is unfairly biased in favour of tails, the rejection region would be ‘small values of <span class="math inline">\(T\)</span>’ (since the minimum value of <span class="math inline">\(T\)</span> is zero, we might also say ‘<span class="math inline">\(T\)</span> close to zero’).</p>
+<p>Finally, if the alternative hypothesis was that the coin is unfairly biased in any way, the rejection region would be ‘large or small values of <span class="math inline">\(T\)</span>’ (<span class="math inline">\(T\)</span> close to <span class="math inline">\(0\)</span> or <span class="math inline">\(n\)</span>).</p>
+</div>
+<div id="example-18" class="section level3" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Example</h3>
+<p>Suppose we observe <span class="math inline">\(28\)</span> heads and <span class="math inline">\(12\)</span> tails in <span class="math inline">\(40\)</span> flips of a coin. Our observed test statistic value is <span class="math inline">\(T_{\rm obs} = 28\)</span>. You may recall that under the null hypothesis (<span class="math inline">\(P(H) = P(T) = 1/2\)</span>) the probability of observing exactly <span class="math inline">\(k\)</span> heads out of <span class="math inline">\(40\)</span> flips is <span class="math inline">\({40 \choose k}/2^{40} = {40 \choose k} \times (1/2)^{40}\)</span> (where <span class="math inline">\({n \choose k} = n! / (n-k)!k!\)</span>). Therefore the probability of observing a test statistic value of <span class="math inline">\(28\)</span> or larger under the null hypothesis (i.e. the p-value) is</p>
+<p><span class="math display">\[
+P(T = 28) + P(T = 29) + \cdots + P(T = 40)
+\]</span></p>
+<p>which equals,</p>
+<p><span class="math display">\[
+{40 \choose 28}/2^{40} + {40 \choose 29}/2^{40} + \cdots + {40 \choose
+40}/2^{40}.
+\]</span></p>
+<p>This value can be calculated on a computer. It is approximately <span class="math inline">\(.008\)</span>, indicating that it is very unlikely to observe 28 or more heads in 40 flips of a fair coin. Thus the data suggests that the coin is not fair, and in particular it is biased in favor of heads.</p>
+<p>Put another way, if we decide in favor of the alternative hypothesis, there is <span class="math inline">\(&lt;1\%\)</span> chance that we are committing a type I error.</p>
+<blockquote>
+<p>An alternative approach to calculating this p-value is to use a normal approximation. Under the null distribution, <span class="math inline">\(T\)</span> has mean <span class="math inline">\(n/2\)</span> and standard deviation <span class="math inline">\(\sqrt{n}/2\)</span> (recall the standard deviation formula for the binomial distribution is <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span> and substitute <span class="math inline">\(p=1/2\)</span>). Thus the standardized test statistic is <span class="math inline">\(T^*_{\rm obs} = 2(T_{\rm obs} - n/2)/\sqrt{n}\)</span>, which is <span class="math inline">\(2.53\)</span> in this case. Since <span class="math inline">\(T^*_{\rm obs}\)</span> has mean <span class="math inline">\(0\)</span> and standard deviation <span class="math inline">\(1\)</span> we may approximate its distribution with a standard normal distribution. Thus the p-value can be approximated as the probability that a standard normal value exceeds <span class="math inline">\(2.53\)</span>. From a table of the standard normal distribution, this is seen to be approximately <span class="math inline">\(.006\)</span>, which is close to the true value of (approximately) <span class="math inline">\(.008\)</span> and can be calculated without the use of a computer.</p>
+</blockquote>
+</div>
+<div id="example-19" class="section level3" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Example</h3>
+<p>In ESP experiment, a subject, Rachel, attempts to guess which of 4 cards has been selected, and performs the guessing task for a sequence of 20 trials. The experimenter chooses one of the 4 cards randomly on each trial, and so, in the example.</p>
+<ol style="list-style-type: decimal">
+<li>Let’s work the problem in terms of the null and alternative hypotheses stated as follows:</li>
+</ol>
+<ul>
+<li>H0: p = 0.25, and</li>
+<li>H1: p &gt; 0.25</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Assume that our test statistic is Y, the number of correct responses (the # of “successes” in the Bernoulli trials). Furthermore, assume that the significance level is <span class="math inline">\(\alpha = .05\)</span>.</li>
+<li>We’ve already decided that, under H0, a reasonable assumption is that trials are independent and random, and that p = .25, and so it is implied that Y has a distribution that is <span class="math inline">\(Bin(20, 0.25)\)</span>, i.e, binomial with parameters n = 20 and p = 0.25.</li>
+<li>The p-value of the observed result y is the probability of obtaining a result as extreme as y and be consistent with H1. To be consistent with H1, y needs to be large.</li>
+<li>We use the binomial distribution calculator to compute the probability of obtaining Y ≥ y if the distribution is B(20,0.25).</li>
+<li>If this p − value is less than or equal α, then we say that our result is
+“significant at the α level.”</li>
+</ol>
+<p>Thus, We need to compute the total probability of obtaining a result as extreme or more than the obtained value. Suppose Rachel answers 9 out of 20 correct. We compute:</p>
+<p><span class="math inline">\(P(Y &gt;= 9) = 0.0409\)</span></p>
+<p>Since the p-value of 0.0409 is less than 0.05, we reject the null hypothesis “at the .05 significance level.”</p>
+<p>Note that, because the binomial distribution is discrete, only <span class="math inline">\(n + 1\)</span> p-values are possible.</p>
+</div>
+<div id="example-20" class="section level3" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> Example</h3>
+<p>The producer of a television programme claims that it is politically unbiased.
+‘If you take somebody off the street it is 50:50 whether he or she will say the programme favours the government or the opposition’, she says.</p>
+<p>However, when ten people, selected at random, are asked the question ‘Does the programme support the government or the opposition?’, nine say it supports the government.</p>
+<p>Does this constitute evidence, at the 5% significance level, that the producer’s claim is inaccurate?</p>
+<p>Read the last sentence carefully and you will see that it does not say
+in which direction the bias must be. It does not ask if the programme
+is favouring the government or the opposition, only if the producer’s claim is inaccurate. So you must consider both ends of the distribution, working out the probability of such an extreme result either way; 9 or 10 saying it favours the government, or 9 or 10 saying that it favours the opposition. This is a 2-tail test.</p>
+<p>If p is the probability that somebody believes the programme supports the government, you have:</p>
+<ul>
+<li>Null hypothesis, H0: p = 0.5 (claim accurate)</li>
+<li>Alternative hypothesis, H1: p ≠ 0.5 (claim inaccurate)</li>
+<li>Significance level: 5% = 0.05 (2-tail test, 0.025 at each tail)</li>
+</ul>
+<p>The situation is modelled by the binomial distribution <span class="math inline">\(X \sim Binom(10, 0.5)\)</span>.</p>
+<p>This gives:</p>
+<ul>
+<li>P(X = 0) = 1/1024 (if 10 favours the opposition, Y = 10),</li>
+<li>P(X = 1) = 10/1024 (if 9 favours the opposition, Y = 9),</li>
+<li>P(X = 9) = 10/1024,</li>
+<li>P(X = 10) = 1/1024.</li>
+</ul>
+<p>Thus, the total probability for the two tails is 22/1024 or 2.15%.</p>
+<p>Since 2.15% &lt; 5%, the null hypothesis is rejected in favour of the alternative, that the producer’s claim is inaccurate.</p>
+<hr />
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="essential-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-collection.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="important-concepts-in-hypothesis-testing-summary.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

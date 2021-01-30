@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.10 Parameter and statistic - summary of symbols | STAT 101 IPS (WSMiP UŁ)</title>
-  <meta name="description" content="3.10 Parameter and statistic - summary of symbols | STAT 101 IPS (WSMiP UŁ)" />
+  <title>7 Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32] | STAT 101 IPS (WSMiP UŁ)</title>
+  <meta name="description" content="7 Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32] | STAT 101 IPS (WSMiP UŁ)" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.10 Parameter and statistic - summary of symbols | STAT 101 IPS (WSMiP UŁ)" />
+  <meta property="og:title" content="7 Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32] | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.10 Parameter and statistic - summary of symbols | STAT 101 IPS (WSMiP UŁ)" />
+  <meta name="twitter:title" content="7 Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32] | STAT 101 IPS (WSMiP UŁ)" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="useful-formulas-descriptive-statistics.html"/>
-<link rel="next" href="finding-mean-and-standard-deviation.html"/>
+<link rel="prev" href="point-and-interval-estimation.html"/>
+<link rel="next" href="the-basics-of-hypothesis-testing.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -355,50 +355,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="parameter-and-statistic---summary-of-symbols" class="section level2" number="3.10">
-<h2><span class="header-section-number">3.10</span> Parameter and statistic - summary of symbols</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Population (P)</th>
-<th>Sample (S)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>expected value (mean): <span class="math inline">\(E(X), \mu\)</span></td>
-<td>sample mean: <span class="math inline">\(\bar{x}\)</span></td>
-</tr>
-<tr class="even">
-<td>proportion: </td>
-<td>sample proportion: <span class="math inline">\(\hat{p}\)</span></td>
-</tr>
-<tr class="odd">
-<td>standard deviation: <span class="math inline">\(\sigma\)</span></td>
-<td>sample standard deviation: <span class="math inline">\(S, S(X), s\)</span></td>
-</tr>
-<tr class="even">
-<td>variance: <span class="math inline">\(\sigma^2\)</span>, <span class="math inline">\(Var(X)\)</span></td>
-<td>sample variance: <span class="math inline">\(S^2, S^2(X), s^2\)</span></td>
-</tr>
-<tr class="odd">
-<td>median: <span class="math inline">\(Md_X\)</span></td>
-<td>sample median <span class="math inline">\(\hat{Md}_X\)</span></td>
-</tr>
-<tr class="even">
-<td>mode: <span class="math inline">\(Mo_X\)</span></td>
-<td>sample mode <span class="math inline">\(\hat{Mo}_X\)</span></td>
-</tr>
-</tbody>
-</table>
+<div id="hypothesis-testing---introduction-lecture-7---draft-copy-ver.-0.32" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32]</h1>
+<p>Often in statistics, we have some <em>hypothesis</em> to test. For example, we want to test whether a drug can lower the chance of a heart attack. Often, we will have two hypotheses to compare: the <em>null hypothesis</em> states that the drug is useless, while the <em>alternative hypothesis</em> states that the drug is useful. Quantitatively, suppose that the chance of heart attack without the drug is <span class="math inline">\(\theta_0\)</span> and the chance with the drug is <span class="math inline">\(\theta\)</span>. Then the null hypothesis is <span class="math inline">\(H_0: \theta = \theta_0\)</span>, while the alternative hypothesis is <span class="math inline">\(H_1: \theta \not= \theta_0\)</span>.</p>
+<p>It is important to note that the null hypothesis and alternative hypothesis are not on equal footing. By default, we assume the null hypothesis is true. For us to reject the null hypothesis, we need a lot of evidence to prove that. This is since we consider incorrectly rejecting the null hypothesis to be a much more serious problem than accepting it when we should not. For example, it is relatively okay to reject a drug when it is actually useful, but it is terrible to distribute drugs to patients when the drugs are actually useless. Alternatively, it is more serious to deem an innocent person guilty than to say a guilty person is innocent.</p>
+<p>In general, let <span class="math inline">\(X_1, \cdots, X_n\)</span> be independent identically distributed (iid), each taking values in <span class="math inline">\(\mathcal{X}\)</span>, each with unknown pdf/pmf <span class="math inline">\(f\)</span>. We have two hypotheses, <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span>, about <span class="math inline">\(f\)</span>. On the basis of data <span class="math inline">\(\mathbf{X} = \mathbf{x}\)</span>, we make a choice between the two hypotheses.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="useful-formulas-descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="finding-mean-and-standard-deviation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="point-and-interval-estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-basics-of-hypothesis-testing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

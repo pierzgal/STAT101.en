@@ -151,7 +151,7 @@ example-6
 example-7
 example-8
 example-9
-random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.44
+random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.45
 random-variable-and-probability-distribution---definitions
 random-variables
 random-variable-and-probability-distribution-function-for-a-single-toss-of-a-fair-coin

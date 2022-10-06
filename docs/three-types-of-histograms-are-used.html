@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.18 Three types of histograms are used: | STAT 101 IPS (WSMiP UŁ)</title>
   <meta name="description" content="3.18 Three types of histograms are used: | STAT 101 IPS (WSMiP UŁ)" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.18 Three types of histograms are used: | STAT 101 IPS (WSMiP UŁ)" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2021-02-26" />
+<meta name="date" content="2022-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,8 @@
   
 <link rel="prev" href="frequency-distribution-table-and-histogram.html"/>
 <link rel="next" href="density-histogram-and-frequency-histogram.html"/>
-<script src="assets/header-attrs-2.6/header-attrs.js"></script>
-<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,11 +48,13 @@
 
 
 
-
-<script src="assets/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="assets/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="assets/viz-1.8.2/viz.js"></script>
 <link href="assets/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="assets/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="assets/grViz-binding-1.0.9/grViz.js"></script>
 
 
 <style type="text/css">
@@ -121,6 +122,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -143,7 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction-lecture-1.html"><a href="introduction-lecture-1.html"><i class="fa fa-check"></i><b>1</b> Introduction [Lecture 1]</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><a href="motivation-two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><i class="fa fa-check"></i><b>1.1</b> Motivation - two reasons why you should learn statistics and data analysis methods?</a></li>
+<li class="chapter" data-level="1.1" data-path="motivation---two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><a href="motivation---two-reasons-why-you-should-learn-statistics-and-data-analysis-methods.html"><i class="fa fa-check"></i><b>1.1</b> Motivation - two reasons why you should learn statistics and data analysis methods?</a></li>
 <li class="chapter" data-level="1.2" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><i class="fa fa-check"></i><b>1.2</b> Review of some mathematical concepts used in statistics and data science</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#algebra-review---some-basic-rules"><i class="fa fa-check"></i><b>1.2.1</b> Algebra review - some basic rules</a></li>
@@ -155,7 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2.7" data-path="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html"><a href="review-of-some-mathematical-concepts-used-in-statistics-and-data-science.html#integral-as-an-area---intuitive-explanation"><i class="fa fa-check"></i><b>1.2.7</b> Integral as an area - intuitive explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="statistics-an-introduction-lecture-2.html"><a href="statistics-an-introduction-lecture-2.html"><i class="fa fa-check"></i><b>2</b> Statistics - an introduction [Lecture 2]</a>
+<li class="chapter" data-level="2" data-path="statistics---an-introduction-lecture-2.html"><a href="statistics---an-introduction-lecture-2.html"><i class="fa fa-check"></i><b>2</b> Statistics - an introduction [Lecture 2]</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="essential-concepts.html"><a href="essential-concepts.html"><i class="fa fa-check"></i><b>2.1</b> Essential concepts</a>
 <ul>
@@ -169,9 +171,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4" data-path="sampling-techniqueslecture-22.html"><a href="sampling-techniqueslecture-22.html"><i class="fa fa-check"></i><b>2.4</b> Sampling techniques</a></li>
 <li class="chapter" data-level="2.5" data-path="data-distribution.html"><a href="data-distribution.html"><i class="fa fa-check"></i><b>2.5</b> Data distribution</a></li>
 <li class="chapter" data-level="2.6" data-path="basic-stages-of-social-researchlecture-23.html"><a href="basic-stages-of-social-researchlecture-23.html"><i class="fa fa-check"></i><b>2.6</b> Basic stages of social research</a></li>
-<li class="chapter" data-level="2.7" data-path="statistical-study-essential-steps.html"><a href="statistical-study-essential-steps.html"><i class="fa fa-check"></i><b>2.7</b> Statistical study - essential steps</a></li>
+<li class="chapter" data-level="2.7" data-path="statistical-study---essential-steps.html"><a href="statistical-study---essential-steps.html"><i class="fa fa-check"></i><b>2.7</b> Statistical study - essential steps</a></li>
 <li class="chapter" data-level="2.8" data-path="experimental-and-observational-studieslecture-24.html"><a href="experimental-and-observational-studieslecture-24.html"><i class="fa fa-check"></i><b>2.8</b> Experimental and observational studies</a></li>
-<li class="chapter" data-level="2.9" data-path="statistical-research-design-an-example-of-a-simple-experimentlecture-25.html"><a href="statistical-research-design-an-example-of-a-simple-experimentlecture-25.html"><i class="fa fa-check"></i><b>2.9</b> Statistical research design - an example of a simple experiment</a></li>
+<li class="chapter" data-level="2.9" data-path="statistical-research-design---an-example-of-a-simple-experimentlecture-25.html"><a href="statistical-research-design---an-example-of-a-simple-experimentlecture-25.html"><i class="fa fa-check"></i><b>2.9</b> Statistical research design - an example of a simple experiment</a></li>
 <li class="chapter" data-level="2.10" data-path="descriptive-and-inferential-statistics.html"><a href="descriptive-and-inferential-statistics.html"><i class="fa fa-check"></i><b>2.10</b> Descriptive and inferential statistics</a></li>
 <li class="chapter" data-level="2.11" data-path="random-samplinglecture-26.html"><a href="random-samplinglecture-26.html"><i class="fa fa-check"></i><b>2.11</b> Random sampling</a>
 <ul>
@@ -179,11 +181,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.11.2" data-path="random-samplinglecture-26.html"><a href="random-samplinglecture-26.html#various-types-of-bias-in-statistical-analysis"><i class="fa fa-check"></i><b>2.11.2</b> Various types of bias in statistical analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="2.12" data-path="experimental-designlecture-27.html"><a href="experimental-designlecture-27.html"><i class="fa fa-check"></i><b>2.12</b> Experimental design</a></li>
-<li class="chapter" data-level="2.13" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><i class="fa fa-check"></i><b>2.13</b> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
+<li class="chapter" data-level="2.13" data-path="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html"><i class="fa fa-check"></i><b>2.13</b> Relevant modern application of statistical theory: Machine learning - the conceptual introduction</a>
 <ul>
-<li class="chapter" data-level="2.13.1" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>2.13.1</b> Machine learning approaches</a></li>
-<li class="chapter" data-level="2.13.2" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>2.13.2</b> Make predictions or decisions using ML</a></li>
-<li class="chapter" data-level="2.13.3" data-path="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning-the-conceptual-introduction.html#machine-learning-approaches---visual-guide"><i class="fa fa-check"></i><b>2.13.3</b> Machine learning approaches - visual guide</a></li>
+<li class="chapter" data-level="2.13.1" data-path="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html#machine-learning-approaches"><i class="fa fa-check"></i><b>2.13.1</b> Machine learning approaches</a></li>
+<li class="chapter" data-level="2.13.2" data-path="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html#make-predictions-or-decisions-using-ml"><i class="fa fa-check"></i><b>2.13.2</b> Make predictions or decisions using ML</a></li>
+<li class="chapter" data-level="2.13.3" data-path="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html"><a href="relevant-modern-application-of-statistical-theory-machine-learning---the-conceptual-introduction.html#machine-learning-approaches---visual-guide"><i class="fa fa-check"></i><b>2.13.3</b> Machine learning approaches - visual guide</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="exploratory-data-analysis-lecture-3.html"><a href="exploratory-data-analysis-lecture-3.html"><i class="fa fa-check"></i><b>3</b> Exploratory data analysis [Lecture 3]</a>
@@ -194,10 +196,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#levels-of-measurement-scales-of-measurement"><i class="fa fa-check"></i><b>3.1.2</b> Levels of measurement (scales of measurement)</a></li>
 <li class="chapter" data-level="3.1.3" data-path="types-of-data-and-the-scales-of-measurement.html"><a href="types-of-data-and-the-scales-of-measurement.html#discrete-or-continuous-variables"><i class="fa fa-check"></i><b>3.1.3</b> Discrete or continuous variables</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html"><i class="fa fa-check"></i><b>3.2</b> Levels of measurement - a summary</a>
+<li class="chapter" data-level="3.2" data-path="levels-of-measurement---a-summary.html"><a href="levels-of-measurement---a-summary.html"><i class="fa fa-check"></i><b>3.2</b> Levels of measurement - a summary</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html#types-of-data-and-levels-of-measurement---intuitions"><i class="fa fa-check"></i><b>3.2.1</b> Types of data and levels of measurement - intuitions</a></li>
-<li class="chapter" data-level="3.2.2" data-path="levels-of-measurement-a-summary.html"><a href="levels-of-measurement-a-summary.html#frequency-distribution"><i class="fa fa-check"></i><b>3.2.2</b> Frequency distribution</a></li>
+<li class="chapter" data-level="3.2.1" data-path="levels-of-measurement---a-summary.html"><a href="levels-of-measurement---a-summary.html#types-of-data-and-levels-of-measurement---intuitions"><i class="fa fa-check"></i><b>3.2.1</b> Types of data and levels of measurement - intuitions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="levels-of-measurement---a-summary.html"><a href="levels-of-measurement---a-summary.html#frequency-distribution"><i class="fa fa-check"></i><b>3.2.2</b> Frequency distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="reliability-and-validity.html"><a href="reliability-and-validity.html"><i class="fa fa-check"></i><b>3.3</b> Reliability and Validity</a></li>
 <li class="chapter" data-level="3.4" data-path="tabular-presentation-of-data-distributions.html"><a href="tabular-presentation-of-data-distributions.html"><i class="fa fa-check"></i><b>3.4</b> Tabular presentation of data distributions</a>
@@ -218,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.8.2" data-path="mean-and-standard-deviation.html"><a href="mean-and-standard-deviation.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>3.8.2</b> Variance and standard deviation</a></li>
 </ul></li>
 <li class="chapter" data-level="3.9" data-path="useful-formulas-descriptive-statistics.html"><a href="useful-formulas-descriptive-statistics.html"><i class="fa fa-check"></i><b>3.9</b> Useful formulas (descriptive statistics)</a></li>
-<li class="chapter" data-level="3.10" data-path="parameter-and-statistic-summary-of-symbols.html"><a href="parameter-and-statistic-summary-of-symbols.html"><i class="fa fa-check"></i><b>3.10</b> Parameter and statistic - summary of symbols</a></li>
+<li class="chapter" data-level="3.10" data-path="parameter-and-statistic---summary-of-symbols.html"><a href="parameter-and-statistic---summary-of-symbols.html"><i class="fa fa-check"></i><b>3.10</b> Parameter and statistic - summary of symbols</a></li>
 <li class="chapter" data-level="3.11" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html"><i class="fa fa-check"></i><b>3.11</b> Finding mean and standard deviation</a>
 <ul>
 <li class="chapter" data-level="3.11.1" data-path="finding-mean-and-standard-deviation.html"><a href="finding-mean-and-standard-deviation.html#example-3.1"><i class="fa fa-check"></i><b>3.11.1</b> Example 3.1</a></li>
@@ -245,17 +247,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.20" data-path="histogram-for-the-binomial-distribution-1.html"><a href="histogram-for-the-binomial-distribution-1.html"><i class="fa fa-check"></i><b>3.20</b> Histogram for the binomial distribution (1)</a></li>
 <li class="chapter" data-level="3.21" data-path="box-plot.html"><a href="box-plot.html"><i class="fa fa-check"></i><b>3.21</b> Box plot</a></li>
-<li class="chapter" data-level="3.22" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html"><i class="fa fa-check"></i><b>3.22</b> Box plot - example (1)</a>
+<li class="chapter" data-level="3.22" data-path="box-plot---example-1.html"><a href="box-plot---example-1.html"><i class="fa fa-check"></i><b>3.22</b> Box plot - example (1)</a>
 <ul>
-<li class="chapter" data-level="3.22.1" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#box-plot---example-2"><i class="fa fa-check"></i><b>3.22.1</b> Box plot - example (2)</a></li>
-<li class="chapter" data-level="3.22.2" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#box-plot---example-compare-the-box-plots"><i class="fa fa-check"></i><b>3.22.2</b> Box plot - example (compare the box plots)</a></li>
-<li class="chapter" data-level="3.22.3" data-path="box-plot-example-1.html"><a href="box-plot-example-1.html#plot-the-data-from-the-above-example-using-histograms-and-smooth-density-curves"><i class="fa fa-check"></i><b>3.22.3</b> Plot the data from the above example using histograms and smooth density curves</a></li>
+<li class="chapter" data-level="3.22.1" data-path="box-plot---example-1.html"><a href="box-plot---example-1.html#box-plot---example-2"><i class="fa fa-check"></i><b>3.22.1</b> Box plot - example (2)</a></li>
+<li class="chapter" data-level="3.22.2" data-path="box-plot---example-1.html"><a href="box-plot---example-1.html#box-plot---example-compare-the-box-plots"><i class="fa fa-check"></i><b>3.22.2</b> Box plot - example (compare the box plots)</a></li>
+<li class="chapter" data-level="3.22.3" data-path="box-plot---example-1.html"><a href="box-plot---example-1.html#plot-the-data-from-the-above-example-using-histograms-and-smooth-density-curves"><i class="fa fa-check"></i><b>3.22.3</b> Plot the data from the above example using histograms and smooth density curves</a></li>
 </ul></li>
-<li class="chapter" data-level="3.23" data-path="box-plots-additional-example.html"><a href="box-plots-additional-example.html"><i class="fa fa-check"></i><b>3.23</b> Box plots - additional example</a></li>
+<li class="chapter" data-level="3.23" data-path="box-plots---additional-example.html"><a href="box-plots---additional-example.html"><i class="fa fa-check"></i><b>3.23</b> Box plots - additional example</a></li>
 <li class="chapter" data-level="3.24" data-path="histogram-and-box-plot.html"><a href="histogram-and-box-plot.html"><i class="fa fa-check"></i><b>3.24</b> Histogram and box-plot</a></li>
 <li class="chapter" data-level="3.25" data-path="skewness-of-data-distribution.html"><a href="skewness-of-data-distribution.html"><i class="fa fa-check"></i><b>3.25</b> Skewness of data distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="introduction-to-statistical-inference-lecture-4-draft-copy-ver-0-4.html"><a href="introduction-to-statistical-inference-lecture-4-draft-copy-ver-0-4.html"><i class="fa fa-check"></i><b>4</b> Introduction to statistical inference [Lecture 4 - draft copy, ver. 0.4]</a>
+<li class="chapter" data-level="4" data-path="introduction-to-statistical-inference-lecture-4---draft-copy-ver.-0.html"><a href="introduction-to-statistical-inference-lecture-4---draft-copy-ver.-0.html"><i class="fa fa-check"></i><b>4</b> Introduction to statistical inference [Lecture 4 - draft copy, ver. 0.4]</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>4.1</b> Introduction</a>
 <ul>
@@ -286,33 +288,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.10" data-path="elementary-probability.html"><a href="elementary-probability.html#various-examples"><i class="fa fa-check"></i><b>4.2.10</b> Various examples (*)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-44.html"><a href="random-variables-and-probability-distributions-lecture-5-draft-copy-ver-0-44.html"><i class="fa fa-check"></i><b>5</b> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.44]</a>
+<li class="chapter" data-level="5" data-path="random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.html"><a href="random-variables-and-probability-distributions-lecture-5---draft-copy-ver.-0.html"><i class="fa fa-check"></i><b>5</b> Random variables and probability distributions [Lecture 5 - draft copy, ver. 0.44]</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a>
+<li class="chapter" data-level="5.1" data-path="random-variable-and-probability-distribution---definitions.html"><a href="random-variable-and-probability-distribution---definitions.html"><i class="fa fa-check"></i><b>5.1</b> Random variable and probability distribution - definitions</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#random-variables"><i class="fa fa-check"></i><b>5.1.1</b> Random variables</a></li>
-<li class="chapter" data-level="5.1.2" data-path="random-variable-and-probability-distribution-definitions.html"><a href="random-variable-and-probability-distribution-definitions.html#probability-distribution-function"><i class="fa fa-check"></i><b>5.1.2</b> Probability distribution (function)</a></li>
+<li class="chapter" data-level="5.1.1" data-path="random-variable-and-probability-distribution---definitions.html"><a href="random-variable-and-probability-distribution---definitions.html#random-variables"><i class="fa fa-check"></i><b>5.1.1</b> Random variables</a></li>
+<li class="chapter" data-level="5.1.2" data-path="random-variable-and-probability-distribution---definitions.html"><a href="random-variable-and-probability-distribution---definitions.html#probability-distribution-function"><i class="fa fa-check"></i><b>5.1.2</b> Probability distribution (function)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution-an-example.html"><a href="how-to-define-random-variable-and-probability-distribution-an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
-<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><i class="fa fa-check"></i><b>5.3</b> Discrete probability distributions - Bernoulli and binomial distributions</a>
+<li class="chapter" data-level="5.2" data-path="how-to-define-random-variable-and-probability-distribution---an-example.html"><a href="how-to-define-random-variable-and-probability-distribution---an-example.html"><i class="fa fa-check"></i><b>5.2</b> How to define random variable and probability distribution - an example</a></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions---bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions---bernoulli-and-binomial-distributions.html"><i class="fa fa-check"></i><b>5.3</b> Discrete probability distributions - Bernoulli and binomial distributions</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#binary-random-variables-and-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Binary random variables and Binomial distribution</a></li>
-<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#some-characteristics-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Some characteristics of the binomial distribution</a></li>
-<li class="chapter" data-level="5.3.3" data-path="discrete-probability-distributions-bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions-bernoulli-and-binomial-distributions.html#examples"><i class="fa fa-check"></i><b>5.3.3</b> Examples</a></li>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions---bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions---bernoulli-and-binomial-distributions.html#binary-random-variables-and-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Binary random variables and Binomial distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions---bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions---bernoulli-and-binomial-distributions.html#some-characteristics-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Some characteristics of the binomial distribution</a></li>
+<li class="chapter" data-level="5.3.3" data-path="discrete-probability-distributions---bernoulli-and-binomial-distributions.html"><a href="discrete-probability-distributions---bernoulli-and-binomial-distributions.html#examples"><i class="fa fa-check"></i><b>5.3.3</b> Examples</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html"><i class="fa fa-check"></i><b>5.4</b> Continuous probability distributions - uniform and normal distributions</a>
+<li class="chapter" data-level="5.4" data-path="continuous-probability-distributions---uniform-and-normal-distributions.html"><a href="continuous-probability-distributions---uniform-and-normal-distributions.html"><i class="fa fa-check"></i><b>5.4</b> Continuous probability distributions - uniform and normal distributions</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html#uniform-probability-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Uniform probability distribution</a></li>
-<li class="chapter" data-level="5.4.2" data-path="continuous-probability-distributions-uniform-and-normal-distributions.html"><a href="continuous-probability-distributions-uniform-and-normal-distributions.html#normal-probability-distribution"><i class="fa fa-check"></i><b>5.4.2</b> Normal probability distribution</a></li>
+<li class="chapter" data-level="5.4.1" data-path="continuous-probability-distributions---uniform-and-normal-distributions.html"><a href="continuous-probability-distributions---uniform-and-normal-distributions.html#uniform-probability-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Uniform probability distribution</a></li>
+<li class="chapter" data-level="5.4.2" data-path="continuous-probability-distributions---uniform-and-normal-distributions.html"><a href="continuous-probability-distributions---uniform-and-normal-distributions.html#normal-probability-distribution"><i class="fa fa-check"></i><b>5.4.2</b> Normal probability distribution</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="the-basics-of-statistical-inference-lecture-6-draft-copy-ver-0-2.html"><a href="the-basics-of-statistical-inference-lecture-6-draft-copy-ver-0-2.html"><i class="fa fa-check"></i><b>6</b> The basics of statistical inference [Lecture 6 - draft copy, ver. 0.2]</a>
+<li class="chapter" data-level="6" data-path="the-basics-of-statistical-inference-lecture-6---draft-copy-ver.-0.html"><a href="the-basics-of-statistical-inference-lecture-6---draft-copy-ver.-0.html"><i class="fa fa-check"></i><b>6</b> The basics of statistical inference [Lecture 6 - draft copy, ver. 0.2]</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="statistics-and-sampling-variability.html"><a href="statistics-and-sampling-variability.html"><i class="fa fa-check"></i><b>6.1</b> Statistics and sampling variability</a></li>
-<li class="chapter" data-level="6.2" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html"><i class="fa fa-check"></i><b>6.2</b> Sampling distribution for a statistic (a sample mean, a sample proportion etc.)</a>
+<li class="chapter" data-level="6.2" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html"><i class="fa fa-check"></i><b>6.2</b> Sampling distribution for a statistic (a sample mean, a sample proportion etc.)</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html#sampling-distribution-of-a-sample-mean"><i class="fa fa-check"></i><b>6.2.1</b> Sampling distribution of a sample mean</a></li>
-<li class="chapter" data-level="6.2.2" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc-.html#sampling-distribution-for-a-sample-sum-s"><i class="fa fa-check"></i><b>6.2.2</b> Sampling distribution for a sample sum (<span class="math inline">\(S\)</span>)</a></li>
+<li class="chapter" data-level="6.2.1" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html#sampling-distribution-of-a-sample-mean"><i class="fa fa-check"></i><b>6.2.1</b> Sampling distribution of a sample mean</a></li>
+<li class="chapter" data-level="6.2.2" data-path="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html"><a href="sampling-distribution-for-a-statistic-a-sample-mean-a-sample-proportion-etc..html#sampling-distribution-for-a-sample-sum-s"><i class="fa fa-check"></i><b>6.2.2</b> Sampling distribution for a sample sum (<span class="math inline">\(S\)</span>)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="central-limit-theorem-clt.html"><a href="central-limit-theorem-clt.html"><i class="fa fa-check"></i><b>6.3</b> Central Limit Theorem (CLT)</a></li>
 <li class="chapter" data-level="6.4" data-path="point-and-interval-estimation.html"><a href="point-and-interval-estimation.html"><i class="fa fa-check"></i><b>6.4</b> Point and interval estimation</a>
@@ -321,13 +323,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4.2" data-path="point-and-interval-estimation.html"><a href="point-and-interval-estimation.html#interval-estimation"><i class="fa fa-check"></i><b>6.4.2</b> Interval estimation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-32.html"><a href="hypothesis-testing-introduction-lecture-7-draft-copy-ver-0-32.html"><i class="fa fa-check"></i><b>7</b> Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32]</a>
+<li class="chapter" data-level="7" data-path="hypothesis-testing---introduction-lecture-7---draft-copy-ver.-0.html"><a href="hypothesis-testing---introduction-lecture-7---draft-copy-ver.-0.html"><i class="fa fa-check"></i><b>7</b> Hypothesis testing - introduction [Lecture 7 - draft copy, ver. 0.32]</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="the-basics-of-hypothesis-testing.html"><a href="the-basics-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>7.1</b> The basics of hypothesis testing</a></li>
 <li class="chapter" data-level="7.2" data-path="statistically-significant-result-rejecting-h0.html"><a href="statistically-significant-result-rejecting-h0.html"><i class="fa fa-check"></i><b>7.2</b> Statistically significant result (rejecting H0)</a></li>
-<li class="chapter" data-level="7.3" data-path="important-concepts-in-hypothesis-testing-summary.html"><a href="important-concepts-in-hypothesis-testing-summary.html"><i class="fa fa-check"></i><b>7.3</b> Important concepts in hypothesis testing - summary</a>
+<li class="chapter" data-level="7.3" data-path="important-concepts-in-hypothesis-testing---summary.html"><a href="important-concepts-in-hypothesis-testing---summary.html"><i class="fa fa-check"></i><b>7.3</b> Important concepts in hypothesis testing - summary</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="important-concepts-in-hypothesis-testing-summary.html"><a href="important-concepts-in-hypothesis-testing-summary.html#testing-outcomes"><i class="fa fa-check"></i><b>7.3.1</b> Testing Outcomes</a></li>
+<li class="chapter" data-level="7.3.1" data-path="important-concepts-in-hypothesis-testing---summary.html"><a href="important-concepts-in-hypothesis-testing---summary.html#testing-outcomes"><i class="fa fa-check"></i><b>7.3.1</b> Testing Outcomes</a></li>
 </ul></li>
 <li class="chapter" data-level="7.4" data-path="worked-examples.html"><a href="worked-examples.html"><i class="fa fa-check"></i><b>7.4</b> Worked examples</a>
 <ul>
@@ -355,8 +357,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="three-types-of-histograms-are-used" class="section level2" number="3.18">
-<h2><span class="header-section-number">3.18</span> Three types of histograms are used:</h2>
+<div id="three-types-of-histograms-are-used" class="section level2 hasAnchor" number="3.18">
+<h2><span class="header-section-number">3.18</span> Three types of histograms are used:<a href="three-types-of-histograms-are-used.html#three-types-of-histograms-are-used" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>histogram <em>of absolute rates</em> (to be used only in justified cases);</li>
 <li>histogram <em>of relative frequencies</em> - the sum of the heights of all bars is equal to 1 (or 100%);</li>
@@ -373,7 +375,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
 <script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -392,6 +393,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {
@@ -412,6 +414,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 },
@@ -428,7 +434,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
